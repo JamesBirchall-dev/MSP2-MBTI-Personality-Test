@@ -1,5 +1,5 @@
 const MbtiModule = (function() {
-	let types = {
+	let types = { //defines the 16 personality types gained from the results 
 		ISTJ: {title: "The Traditionalist", percentage: "13.7%", description: "Dutiful, Practical, Logical, Methodical", site: "http://www.personalitypage.com/html/ISTJ.html"},
 		ISFJ: {title: "The Protector", percentage: "12.7%", description: "Dutiful, Practical, Supportive, Meticulous", site: "http://www.personalitypage.com/html/ISFJ.html"},
 		INFJ: {title: "The Guide", percentage: "1.7%", description: "Devoted, Innovative, Idealistic, Compassionate", site: "http://www.personalitypage.com/html/INFJ.html"},
@@ -17,15 +17,15 @@ const MbtiModule = (function() {
 		ENFJ: {title: "The Developer", percentage: "2.8%", description: "Friendly, Innovative, Supportive, Idealistic", site: "http://www.personalitypage.com/html/ENFJ.html"},
 		ENTJ: {title: "The Reformer", percentage: "2.9%", description: "Determined, Innovative, Strategic, Outgoing", site: "http://www.personalitypage.com/html/ENTJ.html"}
 	};
-	let e, i, s, n, t, f, j, p;
+	let e, i, s, n, t, f, j, p; // score variables (E/I = Extraversion / Introversion S/N = Sensing / iNtuition T/F = Thinking / Feeling  J/P = Judging / Perceiving)
 	let type;
 	
-	function resetScores() {
+	function resetScores() { //resets all scores to zero to be called at the beginning of the process to start fresh
 		e = i = s = n = t = f = j = p = 0;
 		type = "";
 	}
 	
-	function getScores() {
+	function getScores() { // Iterates over all <input> elements. For each checked input, increments the score for its value. Assumes inputs are radio buttons or checkboxes with values matching MBTI letters
 		const inputs = document.getElementsByTagName("input");
 		Array.prototype.forEach.call(inputs, function(input) {
 			if (input.checked) {
@@ -43,7 +43,7 @@ const MbtiModule = (function() {
 		});
 	}
 	
-	function calculatePercentages() {
+	function calculatePercentages() { //converts scores into percentage values. scaling is based on number of questions. 10 for E/I and 20 for the rest. 
 		e = Math.floor(e / 10 * 100);
 		i = Math.floor(i / 10 * 100);
 		s = Math.floor(s / 20 * 100);
@@ -54,7 +54,7 @@ const MbtiModule = (function() {
 		p = Math.floor(p / 20 * 100);
 	}
 	
-	function createCharts() {
+	function createCharts() { //updates DOM elements to display the percentage scores. 
 		document.querySelector("#eScore").innerHTML = e;
 		document.querySelector("#iScore").innerHTML = i;
 		document.querySelector("#sScore").innerHTML = s;
@@ -70,7 +70,7 @@ const MbtiModule = (function() {
 		document.querySelector("#jpChart").style.marginLeft = p / 2 + "%";
 	}
 	
-	function showResults() {
+	function showResults() { //constructs the results based on the strongest trais - filles in letters, title, description, percentage and link to external page (see let types)
 		type += (e >= i) ? "E" : "I";
 		type += (s >= n) ? "S" : "N";
 		type += (t >= f) ? "T" : "F";
@@ -86,7 +86,7 @@ const MbtiModule = (function() {
 		document.querySelector("#results").classList.remove("hidden");
 	}
 	
-	return {
+	return { //called upon test submission and runs functions in sequence
 		processForm: function() {
 			resetScores();
 			getScores();
