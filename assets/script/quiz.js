@@ -3,10 +3,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const sectionKey = document.body.dataset.section; 
     const feedbackImage = document.getElementById("section-result");
     const validationMsg = document.getElementById("validation-message"); 
-
+      
     // Listen for form submission and prevent reload of page
     form.addEventListener("submit", (e) => {
-        e.preventDefault(); // 
+        e.preventDefault(); 
         //bootstrap class
         form.classList.add("was-validated");
 
@@ -23,6 +23,28 @@ document.addEventListener("DOMContentLoaded", () => {
             validationMsg.style.display = "none"; 
         }
 
+        const formData = new FormData(form);
+
+            //start counting e and i values from the form
+    let eCount = 0;
+    let iCount = 0;
+
+    //loop and count for e and i values
+    for (const [name, value] of formData.entries()) {
+        if (value ==="e") {
+            eCount++;
+        }
+
+        else if (value ==="i") {
+            iCount++;
+        }
+    }
+
         alert("Form complete — ready to store");
+
+        // to test the page count in dev tools
+        console.log("Extraversion count:", eCount);
+        console.log("Intraversion count:", iCount);
+
     });
 });
