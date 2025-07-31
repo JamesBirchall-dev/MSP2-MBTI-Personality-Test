@@ -1,22 +1,22 @@
 document.addEventListener("DOMContentLoaded", () => {
   // Define the MBTI types data (same as your original)
   const types = {
-    ISTJ: {title: "The Traditionalist", percentage: "13.7%", description: "Dutiful, Practical, Logical, Methodical", site: "http://www.personalitypage.com/html/ISTJ.html"},
-    ISFJ: {title: "The Protector", percentage: "12.7%", description: "Dutiful, Practical, Supportive, Meticulous", site: "http://www.personalitypage.com/html/ISFJ.html"},
-    INFJ: {title: "The Guide", percentage: "1.7%", description: "Devoted, Innovative, Idealistic, Compassionate", site: "http://www.personalitypage.com/html/INFJ.html"},
-    INTJ: {title: "The Visionary", percentage: "1.4%", description: "Independent, Innovative, Analytical, Purposeful", site: "http://www.personalitypage.com/html/INTJ.html"},
-    ISTP: {title: "The Problem-Solver", percentage: "6.4%", description: "Expedient, Practical, Objective, Adaptable", site: "http://www.personalitypage.com/html/ISTP.html"},
-    ISFP: {title: "The Harmonizer", percentage: "6.1%", description: "Tolerant, Realistic, Harmonious, Adaptable", site: "http://www.personalitypage.com/html/ISFP.html"},
-    INFP: {title: "The Humanist", percentage: "3.2%", description: "Insightful, Innovative, Idealistic, Adaptable", site: "http://www.personalitypage.com/html/INFP.html"},
-    INTP: {title: "The Conceptualizer", percentage: "2.4%", description: "Questioning, Innovative, Objective, Abstract", site: "http://www.personalitypage.com/html/INTP.html"},
-    ESTP: {title: "The Activist", percentage: "5.8%", description: "Energetic, Practical, Pragmatic, Spontaneous", site: "http://www.personalitypage.com/html/ESTP.html"},
-    ESFP: {title: "The Fun-Lover", percentage: "8.7%", description: "Spontaneous, Practical, Friendly, Harmonious", site: "http://www.personalitypage.com/html/ESFP.html"},
-    ENFP: {title: "The Enthusiast", percentage: "6.3%", description: "Optimistic, Innovative, Compassionate, Versatile", site: "http://www.personalitypage.com/html/ENFP.html"},
-    ENTP: {title: "The Entrepreneur", percentage: "2.8%", description: "Risk-Taking, Innovative, Outgoing, Adaptable", site: "http://www.personalitypage.com/html/ENTP.html"},
-    ESTJ: {title: "The Coordinator", percentage: "10.4%", description: "Organized, Practical, Logical, Outgoing", site: "http://www.personalitypage.com/html/ESTJ.html"},
-    ESFJ: {title: "The Supporter", percentage: "12.6%", description: "Friendly, Practical, Loyal, Organized", site: "http://www.personalitypage.com/html/ESFJ.html"},
-    ENFJ: {title: "The Developer", percentage: "2.8%", description: "Friendly, Innovative, Supportive, Idealistic", site: "http://www.personalitypage.com/html/ENFJ.html"},
-    ENTJ: {title: "The Reformer", percentage: "2.9%", description: "Determined, Innovative, Strategic, Outgoing", site: "http://www.personalitypage.com/html/ENTJ.html"}
+    ISTJ: {title: "The Logistician", percentage: "13.7%", description: "Introverted, Observant, Thinking, and Judging", site: "https://www.16personalities.com/istj-personality", image: "assets/images/istjresult.png" },
+    ISFJ: {title: "The Defender", percentage: "12.7%", description: "Introverted, Observant, Feeling, and Judging", site: "https://www.16personalities.com/isfj-personality", image: "assets/images/isfjresult.png" },
+    INFJ: {title: "The Advocate", percentage: "1.7%", description: "Introverted, Intuitive, Feeling, and Judging", site: "https://www.16personalities.com/infj-personality", image: "assets/images/infjresult.png" }, 
+    INTJ: {title: "The Architect", percentage: "1.4%", description: "Introverted, Intuitive, Thinking, and Judging", site: "https://www.16personalities.com/intj-personality", image: "assets/images/intjresult.png" },
+    ISTP: {title: "The Virtuoso", percentage: "6.4%", description: "Introverted, Observant, Thinking, and Prospecting", site: "https://www.16personalities.com/istp-personality", image: "assets/images/istpresult.png" },
+    ISFP: {title: "The Adventurer", percentage: "6.1%", description: "Introverted, Observant, Feeling, and Prospecting", site: "https://www.16personalities.com/isfp-personality", image: "assets/images/isfpresult.png" },
+    INFP: {title: "The Mediator", percentage: "3.2%", description: "Introverted, Intuitive, Feeling, and Prospecting ", site: "https://www.16personalities.com/infp-personality", image: "assets/images/infpresult.png" },
+    INTP: {title: "The Logician", percentage: "2.4%", description: "Introverted, Intuitive, Thinking, and Prospecting", site: "https://www.16personalities.com/intp-personality", image: "assets/images/intpresult.png" },
+    ESTP: {title: "The Entrepeneur", percentage: "5.8%", description: "Extraverted, Observant, Thinking, and Prospecting", site: "https://www.16personalities.com/estp-personality", image: "assets/images/estpresult.png" },
+    ESFP: {title: "The Entertainer", percentage: "8.7%", description: "Extraverted, Observant, Feeling, and Prospecting", site: "https://www.16personalities.com/esfp-personality", image: "assets/images/esfpresult.png" },
+    ENFP: {title: "The Campaigner", percentage: "6.3%", description: "Extraverted, Intuitive, Feeling, and Prospecting", site: "https://www.16personalities.com/enfp-personality", image: "assets/images/enfpresult.png" },
+    ENTP: {title: "The Debater", percentage: "2.8%", description: "Extraverted, Intuitive, Thinking, and Prospecting", site: "https://www.16personalities.com/entp-personality", image: "assets/images/entpresult.png" },
+    ESTJ: {title: "The Executive", percentage: "10.4%", description: "Extraverted, Observant, Thinking, and Judging ", site: "https://www.16personalities.com/estj-personality", image: "assets/images/estjresult.png" },
+    ESFJ: {title: "The Consul", percentage: "12.6%", description: "Extraverted, Observant, Feeling, and Judging", site: "https://www.16personalities.com/esfj-personality", image: "assets/images/esfjresult.png" },
+    ENFJ: {title: "The Protagonist", percentage: "2.8%", description: "Extraverted, Intuitive, Feeling, and Judging", site: "https://www.16personalities.com/enfj-personality", image: "assets/images/enfjresult.png" },
+    ENTJ: {title: "The Commander", percentage: "2.9%", description: "Extraverted, Intuitive, Thinking, and Judging", site: "https://www.16personalities.com/entj-personality", image: "assets/images/entjresult.png" },
   };
 
   // Parse URL parameters
