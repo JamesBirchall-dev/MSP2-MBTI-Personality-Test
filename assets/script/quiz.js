@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
    
 
-    let nextPage = ""; //var to hold href of the next page
+    let nextPage = ""; //var to hold href of the next page - TO BE TESTED
         if (currentSection === "section1")
             nextPage = "sn.html";
         else if (currentSection === "section2") nextPage = "tf.html"
