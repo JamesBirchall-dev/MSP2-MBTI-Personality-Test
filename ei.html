@@ -28,113 +28,223 @@
   <a class="nav-link disabled" aria-disabled="true"></a>
 </nav>
 <h1>MBTI Personality Test</h1>
-  <form id="quiz-form">
+  <form id="quiz-form" class="needs-validation" novalidate>
   
   <!--Section 1 Heading for the 1/4 results scoring-->
   <h2>Section 1: Extraversion (E) vs. Introversion (I)</h2>  
   
-    <div class="card">
+<form id="quiz-form" class="needs-validation" novalidate>
+  <div class="card">
     <div class="card-body">
-      <div class="section1-question">
-        <p><strong>1. You Prefer To Spend Time :</strong></p>
-        <label><input type="radio" name="q1" value="e"> Engage In Group Activities</label><br>
-        <label><input type="radio" name="q1" value="i"> Enjoy Solitude And Quiet</label>
+      <p><strong>1. In social settings, do you prefer to:</strong></p>
+
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q1" id="q1e" value="e" required>
+        <label class="form-check-label" for="q1e">Interact with many people, including strangers</label>
       </div>
-    </div>     
+
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q1" id="q1i" value="i">
+        <label class="form-check-label" for="q1i">Stick with a few close friends or people you know</label>
+      </div>
+
+      <div class="invalid-feedback">
+        Please select an answer to continue.
+      </div>
+    </div>
+  </div>
+
+  <form id="quiz-form" class="needs-validation" novalidate>
+  <div class="card">
+    <div class="card-body">
+      <p><strong>2. When working on a project, do you prefer to:</strong></p>
+
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q2" id="q2e" value="e" required>
+        <label class="form-check-label" for="q2e">Collaborate with a team</label>
+      </div>
+
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q2" id="q2e" value="i">
+        <label class="form-check-label" for="q2i">Work independently in a quiet space</label>
+      </div>
+
+      <div class="invalid-feedback">
+        Please select an answer to continue.
+      </div>
+    </div>
+  </div>
+
+  <form id="quiz-form" class="needs-validation" novalidate>
+  <div class="card">
+    <div class="card-body">
+      <p><strong>3. At a party, are you more likely to: </strong></p>
+
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q3" id="q3e" value="e" required>
+        <label class="form-check-label" for="q3e">Mingle and talk to lots of people</label>
+      </div>
+
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q3" id="q3e" value="i">
+        <label class="form-check-label" for="q3i">Find a quiet corner or leave early</label>
+      </div>
+
+      <div class="invalid-feedback">
+        Please select an answer to continue.
+      </div>
+    </div>
+  </div>
+
+  <form id="quiz-form" class="needs-validation" novalidate>
+  <div class="card">
+    <div class="card-body">
+      <p><strong>How do you recharge your energy? </strong></p>
+
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q4" id="q4e" value="e" required>
+        <label class="form-check-label" for="q4e">Being around people and staying active</label>
+      </div>
+
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q4" id="q4e" value="i">
+        <label class="form-check-label" for="q4i">Spending time alone or in reflection</label>
+      </div>
+
+      <div class="invalid-feedback">
+        Please select an answer to continue.
+      </div>
+    </div>
+  </div>
+
+<form id="quiz-form" class="needs-validation" novalidate>
+  <div class="card">
+    <div class="card-body">
+      <p><strong>5. When you're thinking through a problem, you tend to: </strong></p>
+
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q5" id="q5e" value="e" required>
+        <label class="form-check-label" for="q5e">Talk it out with others</label>
+      </div>
+
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q5" id="q5e" value="i">
+        <label class="form-check-label" for="q5i">Think it through privately first</label>
+      </div>
+
+      <div class="invalid-feedback">
+        Please select an answer to continue.
+      </div>
+    </div>
+  </div>
+
+  <form id="quiz-form" class="needs-validation" novalidate>
+  <div class="card">
+    <div class="card-body">
+      <p><strong>6. Your ideal weekend looks like: </strong></p>
+
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q6" id="q6e" value="e" required>
+        <label class="form-check-label" for="q6e">Going out, attending events, or socializing</label>
+      </div>
+
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q6" id="q6e" value="i">
+        <label class="form-check-label" for="q6i">Staying home, reading, or doing solo activities</label>
+      </div>
+
+      <div class="invalid-feedback">
+        Please select an answer to continue.
+      </div>
+    </div>
+  </div>
+
+    <form id="quiz-form" class="needs-validation" novalidate>
+  <div class="card">
+    <div class="card-body">
+      <p><strong>7. Do you find it easier to: </strong></p>
+
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q7" id="q7e" value="e" required>
+        <label class="form-check-label" for="q7e">Start conversations with new people</label>
+      </div>
+
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q7" id="q7e" value="i">
+        <label class="form-check-label" for="q7i">Wait to be approached or avoid small talk</label>
+      </div>
+
+      <div class="invalid-feedback">
+        Please select an answer to continue.
+      </div>
+    </div>
+  </div>
+
+<form id="quiz-form" class="needs-validation" novalidate>
+  <div class="card">
+    <div class="card-body">
+      <p><strong>8. At work or school, you are more comfortable  </strong></p>
+
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q8" id="q8e" value="e" required>
+        <label class="form-check-label" for="q8e">In fast-paced, social environments</label>
+      </div>
+
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q8" id="q8e" value="i">
+        <label class="form-check-label" for="q8i">In quiet, low-interruption settings</label>
+      </div>
+
+      <div class="invalid-feedback">
+        Please select an answer to continue.
+      </div>
+    </div>
   </div>
   
+  <form id="quiz-form" class="needs-validation" novalidate>
   <div class="card">
     <div class="card-body">
-     <div class="section1-question">     
-      <p><strong>2. You Prefer To Spend Time :</strong></p>
-      <label><input type="radio" name="q2" value="e"> Engage In Group Activities</label><br>
-      <label><input type="radio" name="q2" value="i"> Enjoy Solitude And Quiet</label>
-     </div>
-    </div>     
-  </div>    
+      <p><strong>9. You tend to feel more drained after: </strong></p>
 
-  <div class="card">
-    <div class="card-body">
-      <div class="section1-question">     
-      <p><strong>3. You Feel More Comfortable When You :</strong></p>
-      <label><input type="radio" name="q3" value="e"> Engage In Group Activities</label><br>
-      <label><input type="radio" name="q3" value="i"> Enjoy Solitude And Quiet</label>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q9" id="q9e" value="e" required>
+        <label class="form-check-label" for="q9e">Spending too much time alone</label>
+      </div>
+
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q9" id="q9e" value="i">
+        <label class="form-check-label" for="q9i"> Being around lots of people for long periods</label>
+      </div>
+
+      <div class="invalid-feedback">
+        Please select an answer to continue.
+      </div>
     </div>
-    </div>     
-  </div>
-        
-    <div class="card">
-    <div class="card-body">
-    <div class="section1-question">     
-      <p><strong>4. You Often Find Yourself :</strong></p>
-      <label><input type="radio" name="q4" value="e"> Engage In Group Activities</label><br>
-      <label><input type="radio" name="q4" value="i"> Enjoy Solitude And Quiet</label>
-    </div>
-    </div>     
-  </div>
-        
-  <div class="card">
-    <div class="card-body">
-    <div class="section1-question">  
-      <p><strong>5. You Often Find Yourself :</strong></p>
-      <label><input type="radio" name="q5" value="e"> Engage In Group Activities</label><br>
-      <label><input type="radio" name="q5" value="i"> Enjoy Solitude And Quiet</label>
-    </div>
-    </div>     
-  </div>
-        
-  <div class="card">
-    <div class="card-body">  
-    <div class="section1-question">    
-      <p><strong>6. You Prefer To Spend Time :</strong></p>
-      <label><input type="radio" name="q6" value="e"> Engage In Group Activities</label><br>
-      <label><input type="radio" name="q6" value="i"> Enjoy Solitude And Quiet</label>
-    </div>
-    </div>     
-  </div>
-        
-  <div class="card">
-    <div class="card-body">
-    <div class="section1-question">    
-      <p><strong>7. You Usually Choose To :</strong></p>
-      <label><input type="radio" name="q7" value="e"> Engage In Group Activities</label><br>
-      <label><input type="radio" name="q7" value="i"> Enjoy Solitude And Quiet</label>
-    </div>
-    </div>     
-  </div>
-        
-  <div class="card">
-    <div class="card-body">
-    <div class="section1-question">     
-      <p><strong>8. You Often Find Yourself :</strong></p>
-      <label><input type="radio" name="q8" value="e"> Engage In Group Activities</label><br>
-      <label><input type="radio" name="q8" value="i"> Enjoy Solitude And Quiet</label>
-    </div>
-    </div>     
   </div>
 
-    <div class="card">
-    <div class="card-body">      
-    <div class="section1-question">    
-      <p><strong>9. You Tend To :</strong></p>
-      <label><input type="radio" name="q9" value="e"> Engage In Group Activities</label><br>
-      <label><input type="radio" name="q9" value="i"> Enjoy Solitude And Quiet</label>
-    </div>
-    </div>     
-  </div>
-        
+  <form id="quiz-form" class="needs-validation" novalidate>
   <div class="card">
     <div class="card-body">
-    <div class="section1-question">      
-      <p><strong>10. You Are More Likely To :</strong></p>
-      <label><input type="radio" name="q10" value="e"> Engage In Group Activities</label><br>
-      <label><input type="radio" name="q10" value="i"> Enjoy Solitude And Quiet</label>
+      <p><strong>10. When making plans, you prefer: </strong></p>
+
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q10" id="q10e" value="e" required>
+        <label class="form-check-label" for="q10e">Spontaneous group activities</label>
+      </div>
+
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q10" id="q10e" value="i">
+        <label class="form-check-label" for="q10i">Structured, solo time or small gatherings</label>
+      </div>
+
+      <div class="invalid-feedback">
+        Please select an answer to continue.
+      </div>
     </div>
-    </div>     
   </div>
 
  <!--href needs to be # in order for the js to deal with the navigation-->
-   <a href="#" id="next" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" data-next="sn.html">Next Section</a>
+   <button type="submit" id="next" class="btn btn-primary btn-lg active">Next Section</button>
   </form>
 
 <script src="assets/script/quiz.js"></script>
