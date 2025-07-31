@@ -39,12 +39,13 @@ document.addEventListener("DOMContentLoaded", () => {
             iCount++;
         }
     }
+    // store results in a sessionstorage
+    sessionStorage.setItem("section1", JSON.stringify({ e: eCount, i: iCount}));
+
 
         alert("Form complete — ready to store");
 
-        // to test the page count in dev tools
-        console.log("Extraversion count:", eCount);
-        console.log("Intraversion count:", iCount);
-
+        // to test the session storage using the unique body id assigned to eat page  
+        console.log("Stored section1:",sessionStorage.getItem("section1"))
     });
 });
