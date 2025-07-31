@@ -42,10 +42,19 @@ document.addEventListener("DOMContentLoaded", () => {
     // store results in a sessionstorage
     sessionStorage.setItem("section1", JSON.stringify({ e: eCount, i: iCount}));
 
+   
 
-        alert("Form complete — ready to store");
+    let nextPage = ""; //var to hold href of the next page
+        if (currentSection === "section1")
+            nextPage = "sn.html";
+        else if (currentSection === "section2") nextPage = "tf.html"
+        else if (currentSection === "section3") nextPage = "jp.html"
+        else if (currentSection === "section4") nextPage = "results.html"
 
-        // to test the session storage using the unique body id assigned to eat page  
-        console.log("Stored section1:",sessionStorage.getItem("section1"))
+        if (nextPage) {
+            window.location.href = nextPage;
+        }
+
+         
     });
 });
