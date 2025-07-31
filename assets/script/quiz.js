@@ -3,6 +3,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const sectionKey = document.body.dataset.section;
     const feedbackImage = document.getElementById("section-result");
     const validationMsg = document.getElementById("validation-message"); 
+    const valueMap = { // define answer ids to count for each section
+        section1: ["e", "i"],
+        section2: ["s", "n"],
+        section3: ["t", "f"],
+        section4: ["j", "p"],
+
+    }
+
       
     // Listen for form submission and prevent reload of page
     form.addEventListener("submit", (e) => {
@@ -24,24 +32,25 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         const formData = new FormData(form);
+        const [firstLetter, secondLetter] = valueMap[sectionKey] || [];
 
-            //start counting e and i values from the form
-    let eCount = 0;
-    let iCount = 0;
+
+            // counts first and second letter so can be applied to all the section pages
+    let firstCount = 0;
+    let secondCount = 0;
 
     //loop and count for e and i values
     for (const [name, value] of formData.entries()) {
-        if (value ==="e") {
-            eCount++;
+        if (value === firstLetter) firstCount++;
+        else if (value === secondLetter) secondCount++;
+            
         }
-
-        else if (value ==="i") {
-            iCount++;
-        }
-    }
+    
     // store results in a sessionstorage
-    sessionStorage.setItem(sectionKey, JSON.stringify({ e: eCount, i: iCount }));
-
+    sessionStorage.setItem(sectionKey, JSON.stringify({
+    [firstLetter]: firstCount,
+    [secondLetter]: secondCount
+    }))
    
     // navigation 
     let nextPage = "";
