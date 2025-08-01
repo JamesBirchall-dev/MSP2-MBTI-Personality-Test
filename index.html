@@ -16,16 +16,19 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
   </head>
-<body>
+<body class="index-page">
     <!-- Navigation -->
 <!-- Navigation -->
- <nav class="nav">
+ <nav class="nav py-3">
+    <div class="container"></div>
   <a class="nav-link active" aria-current="page" href="index.html"></a>
   <a class="nav-link" href="index.html">Home</a>
   <a class="nav-link" href="testpage.html">Test</a>
   <a class="nav-link disabled" aria-disabled="true"></a>
+ </div>
 </nav>
-</nav>
+
+
     <div class="container">
         <h1>
             The Myers Briggs Type Indicator
@@ -43,11 +46,13 @@
         can be quite skewed in this regard as many people will show a high relation to both extrovert and introvert in much of the answers. 
         </p>
 
-        <img src="https://github.com/JamesBirchall-dev/imagehost/blob/main/mayersbriggsdiagram.png?raw=true" alt="Myers Briggs Personality Diagram">
-        <a href="testpage.html">
-        <button>Take the Test</button>
+        <section class="image-section text-center py-5">
+      <img src="https://github.com/JamesBirchall-dev/imagehost/blob/main/mayersbriggsdiagram.png?raw=true" 
+       alt="Myers Briggs Personality Diagram" class="d-block mb-4">
+        <a href="ei.html">
+        <button type="button" class="btn btn-secondary">Take the test!</button>
         </a>
-    </div>        
+    </div>
+</section>        
 </body>
-<script src="assets/script/script.js"></script>
 </html>

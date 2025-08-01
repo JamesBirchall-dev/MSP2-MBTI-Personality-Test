@@ -3,9 +3,43 @@
 :root {
 	--primary-font: "Montserrat", sans-serif;
 	--secondary-font: "Varela", sans-serif;
-	--primary-color: rgb(233,124,156);
-	--secondary-color: rgb(97,145,176);
+	--primary-color: rgb(27, 38, 46);
+	--secondary-color: rgb(212, 184, 191);
+}
 
+body {
+  font-family: var(--primary-font);
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+}
+
+
+
+.index-page .container > *:not(p) {
+  text-align: center;
+}
+
+.image-section {
+  background-color: var(--secondary-color); 
+  color: white; 
+}
+.image-section img{
+	width: 80%;
+	max-width: 600px;
+	height: auto;
+	display: block;
 
 }
 
+@media (max-width: 768px) {
+	.image-section img {
+		width: 90%;
+		max-width: 500px;
+	}
+}
+
+@media (max-width: 480px) {
+	.image-section img{
+		width: 100%;
+	}
+}
