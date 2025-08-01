@@ -19,14 +19,23 @@ document.addEventListener("DOMContentLoaded", () => {
     ENTJ: {title: "The Commander", percentage: "2.9%", description: "Extraverted, Intuitive, Thinking, and Judging", site: "https://www.16personalities.com/entj-personality", image: "https://github.com/JamesBirchall-dev/imagehost/blob/main/entjresult.png?raw=true" },
   };
 
-  // Parse URL parameters
-                const params = new URLSearchParams(window.location.search);
-                const type = params.get("type");  
+// grabs stored values from each sections sessionstorage. section 1 = e vs i, section 2 = s vs n, section 3 = t vs f, section 3 = j vs p 
+const section1 = JSON.parse(sessionStorage.getItem("section1"));
+const section2 = JSON.parse(sessionStorage.getItem("section2"));
+const section3 = JSON.parse(sessionStorage.getItem("section3"));
+const section4 = JSON.parse(sessionStorage.getItem("section4"));
 
-  if (!type || !types[type]) {
-    document.body.innerHTML = "<h1>Error: MBTI type not found or invalid.</h1>";
-    return;
-  }
+// not sure if required as have bootstrap validation - CHECK
+if (!section1 || !section2 || !section3 || !section4) {
+  document.body.innerHTML =  "<h1>Error: Missing results from one or more sections.</h1>";
+  return;
+}
+// gets the most amount. the first option will take precident so requires >= for example, as the first option defaults as dominant (as even amount of questions so also to prevent a split answer)
+const type =
+ (section1.e >= section1.i ? "E" : "I") + 
+ (section2.s >= section2.n ? "S" : "N") + 
+ (section3.t >= section3.f ? "T" : "F") +
+ (section4.j >= section4.p ? "J" : "P");
 
   // Populate page elements
   document.getElementById("type").textContent = type;

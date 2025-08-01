@@ -1,3 +1,4 @@
+/*
 const MbtiModule = (function () {
   // MBTI trait scores
   let e, i, s, n, t, f, j, p;
