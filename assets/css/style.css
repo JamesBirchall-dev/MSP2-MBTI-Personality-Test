@@ -3,32 +3,33 @@
 :root {
 	--primary-font: "Montserrat", sans-serif;
 	--secondary-font: "Varela", sans-serif;
-	--primary-color: rgb(27, 38, 46);
-	--secondary-color: rgb(212, 184, 191);
+	--primary-color: rgb(49, 81, 102);
+	--secondary-color: rgb(168, 180, 211);
 }
 
 body {
   font-family: var(--primary-font);
   color: var(--primary-color);
   background-color: var(--secondary-color);
+  }
+
+.custom-navbar {
+  background-color: var(--primary-color);
+  color: white;
 }
 
-
-
-.index-page .container > *:not(p) {
+.index-page .container > {
   text-align: center;
 }
 
 .image-section {
   background-color: var(--secondary-color); 
-  color: white; 
+  color: rgb(16, 12, 19); 
 }
-.image-section img{
-	width: 80%;
-	max-width: 600px;
-	height: auto;
-	display: block;
-
+.image-section img {
+  width: 100%;
+  height: auto;
+  max-width: 800px;
 }
 
 @media (max-width: 768px) {

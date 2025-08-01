@@ -17,42 +17,70 @@
     <link rel="stylesheet" href="assets/css/style.css">
   </head>
 <body class="index-page">
-    <!-- Navigation -->
-<!-- Navigation -->
+    
+<!-- Navigation py-3 required for optimal width, mb-4 for spacing beneath, container required to bring button in alignment with content-->
+  <nav class="nav py-3 mb-4 custom-navbar">
+    <div class="container">
+      <a class="nav-link" href="ei.html">
+            <button type="button" class="btn btn-primary btn-lg">Take the test!</button>
+      </a>
+    </div>
+  </nav>
+
+<!--Heading card, container required for alignment-->  
+<div class="container">
+<div class="card">
+  <div class="card-header">
+    <h1>The Myers Briggs Type Indicator Test (MBTI)</h1>
+  </div>
+  <div class="card-body">
+    <h2 class="card-title">About the test</h2>
+    <p class="card-text">
+  The Myers-Briggs Type Indicator (MBTI) is based on Carl Jung's theories of psychological types. During World War II, Katharine Briggs and her daughter, Isabel Briggs Myers, developed the test to simplify Jung's ideas into a practical tool for assigning roles in the military. The MBTI identifies 16 personality types, each represented by a four-letter abbreviation that reflects an individual's preferences in four areas. Notably, the letter "N" is used to denote "intuition" to avoid confusion with "introversion," which also starts with the letter "I."
+</p>
+
+<p class="card-text">
+  It's important to note that research has since shown the MBTI’s binary approach—for example, classifying individuals strictly as either introverted or extroverted—can be overly simplistic. Many people exhibit traits of both ends of the spectrum, resulting in skewed distributions and a lack of nuance in the results.
+</p>
+    <a href="https://en.wikipedia.org/wiki/Myers%E2%80%93Briggs_Type_Indicator" target="_blank" class="btn btn-secondary">Visit the wikipedia page</a>
+  </div>
+</div>
+</div>
+
+<!-- Navigation PLACEHOLDER FOR OTHER PAGES
  <nav class="nav py-3">
     <div class="container"></div>
   <a class="nav-link active" aria-current="page" href="index.html"></a>
   <a class="nav-link" href="index.html">Home</a>
-  <a class="nav-link" href="testpage.html">Test</a>
-  <a class="nav-link disabled" aria-disabled="true"></a>
- </div>
-</nav>
-
-
-    <div class="container">
-        <h1>
-            The Myers Briggs Type Indicator
-        </h1>
-        <p>
-        Based largely on the work of Carl Jung's theories of psychological types, the test was developed by Katharine Briggs and Isabel Myers-Briggs in World War II.
-        It was developed to simplify Jung's work into a simple test for practical uses for role assignment in the war. The 16 types are typically referred to by an 
-        abbreviation of four letters, the initial letters of each of their four type preferences (except in the case of intuition, which uses the abbreviation "N" to
-        distinguish it from introversion). For instance:
-
-        ENTJ: extraversion (E), intuition (N), thinking (T), judgment (J)
-        ISFP: introversion (I), sensing (S), feeling (F), perception (P)      
-        
-        It is worth noting, that studies since have shown as each question has been broken down to introvert vs extrovert, this quite polarising and the distribution of results
-        can be quite skewed in this regard as many people will show a high relation to both extrovert and introvert in much of the answers. 
-        </p>
-
-        <section class="image-section text-center py-5">
-      <img src="https://github.com/JamesBirchall-dev/imagehost/blob/main/mayersbriggsdiagram.png?raw=true" 
-       alt="Myers Briggs Personality Diagram" class="d-block mb-4">
-        <a href="ei.html">
+  <a class="nav-link" href="ei.html">
         <button type="button" class="btn btn-secondary">Take the test!</button>
         </a>
-    </div>
-</section>        
+  <a class="nav-link disabled" aria-disabled="true"></a>
+ </div>
+</nav>-->
+    
+<section class="image-section text-center pt-3 pb-5">
+  <div class="container">
+    <h3 class="mb-4">Diagram of Cognitive Functions in the MBTI</h3>
+
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Cognitive_Functions.svg/1024px-Cognitive_Functions.svg.png" 
+         alt="Myers Briggs Personality Diagram" 
+         class="img-fluid rounded-4 mb-3" 
+         style="max-width: 100%; height: auto;">
+
+ <p class="mb-3">
+  <span class="d-inline-block bg-light text-dark px-2 py-1 rounded">
+    <small>
+      Original concepts by Katharine Cook Briggs (1875-1968) and Isabel Briggs Myers (1897-1980).Author of the referenced image is JakeBeech. - This file was derived from: CognitiveFunctions.png, Public Domain – <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>
+    </small>
+  </span>
+</p>
+
+    <a href="ei.html">
+      <button type="button" class="btn btn-secondary">Take the test!</button>
+    </a>
+
+  </div>
+</section>   
 </body>
 </html>
