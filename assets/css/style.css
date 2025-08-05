@@ -32,12 +32,35 @@ body {
   max-width: 800px;
 }
 
+/* boostrap quiz form override styles for optimised width on larger screens*/
+
+#quiz-form {
+  max-width: 700px;
+  margin:auto;
+  padding: 1rem; 
+}
+
+/*spacing around cards*/
+.card {
+  margin-bottom: 1rem;
+  color: rgb(245, 231, 231);
+  background-color: rgb(25, 38, 61); /*essential to show radio buttons as input class being used in JS*/
+  font-size: 1rem;
+  font-weight: 300 ; /*ensures readbility with negative contrast*/
+}
+
+.form-check-input {
+  opacity: 1;
+}
+
 @media (max-width: 768px) {
 	.image-section img {
 		width: 90%;
 		max-width: 500px;
 	}
 }
+
+
 
 @media (max-width: 480px) {
 	.image-section img{
