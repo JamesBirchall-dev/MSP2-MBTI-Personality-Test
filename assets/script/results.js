@@ -1,6 +1,6 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function () {
   // Define the MBTI types data (same as your original)
-  const types = {
+  var types = {
     ISTJ: {title: "The Logistician", percentage: "13.7%", description: "Introverted, Observant, Thinking, and Judging", site: "https://www.16personalities.com/istj-personality", image: "https://github.com/JamesBirchall-dev/imagehost/blob/main/istjresult.png?raw=true" },
     ISFJ: {title: "The Defender", percentage: "12.7%", description: "Introverted, Observant, Feeling, and Judging", site: "https://www.16personalities.com/isfj-personality", image: "https://github.com/JamesBirchall-dev/imagehost/blob/main/isfjresult.png?raw=true" },
     INFJ: {title: "The Advocate", percentage: "1.7%", description: "Introverted, Intuitive, Feeling, and Judging", site: "https://www.16personalities.com/infj-personality", image: "https://github.com/JamesBirchall-dev/imagehost/blob/main/infjresult.png?raw=true" }, 
@@ -20,10 +20,10 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
 // grabs stored values from each sections sessionstorage. section 1 = e vs i, section 2 = s vs n, section 3 = t vs f, section 3 = j vs p 
-const section1 = JSON.parse(sessionStorage.getItem("section1"));
-const section2 = JSON.parse(sessionStorage.getItem("section2"));
-const section3 = JSON.parse(sessionStorage.getItem("section3"));
-const section4 = JSON.parse(sessionStorage.getItem("section4"));
+var section1 = JSON.parse(sessionStorage.getItem("section1"));
+var section2 = JSON.parse(sessionStorage.getItem("section2"));
+var section3 = JSON.parse(sessionStorage.getItem("section3"));
+var section4 = JSON.parse(sessionStorage.getItem("section4"));
 
 // not sure if required as have bootstrap validation - CHECK
 if (!section1 || !section2 || !section3 || !section4) {
@@ -31,11 +31,13 @@ if (!section1 || !section2 || !section3 || !section4) {
   return;
 }
 // gets the most amount. the first option will take precident so requires >= for example, as the first option defaults as dominant (as even amount of questions so also to prevent a split answer)
-const type =
+var type =
  (section1.e >= section1.i ? "E" : "I") + 
  (section2.s >= section2.n ? "S" : "N") + 
  (section3.t >= section3.f ? "T" : "F") +
  (section4.j >= section4.p ? "J" : "P");
+
+ var resultData = types[type];
 
   // Populate page elements
   document.getElementById("type").textContent = type;
