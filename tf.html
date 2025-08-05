@@ -20,13 +20,14 @@
   <!--body id section for custom css and js based on each section scores-->  
 <body data-section="section3">
 
-    <!-- Navigation -->
- <nav class="nav">
-  <a class="nav-link active" aria-current="page" href="testpage.html"></a>
-  <a class="nav-link" href="index.html">Home</a>
-  <a class="nav-link" href="testpage.html">Test</a>
-  <a class="nav-link disabled" aria-disabled="true"></a>
-</nav>
+<!-- Navigation py-3 required for optimal width, mb-4 for spacing beneath, container required to bring button in alignment with content-->
+  <nav class="nav py-3 mb-4 custom-navbar">
+    <div class="container">
+      <a class="nav-link" href="index.html">
+            <button type="button" class="btn btn-primary btn-lg">Home</button>
+      </a>
+    </div>
+  </nav>
 <div class="container">  
 <h1>MBTI Personality Test</h1>
   <!--Section 3 Heading for the 3/4 results scoring-->
@@ -83,7 +84,7 @@
 
       <div class="form-check">
         <input class="form-check-input" type="radio" name="q23" id="q23t" value="t" required>
-        <label class="form-check-label" for="q23e">Point out flaws to improve ideas</label>
+        <label class="form-check-label" for="q23t">Point out flaws to improve ideas</label>
       </div>
 
       <div class="form-check">

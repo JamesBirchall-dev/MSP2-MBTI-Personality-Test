@@ -17,14 +17,14 @@
     <link rel="stylesheet" href="assets/css/style.css">
   </head>
  
-  <!-- Navigation -->
- <nav class="nav">
-  <a class="nav-link active" aria-current="page" href="results.html"></a>
-  <a class="nav-link" href="index.html">Home</a>
-  <a class="nav-link" href="testpage.html">Test</a>
-  <a class="nav-link disabled" aria-disabled="true"></a>
-</nav>
-
+<!-- Navigation py-3 required for optimal width, mb-4 for spacing beneath, container required to bring button in alignment with content-->
+  <nav class="nav py-3 mb-4 custom-navbar">
+    <div class="container">
+      <a class="nav-link" href="index.html">
+            <button type="button" class="btn btn-primary btn-lg">Home</button>
+      </a>
+    </div>
+  </nav>
 <body>
   <h1>Your MBTI Type: <span id="type"></span></h1>
   <h2 id="title"></h2>
