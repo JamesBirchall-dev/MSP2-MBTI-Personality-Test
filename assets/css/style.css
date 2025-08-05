@@ -1,54 +1,72 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
+/* Monsterrat google font import*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+/*Global variable*/
 :root {
-	--primary-font: "Montserrat", sans-serif;
-	--secondary-font: "Varela", sans-serif;
-	--primary-color: rgb(49, 81, 102);
-	--secondary-color: rgb(168, 180, 211);
+  --primary-font: "Montserrat", sans-serif;
+  --secondary-font: "Varela", sans-serif;
+  --primary-color: rgb(49, 81, 102);
+  --secondary-color: rgb(168, 180, 211);
 }
-
+/*font text color and background color for page*/
 body {
   font-family: var(--primary-font);
   color: var(--primary-color);
   background-color: var(--secondary-color);
-  }
-
-h1, h2, h3 {
- font-family:  var(--secondary-font);
- color: rgb(2, 18, 29);
- text-align: center;
- }
-
-
+}
+/*main headings stlye*/
+h1,
+h2,
+h3 {
+  font-family: var(--secondary-font);
+  color: rgb(2, 18, 29);
+  text-align: center;
+}
+/*Navbar styling*/
 .custom-navbar {
   background-color: var(--primary-color);
   color: white;
 }
-
+/*centre alignment for homepage*/
 .index-page .container {
   text-align: center;
 }
-
+/*image section stylinh*/
 .image-section {
-  background-color: var(--secondary-color); 
-  color: rgb(16, 12, 19); 
+  background-color: var(--secondary-color);
+  color: rgb(16, 12, 19);
 }
+/*image section - responsive full width with a max width*/
 .image-section img {
   width: 100%;
   height: auto;
   max-width: 800px;
 }
 
+/*device scaling for image*/
+@media (max-width: 768px) {
+  .image-section img {
+    width: 90%;
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 480px) {
+  .image-section img {
+    width: 100%;
+  }
+}
+
+
 /* boostrap quiz form override styles for optimised width on larger screens*/
 
 #quiz-form {
   max-width: 700px;
-  margin:auto;
-  padding: 1rem; 
+  margin: auto;
+  padding: 1rem;
 }
 
 #quiz-form .form-check-label:hover {
-  color: rgb(233,124,156); /*pink/red to suit design*/
+  color: rgb(233, 124, 156); /*pink/red to suit design*/
   cursor: pointer;
   transition: color 0.3s ease; /*smooth hover transition*/
 }
@@ -57,26 +75,16 @@ h1, h2, h3 {
 .card {
   margin-bottom: 1rem;
   color: rgb(245, 231, 231);
-  background-color: rgb(25, 38, 61); /*essential to show radio buttons as input class being used in JS*/
+  background-color: rgb(
+    25,
+    38,
+    61
+  ); /*essential to show radio buttons as input class being used in JS*/
   font-size: 1rem;
-  font-weight: 300 ; /*ensures readbility with negative contrast*/
+  font-weight: 300; /*ensures readbility with negative contrast*/
 }
 
 .card h1 {
   color: rgb(245, 231, 231); /* overwrites h1 text color withing card only*/
 }
 
-@media (max-width: 768px) {
-	.image-section img {
-		width: 90%;
-		max-width: 500px;
-	}
-}
-
-
-
-@media (max-width: 480px) {
-	.image-section img{
-		width: 100%;
-	}
-}
