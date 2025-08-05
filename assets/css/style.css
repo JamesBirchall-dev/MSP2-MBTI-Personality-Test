@@ -40,6 +40,7 @@ h3 {
   width: 100%;
   height: auto;
   max-width: 800px;
+  min-height: 300px;
 }
 
 /*device scaling for image*/
