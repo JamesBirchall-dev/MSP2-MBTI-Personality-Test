@@ -25,7 +25,7 @@ h1, h2, h3 {
   color: white;
 }
 
-.index-page .container > {
+.index-page .container {
   text-align: center;
 }
 
@@ -47,6 +47,12 @@ h1, h2, h3 {
   padding: 1rem; 
 }
 
+#quiz-form .form-check-label:hover {
+  color: rgb(233,124,156); /*pink/red to suit design*/
+  cursor: pointer;
+  transition: color 0.3s ease; /*smooth hover transition*/
+}
+
 /*spacing around cards*/
 .card {
   margin-bottom: 1rem;
@@ -59,11 +65,6 @@ h1, h2, h3 {
 .card h1 {
   color: rgb(245, 231, 231); /* overwrites h1 text color withing card only*/
 }
-
-#quiz-form .form-check-label:hover {
-  color: rgb(233,124,156); /*pink/red to suit design*/
-  cursor: pointer;
-  transition: color 0.3s ease; /*smooth hover transition*/
 
 @media (max-width: 768px) {
 	.image-section img {
@@ -78,4 +79,4 @@ h1, h2, h3 {
 	.image-section img{
 		width: 100%;
 	}
-}}
+}
