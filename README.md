@@ -88,39 +88,47 @@ The Myers Briggs Personality Index (MBTI) Test, is a psuedo psychology quiz deve
 
 ### Wireframes
 
-### Index Page
+####
+
+#### Index Page
 
 ![Index Page](assets/images/readme-index-layout.png)
 
-### Section Pages (ei.html, sn.html, tf.html, jp.html)
+#### Section Pages (ei.html, sn.html, tf.html, jp.html)
+
+#### Section Pages Re-Design Flag:
+
+The initial design had a single page for the test/quiz and was 70 questions long. It became clear during construction that this was poor UX so I decided to split it into the 4 pages corresponding to the different sections/pages.
+The commit that corresponds to this is :
+"added:redesign UX :html files to split existing sections to different pages"
 
 ![Section pages](assets/images/readme-section-layout.png)
 
-### Results Page
+#### Results Page
 
 ![Results page](assets/images/readme-results-layout.png)
 
-### Fonts
+#### Fonts
 
 ![Fonts](assets/readmeassets/readme-font.png)
 
 - **Primary:** `Montserrat`, sans-serif – Bold and accessible for headings
 - **Secondary:** `Varela`, sans-serif – Clean and minimalist for paragraph text
 
-### Colors
+#### Colors
 
 ![Color Palette](https://github.com/JamesBirchall-dev/imagehost/blob/main/mayersbriggsdiagram-colors.png?raw=true)
 
 - Based on MBTI diagram used across multiple platforms
 - Accessible color scheme with light backgrounds and high contrast
 
-### Images
+#### Images
 
 #### Index Page MBTI Diagram sourced from (https://en.wikipedia.org/wiki/Myers%E2%80%93Briggs_Type_Indicator)
 
 ![MBTI](https://en.wikipedia.org/wiki/Myers%E2%80%93Briggs_Type_Indicator")
 
-### MBTI Test
+#### MBTI Test
 
 ![ISTJ](https://raw.githubusercontent.com/JamesBirchall-dev/imagehost/main/istjresult.webp)
 
