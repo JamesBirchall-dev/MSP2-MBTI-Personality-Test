@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Define the MBTI types data (same as your original)
+  // Define the MBTI types data
   var types = {
     ISTJ: {title: "The Logistician", percentage: "13.7%", description: "Introverted, Observant, Thinking, and Judging", site: "https://www.16personalities.com/istj-personality", image: "https://raw.githubusercontent.com/JamesBirchall-dev/imagehost/main/istjresult.webp" },
     ISFJ: {title: "The Defender", percentage: "12.7%", description: "Introverted, Observant, Feeling, and Judging", site: "https://www.16personalities.com/isfj-personality", image: "https://raw.githubusercontent.com/JamesBirchall-dev/imagehost/main/isfjresult.webp" },

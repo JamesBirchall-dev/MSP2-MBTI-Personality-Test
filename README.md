@@ -1,60 +1,73 @@
-# Myers-Briggs Personality Test
+# The Myers Briggs Personality Index (MBTI) Test
 
-## Acknowledgements / Sources
+The Myers Briggs Personality Index (MBTI) Test, is a psuedo psychology quiz developed during WWII to determine the users' personality groups based on introverted vs extroverted answers over 4 different sections. Based on the work of Carl Jung, it is a popular quiz for people to determine their personality group and though considered redundant professionally, it still provides a good insight to someones traits.
 
-- [Test Code (CodePen)](https://codepen.io/pulpexploder/pen/pNpdeq)
-- [Wikipedia – MBTI](https://en.wikipedia.org/wiki/Myers%E2%80%93Briggs_Type_Indicator)
-- [16Personalities.com](https://www.16personalities.com/)
-- [Bootstrap Documentation](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
+![device mockup](assets/images/readme-devicemockup.png)
 
----
+# Table of Contents
 
-## Table of Contents
+## UX
 
-1. [UX](#ux)
+- [User Stories](#user-stories)
 
-   - [Goals](#goals)
-     - [Visitor Goals](#visitor-goals)
-     - [Business Goals](#business-goals)
-     - [User Stories](#user-stories)
-   - [Visual Design](#visual-design)
-     - [Wireframes](#wireframes)
-     - [Fonts](#fonts)
-     - [Icons](#icons)
-     - [Colors](#colors)
-     - [Images](#images)
-     - [Styling](#styling)
+## Visual Design
 
-2. [Features](#features)
+- [Wireframes](#wireframes)
+- [Index Page](#index-page)
+- [Section Pages (ei.html, sn.html, tf.html, jp.html)](#section-pages-eihtml-snhtml-tfhtml-jphtml)
+- [Results Page](#results-page)
+- [Fonts](#fonts)
+- [Colors](#colors)
+- [Images](#images)
+  - [Index Page MBTI Diagram](#index-page-mbti-diagram-sourced-from)
+  - [MBTI Test](#mbti-test)
+    - [ISTJ](#istj)
+    - [ISFJ](#isfj)
+    - [INFJ](#infj)
+    - [INTJ](#intj)
+    - [ISTP](#istp)
+    - [ISFP](#isfp)
+    - [INFP](#infp)
+    - [INTP](#intp)
+    - [ESTP](#estp)
+    - [ESFP](#esfp)
+    - [ENFP](#enfp)
+    - [ENTP](#entp)
+    - [ESTJ](#estj)
+    - [ESFJ](#esfj)
+    - [ENFJ](#enfj)
+    - [ENTJ](#entj)
+- [Styling](#styling)
 
-   - [Page Elements](#page-elements)
-   - [Feature Ideas](#feature-ideas)
+## Page Elements
 
-3. [Technologies Used](#technologies-used)
+- [Homepage (index.html)](#homepage-indexhtml)
+- [Section Pages Elements (ei.html, sn.html, tf.html, jp.html)](#section-pages-elements-eihtml-snhtml-tfhtml-jphtml)
+- [Results Page (results.html)](#results-page-resultshtml)
 
-   - [Languages](#languages)
-   - [Frameworks](#frameworks)
-   - [Libraries](#libraries)
+## Javascript
 
-4. [Testing](#testing)
+- [Javascript Overview](#javascript-overview)
+  - [quiz.js](#quizjs)
+  - [results.js](#resultsjs)
+  - [Function map](#function-map)
 
-   - [Methods](#methods)
-   - [Bugs](#bugs)
+## Testing
 
-5. [Deployment](#deployment)
+- [User Testing](#user-testing)
+- [General Testing](#general-testing)
+- [User Stories Testing](#user-stories-testing)
+- [Mobile Testing](#mobile-testing)
+- [Desktop Testing](#desktop-testing)
+- [Lighthouse Overview](#lighthouse-overview)
+- [Issues Resolution/Acceptance](#issues-resolutionacceptance)
 
-   - [Local Deployment](#local-deployment)
-   - [GitHub Deployment](#github-deployment)
+## Deployment
 
-6. [Credit and Contact](#credit-and-contact)
-
-   - [Content](#content)
-   - [Contact](#contact)
-
-7. [Introduction](#introduction)
-8. [Design Overview](#design-overview)
-9. [Page Functions](#page-functions)
-10. [Personality Types](#personality-types)
+- [Local Deployment](#local-deployment)
+  - [Local Preparation](#local-preparation)
+- [Github Deployment](#github-deployment)
+  - [Github Instructions](#github-instructions)
 
 ---
 
@@ -71,13 +84,21 @@
 7. I want to return to the homepage easily.
 8. I want the site to be visually accessible.
 
----
-
 ## Visual Design
 
 ### Wireframes
 
-> Include wireframe images or links here.
+### Index Page
+
+![Index Page](assets/images/readme-index-layout.png)
+
+### Section Pages (ei.html, sn.html, tf.html, jp.html)
+
+![Section pages](assets/images/readme-section-layout.png)
+
+### Results Page
+
+![Results page](assets/images/readme-results-layout.png)
 
 ### Fonts
 
@@ -95,469 +116,404 @@
 
 ### Images
 
-![Lifestyle Images](assets/readmeassets/readme-lifestyleimages.png)
+#### Index Page MBTI Diagram sourced from (https://en.wikipedia.org/wiki/Myers%E2%80%93Briggs_Type_Indicator)
 
-- Sourced from 16Personalities.com and Wikipedia
-- All images credited in the UI
+![MBTI](https://en.wikipedia.org/wiki/Myers%E2%80%93Briggs_Type_Indicator")
 
-### Background Color
+### MBTI Test
 
-- `RGB(168,180,211)` – A lighter, more accessible variant of the standard MBTI blue
+![ISTJ](https://raw.githubusercontent.com/JamesBirchall-dev/imagehost/main/istjresult.webp)
+
+#### Results Page Personality Type Images sourced from (https://16personalities.com)
+
+### ISTJ
+
+![ISTJ](https://raw.githubusercontent.com/JamesBirchall-dev/imagehost/main/istjresult.webp)
+
+### ISFJ
+
+![ISFJ](https://raw.githubusercontent.com/JamesBirchall-dev/imagehost/main/isfjresult.webp)
+
+### INFJ
+
+![INFJ](https://raw.githubusercontent.com/JamesBirchall-dev/imagehost/main/infjresult.webp)
+
+### INTJ
+
+![INTJ](https://raw.githubusercontent.com/JamesBirchall-dev/imagehost/main/intjresult.webp)
+
+### ISTP
+
+![ISTP](https://raw.githubusercontent.com/JamesBirchall-dev/imagehost/main/istpresult.webp)
+
+### ISFP
+
+![ISFP](https://raw.githubusercontent.com/JamesBirchall-dev/imagehost/main/isfpresult.webp)
+
+### INFP
+
+![INFP](https://raw.githubusercontent.com/JamesBirchall-dev/imagehost/main/infpresult.webp)
+
+### INTP
+
+![INTP](https://raw.githubusercontent.com/JamesBirchall-dev/imagehost/main/intpresult.webp)
+
+### ESTP
+
+![ESTP](https://raw.githubusercontent.com/JamesBirchall-dev/imagehost/main/estpresult.webp)
+
+### ESFP
+
+![ESFP](https://raw.githubusercontent.com/JamesBirchall-dev/imagehost/main/esfpresult.webp)
+
+### ENFP
+
+![ENFP](https://raw.githubusercontent.com/JamesBirchall-dev/imagehost/main/enfpresult.webp)
+
+### ENTP
+
+![ENTP](https://raw.githubusercontent.com/JamesBirchall-dev/imagehost/main/entpresult.webp)
+
+### ESTJ
+
+![ESTJ](https://raw.githubusercontent.com/JamesBirchall-dev/imagehost/main/estjresult.webp)
+
+### ESFJ
+
+![ESFJ](https://raw.githubusercontent.com/JamesBirchall-dev/imagehost/main/esfjresult.webp)
+
+### ENFJ
+
+![ENFJ](https://raw.githubusercontent.com/JamesBirchall-dev/imagehost/main/enfjresult.webp)
+
+### ENTJ
+
+![ENTJ](https://raw.githubusercontent.com/JamesBirchall-dev/imagehost/main/entjresult.webp)
 
 ### Styling
 
-- Primarily uses Bootstrap classes for layout, buttons, and forms
-- Custom styles in `style.css`
+- Bootstrap 5 classes utilised as well as custom css (styles.css stylesheet). See page elements for more details.
 
----
-
-## Features
-
-### Page Elements
-
-#### Homepage (`index.html`)
-
-- **Navbar** – Link to start test
-- **Content Card** – MBTI overview
-- **External Button** – Link to Wikipedia
-- **Responsive Diagram**
-- **Call-to-Action Buttons**
-- **Responsive Layout**
-- **Favicon + Custom CSS**
-
-#### Quiz Pages
-
-- **Navbar** – Home link
-- **10 Questions per Section** – Radio input, Bootstrap card format
-- **Validation** – HTML5 + Bootstrap
-- **JavaScript Logic** – Controls flow, stores scores
-- **Responsive + Accessible**
-
-#### Results Page
-
-- **Result Type Display**
-- **Personality Description**
-- **External Link**
-- **Population Percentage**
-- **Result Image**
-- **Attribution**
-- **Responsive Layout**
-- **JavaScript Integration**
-
----
-
-## Technologies Used
-
-- **HTML5**
-- **CSS3**
-- **JavaScript**
-- **Bootstrap 5**
-- **Git & GitHub**
-
----
-
-## Testing
-
-### Methods
-
-- [x] HTML Validation
-- [x] CSS Validation
-- [x] User Testing
-- [x] Lighthouse Audits
-- [x] Mobile Responsiveness
-- [x] Browser Compatibility
-
-### Bugs
-
-> Document any known or fixed bugs here.
-
----
-
-## Deployment
-
-### Local Deployment
-
-1. Clone the repo
-2. Open `index.html` in your browser
-
-### GitHub Pages Deployment
-
-1. Push to `main` branch
-2. Enable Pages in repo settings
-3. Visit `https://username.github.io/repo-name/`
-
----
-
-## Credit and Contact
-
-### Content
-
-- Wikipedia
-- 16Personalities
-- CodePen quiz logic
-
-### Contact
-
-- [GitHub Profile](https://github.com/JamesBirchall-dev)
-
----
-
-## Introduction
-
-The **Myers-Briggs Personality Indicator Test** was developed during World War II, based on Carl Jung’s theories. It was designed to simplify complex psychological types and help assign individuals to suitable wartime roles.
-
-The test is structured into **4 sections**, each with two answer options. Your responses result in one dominant trait from each category, forming a **four-letter personality type**.
-
-### The Four Dichotomies
-
-- **Extraversion (E)** or **Introversion (I)**
-- **Sensing (S)** or **Intuition (N)**
-- **Thinking (T)** or **Feeling (F)**
-- **Judging (J)** or **Perceiving (P)**
-
-> If tied, the **first trait** is assumed to be dominant.
-
----
-
-## Design Overview
-
-The website educates users on the MBTI framework, provides links to additional resources, and features an interactive test to reveal a user’s type.
-
----
-
-## Page Functions
+## Page Elements
 
 ### Homepage (`index.html`)
 
-- **Navbar** – Navigation to test pages using Bootstrap components
-- **Take Test Button** – Uses JavaScript to avoid default anchor behavior
-- **Information Card** – Overview of MBTI using a styled Bootstrap card
-- **External Link** – Opens MBTI Wikipedia page in a new tab
-- **Responsive Images** – Cognitive function diagrams and mockups
-- **Custom CSS + Favicon Support**
-
-### Test Pages (`ei.html`, `sn.html`, `tf.html`, `jp.html`)
-
-- **Navbar** – "Home" button for navigation
-- **Bootstrap Quiz Form** – 10 questions per section
-- **Client-side Validation** – HTML5 `required` and Bootstrap validation
-- **Custom Error Message** – Shown via JavaScript when fields are incomplete
-- **JavaScript Logic** – `quiz.js` handles navigation and scoring
-- **Responsive Layout** – Bootstrap ensures full mobile/tablet support
-
-### Results Page
-
-- **Navbar** – Home link
-- **Result Display** – Personality type, description, image, and percentage
-- **External Link** – More info on personality type
-- **Responsive Image** – Using `img-fluid` class
-- **Acknowledgements** – Attribution to 16Personalities.com
-- **JavaScript Integration** – `results.js` retrieves and displays test results
-
----
-
-## Personality Types
-
-There are 16 possible outcomes:
-
-- **ISTJ**: "The Logistician"
-- **ISFJ**: "The Defender"
-- **INFJ**: "The Advocate"
-- **INTJ**: "The Architect"
-- **ISTP**: "The Virtuoso"
-- **ISFP**: "The Adventurer"
-- **INFP**: "The Mediator"
-- **INTP**: "The Logician"
-- **ESTP**: "The Entrepreneur"
-- **ESFP**: "The Entertainer"
-- **ENFP**: "The Campaigner"
-- **ENTP**: "The Debater"
-- **ESTJ**: "The Executive"
-- **ESFJ**: "The Consul"
-- **ENFJ**: "The Protagonist"
-- **ENTJ**: "The Commander"
-
-### All Pages
-
-#### Navbar
-
-Desktop/Laptop Nav
-
-<div align="center">
-  <img src="assets/readmeassets/readme-nav-desktop.png" alt="Desktop Header">
-</div>
-Tablet Nav (Collapsed & expanded)
-<div align="center">  
-  <img src="assets/readmeassets/readme-nav-tablet-collapsed.png" alt="Tablet Header Collapsed">
-  <img src="assets/readmeassets/readme-nav-tablet-expanded.png" alt="Tablet Header Expanded">
-</div>
-Mobile Nav (Collapsed & expanded)
-<div align="center">  
-   <img src="assets/readmeassets/readme-nav-mobile-collapsed.png" alt="Mobile Header Collapsed">
-    <img src="assets/readmeassets/readme-nav-mobile-expanded.png" alt="Mobile Header Expanded">
-</div>
-
-- The Navbar is simple, providing links to the 3 main pages: Home, Contact and Classes.
-- Button also in the nav for 'Join' which directs user to the Register page. This stands out more than the other links to make the registration process easy and more likely.
-- Hover over functionality on links.
-- On smaller devices, the menu becomes collapsible.
-- Bootstrap 5 elements broken down in this sheet https://docs.google.com/document/d/1BvyNlDbG85mt_AnDzTFATYOsyBalbLm7DthT1MtFjgA/edit?usp=sharing
-
-#### Footer
-
-Mobile
-
-<div align="center">
-  <img src="assets/readmeassets/readme-footer-mobile.png" alt="Mobile Footer">
-</div>
-Tablet
-<div align="center">
-  <img src="assets/readmeassets/readme-footer-tablet.png" alt="Tablet Footer">
-</div>
-
-- Located at the bottom of every page, a simple approach like with the nav.
-- 3 centered icons to make for elegant transition with smaller devices.
-- Hover over functionality and high contrast icons against the footer background.
-
-### Index Page
-
-The homepage has been designed to maximise navigation and information within landing view, whilst upholding the asthetic of the site.
-This is acheived with a sliding carousel with 3 slides, each directing to a part of the site, then the service cards below providing more information and a bolder text on background to stand out in the page. You will see a mission statement below this to provide more information on branding then finally a tour video fo the user to browse the facilities.
-
-#### Carousel With Captions
-
-- Using [Bootstrap](https://getbootstrap.com/docs/4.0/components/carousel/) as a template.
-- 3 x images on automatic change. [Index Bootstrap Elements](https://docs.google.com/document/d/1Lz-XzIniIzwuXU_tz8ReggDIRi7KBWEWQR4D297tFEI/edit?usp=sharing)
-- Caption text with Call to Action button linking to Classes & Register-Form (removed for mobile devices as too small to be interactive).
-- White indicators and text for contrast against images.
-Desktop/Laptop
-<div align="center">
-  <img src="assets/readmeassets/readme-carousel-desktop.png" alt="Carousel Desktop">
-</div>
-Tablet
-<div align="center">
-  <img src="assets/readmeassets/readme-carousel-tablet.png" alt="Carousel Tablet">
-</div>
-Mobile
-<div align="center">
-  <img src="assets/readmeassets/readme-carousel-mobile.png" alt="Carousel Desktop">
-</div>
-
-#### Service Card Section
-
-- Using [Bootstrap Cards](https://getbootstrap.com/docs/4.0/components/card/) class as a template with manual CSS to adjust colors and sizing.
-- After the carousel and main header, service cards x 4 to provide a preview to other pages on the site all with Call to Action buttons to direct the user.
-- 4 in a row Desktop.
-<div align="center">
-  <img src="assets/readmeassets/readme-services-desktop.png" alt="services desktop">
-</div>
-
-- 2 for Tablet.
-<div align="center">
-  <img src="assets/readmeassets/readme-services-tablet.png" alt="services tablet">
-</div>
-- 1 for Mobile.
-
-<div align="center">
-  <img src="assets/readmeassets/readme-services-mobile.png" alt="services mobile">
-</div>
-
-#### Mission Statement Section
-
-- Using Bootstrap 'flex-container' class for screen size adjustment.
-- Content centred with left aligned text.
-- Section text using the Transparent Teal for consistancy.
-- Main text body using off-white/ light blue for better contrast with a large body of text.
-
-<div align="center">
-  <img src="assets/readmeassets/readme-mission-desktop.png" alt="Mission Statement Desktop">
-</div>
-
-<div align="center">
-  <img src="assets/readmeassets/readme-mission-tablet.png" alt="Mission Statement Tablet">
-</div>
-
-<div align="center">
-  <img src="assets/readmeassets/readme-mission-mobile.png" alt="Mission Statement Mobile">
-</div>
-
-#### Take the Tour Video Section
-
-To allow users to see the Health Centre's facilities in more detail, key for users who want to see what gym equipment is available.
-
-- Embedded youtube video using Bootstrap 'video-container' class for screen size adjustment.
-- Fixed height
-- 16:9 Aspect ratio maintained by youtube when the video is played.
-- Shown in container with consistant Transparent Teal background.
-
-<div align="center">
-  <img src="assets/readmeassets/readme-youtubeunclicked-desktop.png" alt="Take the Tour Default">
-</div>
-<div align="center">
-  <img src="assets/readmeassets/readme-youtubeclicked-desktop.png" alt="Take the Tour Video Playing">
-</div>
-
-### Classes Page
-
-The primary purpose of this page is to show the user what kind of classes the gym has to offer members, as with the Business Goal of promoting the new 'Health Forum', this sits at the top of the page as priority and with the flexible bootstrap classes, it makes for a good experience with scrolling on hand held devices.
-
-<div align="center">
-  <img src="https://user-images.githubusercontent.com/44118951/92344160-fd78d700-f0c5-11ea-9017-7046a210424f.png" alt="Gallery Page">
-</div>
+#### **1. `<nav class="nav py-3 mb-4 custom-navbar">`**
 
-- Bootstrap 5 elements broken down in this sheet [Classes Bootastrap Elements](https://docs.google.com/document/d/1tN2jn3ORCs-YBwR9UFiZBwcn5GD6hB5dueIYM0cXcoE/edit?usp=sharing)
-
-<div align="center">
-  <img src="assets/readmeassets/readme-classes-desktop.png" alt="Classes Desktop">
-</div>
-Text box aligns to the center of the image horizontally with image to the right.
-<div align="center">
-  <img src="assets/readmeassets/readme-classes-tablet.png" alt="Classes Tablet">
-</div>
-Image stacks underneath for tablet ensuring text information has reading priority.
+- **Type:** HTML `<nav>` (navigation)
+- **Bootstrap:**
+  - `.nav` → Base navigation layout
+  - `.py-3` → Vertical padding
+  - `.mb-4` → Margin bottom
+- **Custom CSS:** `custom-navbar`
 
-<div align="center">
-  <img src="assets/readmeassets/readme-classes-mobile.png" alt="Classes Mobile">
-</div>
-Spacing between class containers to seperate them visually whilst optimising space.
+##### **2. `<div class="container">` (inside `<nav>`)**
 
-### Contact Page
+- **Type:** HTML `<div>`
+- **Bootstrap:** `.container` → Responsive fixed-width container
 
-The purpose of this page is to provide the neccessary information to contact the business, with a primary focus on trying to get the user to choose form contact over the phone (whilst making this accessible still).
+#### **3. `<a href="ei.html" class="btn btn-primary btn-lg">Take the test!</a>`**
 
-- Bootstrap 5 elements broken down in this sheet [Contact Bootastrap Elements](https://docs.google.com/document/d/1XieEHmNwVU2Tya-WhcT6FXTDByMCNL7RiMXEJUwkH3U/edit?usp=sharing)
-<div align="center">
-  <img src="assets/Readmeassets/readme-contact-desktop.png" alt="Contact Desktop">
-</div>
-<div align="center">
-  <img src="assets/Readmeassets/readme-contact-tablet.png" alt="Contact Tablet">
-</div>
+- **Type:** HTML `<a>` (link)
+- **Bootstrap:**
+  - `.btn` → Button styling
+  - `.btn-primary` → Primary theme color
+  - `.btn-lg` → Large button size
 
-## Register Page
+#### **4. `<div class="container">` (main heading card container)**
 
-This page is designed to easily display membership pricing information and for the user to be able to submit interest for membership (with the kind of membership they want) and their contact details for the staff at the gym to prepare for the appropiate next steps with the user.
+- **Type:** HTML `<div>`
+- **Bootstrap:** `.container` → Responsive wrapper
 
-- Bootstrap 5 elements broken down in this sheet [Register Bootastrap Elements](https://docs.google.com/document/d/18ECCWaVpi4yynrV19uudBJnjc3bctX6IdtXs8tG1UtA/edit?usp=sharing)
-<div align="center">
-  <img src="assets/Readmeassets/readme-register-desktop.png" alt="Register Desktop">
-</div>
+#### **5. `<div class="card">`**
 
-- Heading and welcome text informing user of expected turn around for response.
-- Membership table detailing pricing and discount for Business Goal.
-- Form with optional checkbox and mandatory text fields, along with warnings.
-- Button directing to success.html - Only if mandatory form elenment criteria met.
+- **Type:** HTML `<div>`
+- **Bootstrap:** `.card` → Card component
 
-<div align="center">
-  <img src="assets/Readmeassets/readme-register-tablet.png" alt="Register Tablet">
-</div>
+#### **6. `<div class="card-header">`**
 
-- Membership table wraps with smaller device.
+- **Type:** HTML `<div>`
+- **Bootstrap:** `.card-header` → Card header section
 
-<div align="center">
-  <img src="assets/Readmeassets/readme-register-mobile.png" alt="Register Mobile">
-</div>
-- Overflow enables horizontal scroll bar to view all table information.
+#### **7. `<h1>The Myers Briggs Type Indicator Test (MBTI)</h1>`**
 
-## Success Page
+- **Type:** HTML `<h1>`
+- **Bootstrap:** _None_
 
-This page confirms to the user that their message has been sent. This page directs both from the contact-form.html and register-form.html submissions. It also allows for easy navigation back to the home page so they can continue browsing the site.
+#### **8. `<div class="card-body">`**
 
-- Bootstrap 5 elements broken down in this sheet [Success Bootastrap Elements](https://docs.google.com/document/d/1tST-KRPXV6kTPkd2zjjJlJLHd1KfleX0C8LjhUV5xd4/edit?usp=sharing)
-<div align="center">
-  <img src="assets/Readmeassets/readme-success-desktop.png" alt="Success Desktop">
+- **Type:** HTML `<div>`
+- **Bootstrap:** `.card-body` → Main content area for card
 
-- Success Message with phone link and return to index.html button.
-- Beneath message insert same contact box layout as contact.html.
-</div>
-<div align="center">
-  <img src="assets/Readmeassets/readme-success-tablet.png" alt="Success Tablet">
-</div>
+#### **9. `<h2 class="card-title">About the test</h2>`**
 
-- Scales down for tablet.
-<div align="center">
-  <img src="assets/Readmeassets/readme-success-mobile.png" alt="Success Mobile">
-</div>
+- **Type:** HTML `<h2>`
+- **Bootstrap:** `.card-title` → Card title styling
 
-- Stacks vertically for mobile.
+#### **10. `<p class="card-text">` (two instances)**
 
-## Contact Form
+- **Type:** HTML `<p>`
+- **Bootstrap:** `.card-text` → Standard card paragraph styling
 
--Simple form page with CTA button directing to success.html.
--All fields mandatory and validation format correct for each field. (ie email must have an @ in it)
+#### **11. `<a href="..." target="_blank" class="btn btn-secondary">Visit the wikipedia page</a>`**
 
-- Bootstrap 5 elements broken down in this sheet [Contact Form Bootastrap Elements](https://docs.google.com/document/d/1tST-KRPXV6kTPkd2zjjJlJLHd1KfleX0C8LjhUV5xd4/edit?usp=sharing)
+- **Type:** HTML `<a>` (link)
+- **Bootstrap:**
+  - `.btn` → Button styling
+  - `.btn-secondary` → Secondary theme color
 
-<div align="center">
-  <img src="assets/Readmeassets/readme-contactform-desktop.png" alt="Contact Form Desktop">
-</div>
+#### **12. `<section class="image-section text-center pt-3 pb-5">`**
 
-<div align="center">
-  <img src="assets/Readmeassets/readme-contactform-tablet.png" alt="Contact Form Tablet">
-</div>
+- **Type:** HTML `<section>`
+- **Bootstrap:**
+  - `.text-center` → Center-aligned text
+  - `.pt-3` → Padding top
+  - `.pb-5` → Padding bottom
+- **Custom CSS:** `image-section`
 
-<div align="center">
-  <img src="assets/Readmeassets/readme-contactform-mobile.png" alt="Contact Form Mobile">
-</div>
+#### **13. `<div class="container">` (inside image section)**
 
-## Feature Ideas
+- **Type:** HTML `<div>`
+- **Bootstrap:** `.container` → Responsive wrapper
 
-### Future Developement Ideas
+#### **14. `<h3 class="mb-4">Diagram of Cognitive Functions in the MBTI</h3>`**
 
-- A 360 degree tour allowing users to interact with their virtual tour of the gym. Either through Googlemaps or a software company such as Kuula. (https://kuula.co/)
-- Wider range of class information, such as timetables for existing members.
-- Account and Checkout functionality for memberships.
+- **Type:** HTML `<h3>`
+- **Bootstrap:** `.mb-4` → Bottom margin
 
----
+#### **15. `<img class="img-fluid rounded-4 mb-3">`**
 
-# Technologies Used
+- **Type:** HTML `<img>`
+- **Bootstrap:**
+  - `.img-fluid` → Responsive image scaling
+  - `.rounded-4` → Large rounded corners
+  - `.mb-3` → Bottom margin
 
-## Languages
+#### **16. `<p class="mb-3">`**
 
-- [HTML](w3.org/standards/webdesign/htmlcss)
-  - Page markup.
-- [CSS](w3.org/standards/webdesign/htmlcss)
-  - Styling.
-- [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-  - Running functions for interactive components, AJAX, etc.
+- **Type:** HTML `<p>`
+- **Bootstrap:** `.mb-3` → Bottom margin
 
-## Frameworks
+#### **17. `<span class="d-inline-block bg-light text-dark px-2 py-1 rounded">`**
 
-- [Bootstrap4](https://getbootstrap.com/)
-  - Used for basic styles and outline.
+- **Type:** HTML `<span>`
+- **Bootstrap:**
+  - `.d-inline-block` → Inline-block display
+  - `.bg-light` → Light background color
+  - `.text-dark` → Dark text color
+  - `.px-2` → Horizontal padding
+  - `.py-1` → Vertical padding
+  - `.rounded` → Rounded corners
 
-## Libraries
+#### **18. `<small>... <a href="...">CC BY-SA 4.0</a></small>`**
 
-- [JQuery](https://jquery.com/)
-  - Animations and click functions.
-- [Google Fonts](https://fonts.google.com)
-  - Font Styles and icons.
+- **Type:** HTML `<small>` with `<a>` (link)
+- **Bootstrap:** _None_
 
-## Platforms
+#### **19. `<a href="ei.html" class="btn btn-secondary">Take the test!</a>`**
 
-- [Github](https://github.com/)
-  - Storing code remotely and deployment.
-- [VS Code](https://code.visualstudio.com/)
-  - IDE Environment.
+- **Type:** HTML `<a>` (link)
+- **Bootstrap:**
+  - `.btn` → Button styling
+  - `.btn-secondary` → Secondary theme color
 
-## Other Tools
+### **Section pages Elements (ei.html, sn.html, tf.html, jp.html)**
 
-- [Balsamiq](https://balsamiq.com/)
-  - To create wireframes.
-- [Coolor Picker](https://colorpicker.tools/)
-  - Creating color pallettes.
+#### **1. `<nav class="nav py-3 mb-4 custom-navbar">`**
 
----
+- **Function:** Top navigation bar containing a "Home" button.
+- **Bootstrap:**
+  - `.nav` → Applies Bootstrap nav styling.
+  - `.py-3` → Adds vertical padding.
+  - `.mb-4` → Adds bottom margin.
+  - `.container` (inside) → Centers and limits content width.
+  - `.btn`, `.btn-primary`, `.btn-lg` → Large primary-styled Bootstrap button.
 
-# Testing
+####
 
-## Methods
+**2. `<div class="container">` (Heading Section)**
 
-- [Full testing external mastersheet](https://docs.google.com/spreadsheets/d/1MpcjnFR0sRtm0FBuqfoiV8ybn5v_BY5CXubD8ImN6pg/edit?usp=sharing).
+- **Function:** Displays the test title and section heading.
+- **Bootstrap:** `.container` → Responsive fixed-width content wrapper.
 
-### Validation
+#### **3. `<form id="quiz-form" class="needs-validation" novalidate>`**
 
-- HTML has been validated with [W3C HTML5 Validator](https://validator.w3.org/).
-- CSS has been validated with [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) and auto-prefixed with [CSS Autoprefixer](https://autoprefixer.github.io/).
+- **Function:** Contains the test questions and handles input/validation.
+- **Bootstrap:**
+  - `.needs-validation` → Enables Bootstrap form validation styling.
+  - Uses `.mb-3` inside for spacing between form elements.
+
+#### **4. `<div class="container mb-5">` (Question Container)**
+
+- **Function:** Holds a set of questions and answer options.
+- **Bootstrap:**
+  - `.container` → Centers content.
+  - `.mb-5` → Large bottom margin.
+
+#### **5. `<div class="form-check">` (Inside Question Block)**
+
+- **Function:** Groups a single radio button with its label.
+- **Bootstrap:** `.form-check` → Bootstrap form check/radio wrapper.
+
+#### **6. `<input class="form-check-input" type="radio">`**
+
+- **Function:** Radio button for selecting an answer.
+- **Bootstrap:** `.form-check-input` → Styles the radio button.
+
+#### **7. `<label class="form-check-label">`**
+
+- **Function:** Label text for the radio button.
+- **Bootstrap:** `.form-check-label` → Styles label positioning and spacing.
+
+#### **8. `<button class="btn btn-primary mt-3">`**
+
+- **Function:** Submit button for the quiz form.
+- **Bootstrap:**
+  - `.btn` → Base Bootstrap button style.
+  - `.btn-primary` → Primary color style.
+  - `.mt-3` → Top margin.
+
+#### **9. `<div class="container text-center mt-5">` (Footer Area)**
+
+- **Function:** Footer section with centered text.
+- **Bootstrap:**
+  - `.container` → Centers content.
+  - `.text-center` → Centers text horizontally.
+  - `.mt-5` → Adds space above.
+
+### Results Page (results.html)
+
+#### **1. `<nav class="nav py-3 mb-4 custom-navbar">`**
+
+- **Type:** HTML `<nav>` (navigation)
+- **Bootstrap:**
+  - `.nav` → Base navigation layout
+  - `.py-3` → Vertical padding
+  - `.mb-4` → Margin bottom
+- **Custom CSS:** `custom-navbar`
+
+#### **2. `<div class="container">` (inside `<nav>`)**
+
+- **Type:** HTML `<div>`
+- **Bootstrap:** `.container` → Responsive fixed-width container
+
+#### **3. `<a href="index.html" class="btn btn-primary btn-lg">Home</a>`**
+
+- **Type:** HTML `<a>` (link)
+- **Bootstrap:**
+  - `.btn` → Button styling
+  - `.btn-primary` → Primary theme color
+  - `.btn-lg` → Large button size
+
+#### **4. `<div class="container text-center">`**
+
+- **Type:** HTML `<div>`
+- **Bootstrap:**
+  - `.container` → Responsive wrapper
+  - `.text-center` → Center-aligned text
+
+#### **5. `<h1>Your MBTI Type: <span id="type"></span></h1>`**
+
+- **Type:** HTML `<h1>` with `<span>` for dynamic text
+- **Bootstrap:** _None_
+
+#### **6. `<h2 id="title" class="mt-3"></h2>`**
+
+- **Type:** HTML `<h2>`
+- **Bootstrap:** `.mt-3` → Top margin
+
+#### **7. `<p><strong>Percentage of population:</strong> <span id="percentage"></span></p>`**
+
+- **Type:** HTML `<p>` with `<strong>` and `<span>`
+- **Bootstrap:** _None_
+
+#### **8. `<p id="description"></p>`**
+
+- **Type:** HTML `<p>`
+- **Bootstrap:** _None_
+
+#### **9. `<p><a id="site" href="#" target="_blank">Learn more about this type</a></p>`**
+
+- **Type:** HTML `<p>` with `<a>` (link)
+- **Bootstrap:** _None_
+
+#### **10. `<img id="resultImage" alt="Results Image" class="img-fluid my-4">`**
+
+- **Type:** HTML `<img>`
+- **Bootstrap:**
+  - `.img-fluid` → Responsive image scaling
+  - `.my-4` → Vertical margin
+
+#### **11. `<p class="mb-3">`**
+
+- **Type:** HTML `<p>`
+- **Bootstrap:** `.mb-3` → Bottom margin
+
+#### **12. `<span class="d-inline-block bg-light text-dark px-2 py-1 rounded">`**
+
+- **Type:** HTML `<span>`
+- **Bootstrap:**
+  - `.d-inline-block` → Inline-block display
+  - `.bg-light` → Light background color
+  - `.text-dark` → Dark text color
+  - `.px-2` → Horizontal padding
+  - `.py-1` → Vertical padding
+  - `.rounded` → Rounded corners
+
+#### **13. `<small>Illustration and content by <a href="...">16Personalities.com</a></small>`**
+
+- **Type:** HTML `<small>` with `<a>` (link)
+- **Bootstrap:** _None_
+
+#### **14. `<script src="assets/script/results.js"></script>`**
+
+- **Type:** HTML `<script>` (JavaScript loader)
+
+## Javascript
+
+### Javascript Overview
+
+There are 2 seperate javascript files: quiz.js and results.js. The main purpose of the javascript is to collect results from each section, then display preset text and image outputs in the results based off the results from the sections, it is also used for form validation in the quiz-form portion of the site:
+
+#### quiz.js
+
+Is applied to all the test section pages (ei.html, sn.html, tf.html, jp.html) its functions are as follows:
+
+- Uses DOMContentLoaded so the script runs only after all HTML elements are available.
+- Selects key elements from the page: form, sectionkey (corresponding to each section page) , feedback image (placeholder for future developmenet, validation message (for use with bootstrap validation).
+- Maps section keys (section1, section2, etc.) to the two answer options that should be counted for that section:
+- Prevents the default page reload (e.preventDefault()).
+- Adds the Bootstrap validation class "was-validated" to visually show field errors.
+- If form is invalid - Shows the validation message (validationMsg.style.display = "block")
+- If form is valid - Hides the validation message
+- Uses FormData(form) to collect all form inputs (For final score)
+- Counts how many times each letter was chosen
+- stores the results - Creates an object like { e: 3, i: 7 } for that section.
+- Redirects the browser to that next page. _ html redirect not used to prevent this running before the script ends_
+
+#### results.js
+
+Is applied to results.html and it's function is as follows:
+
+- Uses DOMContentLoaded to ensure all HTML elements are available before running the script.
+- Creates an object types where each key is an MBTI code (e.g., "ISTJ") and the value is an object containing: title – personality type name, percentage – approximate percentage of the population with that type, description – short traits summary, site – link to more info (16Personalities.com), image – URL to the type’s image.
+  -Loads JSON‑formatted counts from sessionStorage for: section1, section2, section3, section4
+- validates stored results
+- Compares counts for each section: Picks the letter with the greater count.\* Uses >= so the first option wins if there’s a tie (to prevent split answers)
+- Finds the corresponding data from the types object based on the determined MBTI type.
+  -Populates the results page with: The 4‑letter type, Personality title, Percentage of population, Description ,Link to more info ,Image source and alt text.
+
+#### Function map
+
+This is a visual to show the click journey of the user along with its html and js key steps ([please note only top line script is displayed for overview purposes]
+
+![Functionmap](assets/images/readme-function-map.png)
+
+## Testing
+
+### User Testing
+
+![Fonts](/assets/images/readme-usertesting-quiz-result-scenarios.png)
 
 ### General Testing
 
@@ -572,76 +528,37 @@ This page confirms to the user that their message has been sent. This page direc
 
 ### User Stories Testing
 
-- 1. "As a user interested in joining a gym, I want an easy to navigate website with all the information easy to find."
+1. I want to learn about the history of the MBTI.
 
-Acheived by:
--Hompepage design and navigation. Home page designed so that landing view provides all the neccessary links in the navigation
--Service cards providing additional information with links to these pages also.
+- Homepage header card provides background and information about the test.
 
-<div align="center">
-  <img src="assets/testingassets/testing-userstories-1.png" alt="User Story 1">
-</div>
+2. I want to understand the results before starting the test.
 
-- 2. "I expect to be able to find out what facilities and classes the gym has."
+- MBTI Diagram image as well as Wikipedia link provides overview of this.
 
-  - Homepage-Classes Navigation
-    <div align="center">
-    <img src="assets/testingassets/testing-userstories-2b.png" alt="User Story 2">
-  </div>
+3. I want access to external sources.
 
-  -'Take the Tour' youtube video giving the user a guided tour of the gym.
-    <div align="center">
-    <img src="assets/testingassets/testing-userstories-2c.png" alt="User Story 2b">
-  </div>
+- Acheived via wikipedia links in the homepage and also the 16personalities link at the results page.
 
-- 3. "I expect to be able to register to join as a member."
+4. I want to easily start the test.
 
-  - 'Join' Call to action clearly displayed in the navigation as well as service card.
-     <div align="center">
-    <img src="assets/testingassets/testing-userstories-3.png" alt="User Story 3">
-  </div>
+- Acheived via homepage with button#1 in the navigation to be in landing view, then also button#2 below the image for scrolled-down access.
 
-- 4.  I expect to be able to contact and find the health centre.
+5. I want validation if questions are skipped.
 
-      - 'Contact' Call to action clearly displayed in the navigation as well as service card.
+- Bootstrap validation and backup javascript applied to the test pages.
 
-            <div align="center">
+6. I want the test to work on all devices.
 
-          <img src="assets/testingassets/testing-userstories-4.png" alt="User Story 4">
-        </div>
-          <div align="center">
-          <img src="assets/Readmeassets/readme-contact-desktop.png" alt="User Story 4b">
-        </div>
+- As well as a simple layout. Also utilised bootstrap classes and media queries to scale easily.
 
-- 5. I expect to see imagery which is health focussed.
+7. I want to return to the homepage easily.
 
-  - Design choices: lifestyle imagery, background, blue & green color scheme, large focus on the 'Health Forum' class promotion.
+- Homepage button in all non-index pages in the navigation.
 
-        <div align="center">
+8. I want the site to be visually accessible.
 
-      <img src="assets/Readmeassets/readme-lifestyleimages.png" alt="lifestyle imagery">
-    </div> 
-        <div align="center">
-      <img src="assets/Readmeassets/readme-colors.png" alt="lifestyle imagery">
-    </div>
-
-- 6.  I expect to be able to read more detailed information about the classes.
-
-      - Designated 'Classes' page (classes.html) detailing the activity, providing external wikipedia links for more information.
-
-               <div align="center">
-
-          <img src="assets/Readmeassets/readme-classes-desktop.png" alt="Classes.html">
-        </div>
-
-- 7.  I expect to be able to follow the health centre through social media.
-
-      - Social media icons clearly displayed centred in the footer.
-
-               <div align="center">
-
-          <img src="assets/Readmeassets/readme-footer-tablet.png" alt="Classes.html">
-        </div>
+- simple design with well contrasted background vs foreground. Lighthouse accessibility good scores.
 
 ### Mobile Testing
 
@@ -656,114 +573,92 @@ Acheived by:
 - The sites functionality and navigation have been tested on Chrome, Firefox and Edge.
 - Internet Explorer was not tested and the site was not developed with it in mind as support for the browser is gradually being dropped.
 
-### Functionality and Navigation by Browser and Device
+### Lighthouse Overview
 
-  <div align="center">
-  <img src="assets/testingassets/testing-functionalityandnavigation-checklist.png" alt="Functionality & Navigation by Browser">
-</div>
-- [Full testing external mastersheet](https://docs.google.com/spreadsheets/d/1MpcjnFR0sRtm0FBuqfoiV8ybn5v_BY5CXubD8ImN6pg/edit?usp=sharing).
+Any remaining flags in the lighthouse reports are due to external sources so are neglegible.
+There is also a remaining flag of contrast in foreground vs background however, as this is on the legal disclaimer for external image use; this is also negligable.
 
-### Lighthouse Testing
+Index page
+Desktop
+![index-desktop-lighthouse-overview](/assets/images/readme-index-lighthouse-desktop-overview-final.png)
+Mobile
+![index-mobile-lighthouse-overview](/assets/images/readme-index-lighthouse-mobile-overview-final.png)
 
-\*Summary screenshots show both mobile (Left) and desktop (Right) report summaries.
+ei (section 1) page
+Desktop
+![ei-desktop-lighthouse-overview](/assets/images/readme-ei-lighthouse-desktop-overview-final.png)
+Mobile
+![ei-mobile-lighthouse-overview](/assets/images/readme-ei-lighthouse-mobile-overview-final.png)
 
-- [Full testing external mastersheet](https://docs.google.com/spreadsheets/d/1MpcjnFR0sRtm0FBuqfoiV8ybn5v_BY5CXubD8ImN6pg/edit?usp=sharing).
+sn (section 2) page
+Desktop
+![sn-desktop-lighthouse-overview](/assets/images/readme-sn-lighthouse-desktop-overview-final.png)
+Mobile
+![sn-mobile-lighthouse-overview](/assets/images/readme-sn-lighthouse-mobile-overview-final.png)
 
-## index.html
+tf (section 3) page
+Desktop
+![tf-desktop-lighthouse-overview](/assets/images/readme-tf-lighthouse-desktop-overview-final.png)
+Mobile
+![tf-mobile-lighthouse-overview](/assets/images/readme-tf-lighthouse-mobile-overview-final.png)
 
-<div align="center">
-  <img src="assets/testingassets/testing-lighthouse-index-summary.png" alt="Lighthouse Index Summary">
-</div>
+jp (section 4) page
+Desktop
+![jp-desktop-lighthouse-overview](/assets/images/readme-jp-lighthouse-desktop-overview-final.png)
+Mobile
+![jp-mobile-lighthouse-overview](/assets/images/readme-jp-lighthouse-mobile-overview-final.png)
 
-## classes.html
+Issues Resolution/ Acceptance
 
-<div align="center">
-  <img src="assets/testingassets/testing-lighthouse-classes-summary.png" alt="Lighthouse Classes Summary">
-</div>
+Issue: background vs foreground text low contrast
+Acceptance Reason: text is for legal purposes only, no impact to UX.
+![Backgroundvsforegroundcontrast](/assets/images/readme-lighthouse-mobile-accessibility-backgroundvsforegroundcontrast.png)
 
-## contact.html
+Issue: Issues logged in panel
+Acceptance Reason: 3rd Party Cookie - not in scope.
+![Issuespanel](/assets/images/readme-lighthouse-mobile-bestpractices-issuespanel.png)
 
-<div align="center">
-  <img src="assets/testingassets/testing-lighthouse-contact-summary.png" alt="Lighthouse Contact Summary">
-</div>
+Issue: explicit height and width not set
+Resolution: set explicit width and height to images on index & results page.
+Commit message: lighthouse fix: index, results page - explicit height and width
+![Issuespanel](/assets/images/readme-lighthouse-mobile-performance-imageelementsexplicitheightandwidth.png)
 
-## contact-form.html
+## Deployment
 
-<div align="center">
-  <img src="assets/testingassets/testing-lighthouse-contact-form-summary.png" alt="Lighthouse Contact Form Summary">
-</div>
+### Local Deployment
 
-## register-form.html
-
-<div align="center">
-  <img src="assets/testingassets/testing-lighthouse-register-summary.png" alt="Lighthouse Register Form Summary">
-</div>
-
-## success.html
-
-<div align="center">
-  <img src="assets/testingassets/testing-lighthouse-success-summary.png" alt="Lighthouse Success Summary">
-</div>
-
-## Lighthouse Warning and Issue Resolution
-
-Please see [Full testing external mastersheet](https://docs.google.com/spreadsheets/d/1MpcjnFR0sRtm0FBuqfoiV8ybn5v_BY5CXubD8ImN6pg/edit?usp=sharing). Lighthouse-tab for more information.
-
-### #1
-
-- Page: classes.html
-- Section: Accessibility
-- Type: Warning
-- Message: 'Heading elements are not in sequentially-descending order. '
-- Source: H3 Headers in class text.
-- Action: Update to H2 Headers
-- Status: Resolved
-
-### #2
-
-- Page(s): contact.html ; success.html
-- Section: SEO
-- Type: Warning
-- Message: Background and foreground colors do not have sufficient contrast ratio.
-- Source: Address and Google map background against phone text.
-- Action: Update color to white for full contrast.
-- Status: Resolved
-
-## Bugs
-
-No bugs have been identified in testing.
-
-# Deployment
-
-## Local Deployment
-
-### Local Preparation
+#### Local Preparation
 
 **Requirements:**
 
 - An IDE of your choice, such as [Visual Studio Code](https://code.visualstudio.com/)
 - Github Account
 
-## Github Deployment
+### Github Deployment
 
-### Github Instructions
+#### Github Instructions
 
 1. Log in to your GitHub account.
-   navigate to [[https://github.com/Ri-Dearg/neverlost-thrift](https://github.com/JamesBirchall-dev/Invital-Health-Centre)](https://github.com/JamesBirchall-dev/Invital-Health-Centre).
+   navigate to [https://github.com/Ri-Dearg/neverlost-thrift\](https://github.com/JamesBirchall-dev/Invital-Health-Centre](https://github.com/JamesBirchall-dev/MSP2))](https://github.com/JamesBirchall-dev/MSP2).
 1. You can set up your own repository and copy or clone it, or you fork the repository.
 1. `git add`, `git commit` and `git push` to a GitHub repository, if necessary.
 1. GitHub pages will update from the master branch by default.
 1. Go to the **Settings** page of the repository.
 1. Scroll down to the **Github Pages** section.
 1. Select the Master Branch as the source and **Confirm** the selection.
-1. Wait a minute or two and it should be live for viewing. See my own [here](https://jamesbirchall-dev.github.io/Invital-Health-Centre/).
+1. Wait a minute or two and it should be live for viewing. See my own [here](https://jamesbirchall-dev.github.io/MSP2/).
 
-## Credits and Contact
+### Credits and Contact
 
-### Content
+#### Content
 
-Imagery was almost exclusively obtained through [istockphoto](https://www.istockphoto.com/).
+- code template for MBTI test https://codepen.io/pulpexploder/pen/pNpdeq/)
+- Wikipedia – MBTI(https://en.wikipedia.org/wiki/Myers%E2%80%93Briggs_Type_Indicator)
+- 16Personalities.com (https://www.16personalities.com/)
+- Bootstrap Documentation (https://getbootstrap.com/docs/5.3/getting-started/introduction/)
+- Code Institute(https://learn.codeinstitute.net/)
+- W3 Schools (https://www.w3schools.com/js/js_quiz.asp)
 
-### Contact
+#### Contact
 
 Please feel free to contact me at `jamesbdorel@gmail.com`
