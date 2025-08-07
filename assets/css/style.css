@@ -100,6 +100,12 @@ h3 {
   color: rgb(245, 231, 231); /* overwrites h1 text color withing card only*/
 }
 
+#overall-progress-bar {
+  width: 0%;
+  height: 20px;
+  background-color: #007bff; /* Bootstrap primary color */
+  transition: width 0.3s ease;
+}
 
 /*interacts with card color change on selection js
 .card.answered {
