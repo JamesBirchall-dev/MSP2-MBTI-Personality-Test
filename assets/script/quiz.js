@@ -10,7 +10,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const progress_key = "questionsAnswered"; // key for session storage
 
     //
-    sessionStorage.setItem(progress_key, '0');
+   sessionStorage.setItem(progress_key, '0');
+
 
     // map for each section defined in body section in ei.html sn.html tf.html jp.html
 
