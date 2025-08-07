@@ -6,7 +6,19 @@
   --secondary-font: "Varela", sans-serif;
   --primary-color: rgb(49, 81, 102);
   --secondary-color: rgb(168, 180, 211);
+  /* corresponds to ei sn tf and jp to apply to h2 text headers and selection on test forms"*/
+ /*e vs i*/
+  --extraversion-color: 96, 63, 120;
+  --introversion-color: 97, 145, 176;
+  --sensing-color: 88, 146, 115;
+  --intuition-color: 151, 128, 167;
+  --thinking-color: 233, 124, 156;
+  --feeling-color: 6, 82, 132;
+  --judging-color: 165, 17, 29;
+  --perceiving-color: 1, 87, 42;
 }
+
+
 /*font text color and background color for page*/
 body {
   font-family: var(--primary-font);
@@ -99,38 +111,78 @@ h3 {
 /*updates card background dependent on selection and section - see myersbriggsdiagramcolors in readme */
 
 .card.e-selected {
- background-color: rgba(96,63,120,0.7);
+ background-color: rgba(var(--extraversion-color),0.5);
 }
 
 .card.i-selected {
-  background-color: rgba(97,145,176,0.5); 
+  background-color: rgba(var(--introversion-color),0.5);
 }
 
 .card.s-selected {
-  background-color: rgba(88,146,115,0.5);
+  background-color: rgba(var(--sensing-color),0.5);
 }
 
 .card.n-selected {
-  background-color: rgba(151,128,167,0.5);
+  background-color: rgba(var(--intuition-color),0.5);
 }
 
 .card.t-selected {
-  background-color: rgba(233,124,156,0.5);
+  background-color: rgba(var(--thinking-color),0.5);
 }
 
 .card.f-selected {
-  background-color: rgba(6,82,132,0.5);
+  background-color: rgba(var(--feeling-color),0.5);
 }
 
 .card.j-selected {
-  background-color: rgba(165,17,29,0.5);
+  background-color: rgba(var(--judging-color),0.5);
 }
 
 .card.p-selected {
-  background-color: rgba(1,87,42,0.5);
+  background-color: rgba(var(--perceiving-color),0.5);
 }
 
-/* Progress bar styling */
+/*currently clashing with h1 variables, if have time fix/
+
+.header-container .extraversion-text {
+  color: var(--extraversion-color);
+  font-weight: bold;
+}
+.header-container .introversion-text {
+color: var(--introversion-color);
+font-weight: bold;
+}
+
+.header-container .sensing-text {
+color: var(--sensing-color);
+font-weight: bold; 
+}
+
+.header-container .intuition-text {
+color: var(--intuition-color);
+font-weight: bold;
+}
+
+.header-container .thinking-text {
+color: var(--thinking-color);
+font-weight: bold;
+}
+
+.header-container .feeling-text {
+color: var(--feeling-color);
+font-weight: bold;
+}
+
+.header-container .judging-text {
+color: var(--judging--color);
+font-weight: bold;
+}
+
+.header-container .perceiving-text {
+color: var(--perceiving--color);
+font-weight: bold;
+}
+*/
 
 #progress-container {
   width: 100%;

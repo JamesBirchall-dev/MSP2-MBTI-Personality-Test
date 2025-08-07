@@ -48,16 +48,20 @@
         <a href="index.html" class="btn btn-primary btn-lg">Home</a>
       </div>
     </nav>
+    <div classs="container header-container">
     <h1>MBTI Personality Test</h1>
 
     <!--Section 2 Heading for the 2/4 results scoring-->
-    <h2>Section 2: Sensing (S) vs. Intuition (N)</h2>
-
+    
+    <h2>
+  Section 2: <span class="sensing-text">Sensing (S)</span> vs. <span class="intuition-text">Intuition (N)</span>
+</h2>
+</div>
     <form id="quiz-form" class="needs-validation" novalidate>
       <div class="card">
         <div class="card-body">
           <p>
-            <strong>11. When you receive instructions, do you prefer: </strong>
+            <strong>11. You make decisions based on: </strong>
           </p>
 
           <div class="form-check">
@@ -70,7 +74,7 @@
               required
             >
             <label class="form-check-label" for="q11s"
-              >Clear, concrete directions</label
+              >What has worked before</label
             >
           </div>
 
@@ -83,7 +87,7 @@
               value="n"
             >
             <label class="form-check-label" for="q11n"
-              >General guidelines or concepts</label
+              >What might work better</label
             >
           </div>
 
@@ -95,7 +99,7 @@
 
       <div class="card">
         <div class="card-body">
-          <p><strong>12. You tend to focus more on:</strong></p>
+          <p><strong>12. You’re more drawn to:</strong></p>
 
           <div class="form-check">
             <input
@@ -106,7 +110,7 @@
               value="s"
               required
             >
-            <label class="form-check-label" for="q12s">Facts and details</label>
+            <label class="form-check-label" for="q12s">Practical and useful ideas</label>
           </div>
 
           <div class="form-check">
@@ -118,7 +122,7 @@
               value="n"
             >
             <label class="form-check-label" for="q12n"
-              >Patterns and possibilities</label
+              >Big-picture and imaginative ideas</label
             >
           </div>
 
@@ -130,7 +134,7 @@
 
       <div class="card">
         <div class="card-body">
-          <p><strong>13. When solving problems, you prefer to: </strong></p>
+          <p><strong>13. When reading instructions, you: </strong></p>
 
           <div class="form-check">
             <input
@@ -142,7 +146,7 @@
               required
             >
             <label class="form-check-label" for="q13s"
-              >Use practical, proven methods</label
+              >Follow them step-by-step</label
             >
           </div>
 
@@ -155,7 +159,8 @@
               value="n"
             >
             <label class="form-check-label" for="q13n"
-              >Explore new ideas and innovative approaches</label
+              >Skim and figure it out as you go
+            </label
             >
           </div>
 
@@ -167,7 +172,7 @@
 
       <div class="card">
         <div class="card-body">
-          <p><strong>14. In conversations, you: </strong></p>
+          <p><strong>14. You remember: </strong></p>
 
           <div class="form-check">
             <input
@@ -179,7 +184,7 @@
               required
             >
             <label class="form-check-label" for="q14s"
-              >Stick to what’s real and present</label
+              >Specific facts and details</label
             >
           </div>
 
@@ -192,7 +197,7 @@
               value="n"
             >
             <label class="form-check-label" for="q14n"
-              >Enjoy speculating about future possibilitie</label
+              >Overall impressions and meanings</label
             >
           </div>
 
@@ -206,7 +211,7 @@
         <div class="card-body">
           <p>
             <strong
-              >15. When remembering past events, you are more likely to recall::
+              >15. In conversation, you prefer:
             </strong>
           </p>
 
@@ -233,7 +238,7 @@
               value="n"
             >
             <label class="form-check-label" for="q15n"
-              >The general impression or feelings</label
+              >Metaphors and theories</label
             >
           </div>
 
@@ -245,7 +250,7 @@
 
       <div class="card">
         <div class="card-body">
-          <p><strong>16. You prefer tasks that: </strong></p>
+          <p><strong>16. You enjoy: </strong></p>
 
           <div class="form-check">
             <input
@@ -257,7 +262,7 @@
               required
             >
             <label class="form-check-label" for="q16s"
-              >Have clear steps and outcomes</label
+              >Mastering real-world tools.</label
             >
           </div>
 
@@ -270,7 +275,7 @@
               value="n"
             >
             <label class="form-check-label" for="q16n"
-              >Allow creativity and exploration
+              >Brainstorming new concepts.
             </label>
           </div>
 
@@ -282,7 +287,7 @@
 
       <div class="card">
         <div class="card-body">
-          <p><strong>17. When reading, you enjoy: </strong></p>
+          <p><strong>17. You focus more on: </strong></p>
 
           <div class="form-check">
             <input
@@ -294,7 +299,7 @@
               required
             >
             <label class="form-check-label" for="q17s"
-              >Practical, informative content</label
+              >The present and what’s realistic</label
             >
           </div>
 
@@ -307,7 +312,7 @@
               value="n"
             >
             <label class="form-check-label" for="q17n"
-              >Imaginative or abstract ideas</label
+              >The future and what’s possible</label
             >
           </div>
 
@@ -319,7 +324,7 @@
 
       <div class="card">
         <div class="card-body">
-          <p><strong>18. You trust information that is:</strong></p>
+          <p><strong>18. When analyzing a situation, you:</strong></p>
 
           <div class="form-check">
             <input
@@ -331,7 +336,7 @@
               required
             >
             <label class="form-check-label" for="q18s"
-              >Concrete and proven
+              >Consider what’s currently happening
             </label>
           </div>
 
@@ -344,7 +349,7 @@
               value="n"
             >
             <label class="form-check-label" for="q18n"
-              >Theoretical or inferred</label
+              >Think about long-term implications</label
             >
           </div>
 
@@ -356,7 +361,7 @@
 
       <div class="card">
         <div class="card-body">
-          <p><strong>19. When making decisions, you rely more on:</strong></p>
+          <p><strong>19. When learning something new, you:</strong></p>
 
           <div class="form-check">
             <input
@@ -368,7 +373,7 @@
               required
             >
             <label class="form-check-label" for="q19s"
-              >What is currently happening</label
+              >Prefer a hands-on approach</label
             >
           </div>
 
@@ -381,7 +386,7 @@
               value="n"
             >
             <label class="form-check-label" for="q19n">
-              What could possibly happen</label
+              Try out a fresh perspective</label
             >
           </div>
 
@@ -393,7 +398,7 @@
 
       <div class="card">
         <div class="card-body">
-          <p><strong>10. You prefer learning by: </strong></p>
+          <p><strong>20. Your approach to problems is: </strong></p>
 
           <div class="form-check">
             <input
@@ -405,7 +410,7 @@
               required
             >
             <label class="form-check-label" for="q20s"
-              >Hands-on experience</label
+              >Stick with what you know works</label
             >
           </div>
 
@@ -418,7 +423,7 @@
               value="n"
             >
             <label class="form-check-label" for="q20n"
-              >Exploring concepts and ideas</label
+              >Try out a fresh perspective</label
             >
           </div>
 
