@@ -97,6 +97,7 @@ try {
 
                 const selectedValue = radio.value.toLowerCase();
                 card.classList.add(`${selectedValue}-selected`);
+                updateProgressBar();
             });
         });
     });
@@ -104,12 +105,34 @@ try {
     console.error("Error adding answered card color", err);
 }
 
+const updateProgressBar = () => {
+    const cards = document.querySelectorAll(".card");
+    const totalQuestions = cards.length;
+
+    let answeredCount = 0;
+
+    cards.forEach((card) => {
+        const radios = card.querySelectorAll('input[type="radio"]');
+        const oneChecked = Array.from(radios).some(radio => radio.checked);
+        if (oneChecked) answeredCount++;
+    });
+
+    const percent = (answeredCount / totalQuestions) * 100;
+    const progressBar = document.getElementById("progress-bar");
+    if (progressBar) {
+        progressBar.style.width = `${percent}%`;
+    }
+};
+
+updateProgressBar();
 try {
     form.addEventListener("submit", handleSubmit);
-} catch (err) {
-    console.error("Unexpected error processing form", err);
-}
+} catch(err) {
+    console.error("error processing progress bar", err);
+}   
 });
+
+
 
 
 

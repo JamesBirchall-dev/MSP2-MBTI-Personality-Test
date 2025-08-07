@@ -96,6 +96,8 @@ h3 {
 }
 */
 
+/*updates card background dependent on selection and section - see myersbriggsdiagramcolors in readme */
+
 .card.e-selected {
  background-color: rgba(96,63,120,0.7);
 }
@@ -126,4 +128,22 @@ h3 {
 
 .card.p-selected {
   background-color: rgba(1,87,42,0.5);
+}
+
+/* Progress bar styling */
+
+#progress-container {
+  width: 100%;
+  background-color: white;
+  height: 20px;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+}
+
+#progress-bar{
+  height: 100%;
+  background-color: rgb(8, 78, 78);
+  width: 0%;
+  transition: width 0.3s ease-in-out
 }
