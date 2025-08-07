@@ -78,6 +78,21 @@ const handleSubmit = (e) => {
     }
 };
 
+try {
+    const cards = document.querySelectorAll(".card");
+
+    cards.forEach((card) => {
+        const radios = card.querySelectorAll('input[type="radio"]');
+
+        radios.forEach((radio) => {
+            radio.addEventListener("change", () => {
+                card.classList.add("answered");
+            });
+        });
+    });
+} catch (err) {
+    console.error("Error adding answered card color", err);
+}
 
 try {
     form.addEventListener("submit", handleSubmit);

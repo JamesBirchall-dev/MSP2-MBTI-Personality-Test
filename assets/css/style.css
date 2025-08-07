@@ -88,3 +88,9 @@ h3 {
   color: rgb(245, 231, 231); /* overwrites h1 text color withing card only*/
 }
 
+
+/*interacts with card color change on selection js*/
+.card.answered {
+ background-color: aqua;
+
+}
