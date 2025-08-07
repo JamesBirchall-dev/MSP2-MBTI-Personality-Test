@@ -78,15 +78,25 @@ const handleSubmit = (e) => {
     }
 };
 
+//change card color background upon selection function
 try {
+    const section = document.body.dataset.section;
     const cards = document.querySelectorAll(".card");
 
     cards.forEach((card) => {
         const radios = card.querySelectorAll('input[type="radio"]');
-
         radios.forEach((radio) => {
             radio.addEventListener("change", () => {
-                card.classList.add("answered");
+                const oldClassList = [
+                    "e-selected", "i-selected",
+                    "s-selected", "n-selected",
+                    "t-selected", "f-selected",
+                    "j-selected", "p-selected"
+                ];
+                card.classList.remove(...oldClassList);
+
+                const selectedValue = radio.value.toLowerCase();
+                card.classList.add(`${selectedValue}-selected`);
             });
         });
     });

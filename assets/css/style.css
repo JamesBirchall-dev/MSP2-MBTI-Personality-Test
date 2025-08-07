@@ -89,8 +89,41 @@ h3 {
 }
 
 
-/*interacts with card color change on selection js*/
+/*interacts with card color change on selection js
 .card.answered {
  background-color: aqua;
 
+}
+*/
+
+.card.e-selected {
+ background-color: rgb(96,63,120);
+}
+
+.card.i-selected {
+  background-color: rgb(97,145,176); 
+}
+
+.card.s-selected {
+  background-color: rgb(88,146,115);
+}
+
+.card.n-selected {
+  background-color: rgb(151,128,167);
+}
+
+.card.t-selected {
+  background-color: rgb(233,124,156);
+}
+
+.card.f-selected {
+  background-color: rgb(6,82,132);
+}
+
+.card.j-selected {
+  background-color: rgb(165,17,29);
+}
+
+.card.p-selected {
+  background-color: rgb(1,87,42);;
 }
