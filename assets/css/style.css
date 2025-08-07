@@ -22,7 +22,7 @@
 /*font text color and background color for page*/
 body {
   font-family: var(--primary-font);
-  color: var(--primary-color);
+  
   background-color: var(--secondary-color);
 }
 /*main headings stlye*/
@@ -148,7 +148,7 @@ h3 {
   background-color: rgba(var(--perceiving-color),0.5);
 }
 
-/*currently clashing with h1 variables, if have time fix/
+*currently clashing with h1 variables, if have time fix/
 
 .header-container .extraversion-text {
   color: var(--extraversion-color);

@@ -5,13 +5,25 @@ document.addEventListener("DOMContentLoaded", () => {
     const sectionKey = document.body.dataset.section;
     const validationMsg = document.getElementById("validation-message");
 
+
+
     // total questions for overall progress bar update
     const total_questions = 40;
     const progress_key = "questionsAnswered"; // key for session storage
 
-    //
-   sessionStorage.setItem(progress_key, '0');
+    // ensures the progress defaults at 0% for section 1, 25% section 2 etc. 
+  
+if (!sessionStorage.getItem(progress_key)) {
+    const baseProgressMap = {
+        section1: 0,
+        section2: 10,
+        section3: 20,
+        section4: 30
+    };
 
+    const initialCount = baseProgressMap[sectionKey] || 0;
+    sessionStorage.setItem(progress_key, initialCount);
+}
 
     // map for each section defined in body section in ei.html sn.html tf.html jp.html
 
