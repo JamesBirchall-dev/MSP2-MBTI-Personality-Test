@@ -66,7 +66,7 @@ h3 {
 }
 
 #quiz-form .form-check-label:hover {
-  color: rgb(233, 124, 156); /*pink/red to suit design*/
+ 
   cursor: pointer;
   transition: color 0.3s ease; /*smooth hover transition*/
 }
@@ -74,7 +74,7 @@ h3 {
 /*spacing around cards*/
 .card {
   margin-bottom: 1rem;
-  color: rgb(245, 231, 231);
+  color: rgb(255, 255, 255);
   background-color: rgb(
     25,
     38,
@@ -97,33 +97,33 @@ h3 {
 */
 
 .card.e-selected {
- background-color: rgb(96,63,120);
+ background-color: rgba(96,63,120,0.7);
 }
 
 .card.i-selected {
-  background-color: rgb(97,145,176); 
+  background-color: rgba(97,145,176,0.5); 
 }
 
 .card.s-selected {
-  background-color: rgb(88,146,115);
+  background-color: rgba(88,146,115,0.5);
 }
 
 .card.n-selected {
-  background-color: rgb(151,128,167);
+  background-color: rgba(151,128,167,0.5);
 }
 
 .card.t-selected {
-  background-color: rgb(233,124,156);
+  background-color: rgba(233,124,156,0.5);
 }
 
 .card.f-selected {
-  background-color: rgb(6,82,132);
+  background-color: rgba(6,82,132,0.5);
 }
 
 .card.j-selected {
-  background-color: rgb(165,17,29);
+  background-color: rgba(165,17,29,0.5);
 }
 
 .card.p-selected {
-  background-color: rgb(1,87,42);;
+  background-color: rgba(1,87,42,0.5);
 }
