@@ -8,14 +8,14 @@
   --secondary-color: #A8B4D3;
   /* corresponds to ei sn tf and jp to apply to h2 text headers and selection on test forms"*/
  /*e vs i*/
-  --extraversion-color: #603F78;
-  --introversion-color: #6191B0;
-  --sensing-color: #589273;
-  --intuition-color: #9780A7;
-  --thinking-color: #E97C9C;
-  --feeling-color: #065284;
-  --judging-color: #A5111D;
-  --perceiving-color: #01572A;
+  --extraversion-color: #d9abfa;
+  --introversion-color: #9ad0f5;
+  --sensing-color: #71be95;
+  --intuition-color: #d8c1e9;
+  --thinking-color: #f0b8c9;
+  --feeling-color: #61a4d1;
+  --judging-color: #d67078;
+  --perceiving-color: #6dd6a0;
 }
 
 
@@ -112,7 +112,7 @@ h3 {
 .card {
   margin-bottom: 1rem;
   color: rgb(255, 255, 255);
-  background-color: rgb(25,38,61);
+  background-color: rgb(20, 31, 51);
   font-size: 1rem;
   font-weight: 300; 
   /*ensures readbility with negative contrast*/
@@ -172,6 +172,7 @@ h3 {
 .extraversion-text {
   color: var(--extraversion-color);
   font-weight: bold;
+  
 }
 .introversion-text {
 color: var(--introversion-color);
