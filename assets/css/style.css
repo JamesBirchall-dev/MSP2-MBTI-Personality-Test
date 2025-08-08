@@ -38,6 +38,14 @@ h3 {
   background-color: var(--primary-color);
   color: white;
 }
+
+.sticky-nav-wrapper {
+  position: sticky;
+  top: 0; /* sticks to the top */
+  z-index: 1000; /* ensures it stays on top */
+ 
+}
+
 /*centre alignment for homepage*/
 .index-page .container {
   text-align: center;
@@ -116,6 +124,31 @@ h3 {
 .card.j-selected { background-color: var(--judging-color); }
 .card.p-selected { background-color: var(--perceiving-color); }
 /*currently clashing with h1 variables, if have time fix*/
+
+.results .container{
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.results-card {
+  text-align: center;
+  background-color: #3e8656;
+}
+.results-card h2 {
+  color: white;
+}
+.results-card a{
+  color: blue;
+  text-decoration: underline;
+
+}
+#resultImage {
+  aspect-ratio: 1046 / 516;
+  width: 100%;
+  height: auto;
+  display: block;
+}
 
 .extraversion-text {
   color: var(--extraversion-color);

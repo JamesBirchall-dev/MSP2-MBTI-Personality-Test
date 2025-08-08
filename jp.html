@@ -43,30 +43,32 @@
 
   <!--body id section for custom css and js based on each section scores-->
   <body data-section="section4">
-    <!-- Navigation py-3 required for optimal width, mb-4 for spacing beneath, container required to bring button in alignment with content-->
-    <nav class="nav py-3 mb-4 custom-navbar">
-      <div class="container">
-        <a href="index.html" class="btn btn-primary btn-lg">Home</a>
-      </div>
-    </nav>
+<!-- Navigation py-3 required for optimal width, mb-0 to reduce margin beneath -->
+<nav class="nav py-3 mb-0 custom-navbar">
+  <div class="container">
+    <a href="index.html" class="btn btn-primary btn-lg">Home</a>
+  </div>
+</nav>
 
-    <!--Section 4 Heading for the 4/4 results scoring-->
-   
-
+<!-- Progress Bar sticky -->
 <div class="container">
-<div class="card">
-  <div class="card-header">
-    <h1>The Myers Briggs Type Indicator Test (MBTI)</h1>
-  </div>
-  <div class="card-body">
-    <h2 class="card-title">Section 4: <span class="judging-text">Judging</span> vs. <span class="perceiving-text">Perceiving</span></h2>
+  <div id="overall-progress-container" style="width: 100%; background-color: #ddd;">
+    <div id="overall-progress-bar"></div>
   </div>
 </div>
-        <!--Progress Bar-->
-<div id="overall-progress-container" style="width: 100%; background-color: #ddd;">
-  <div id="overall-progress-bar"></div>
-</div>
-</div>
+
+<!-- Section 4 Heading for the 4/4 results scoring -->
+<div class="container">
+  <div class="card">
+    <div class="card-header">
+      <h1>The Myers Briggs Type Indicator Test (MBTI)</h1>
+    </div>
+    <div class="card-body">
+      <h2 class="card-title">
+        Section 4: <span class="judging-text">Judging</span> vs. <span class="perceiving-text">Perceiving</span>
+      </h2>
+    </div>
+  </div>
 </div>
 
     <form id="quiz-form" class="needs-validation" novalidate>
