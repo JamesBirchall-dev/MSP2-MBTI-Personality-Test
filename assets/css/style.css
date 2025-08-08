@@ -149,12 +149,12 @@ font-weight: bold;
 }
 
 .judging-text {
-color: var(--judging--color);
+color: var(--judging-color);
 font-weight: bold;
 }
 
 .perceiving-text {
-color: var(--perceiving--color);
+color: var(--perceiving-color);
 font-weight: bold;
 }
 */

@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const total_questions = 40;
     const progress_key = "questionsAnswered"; // key for session storage
 
-    // ensures the progress defaults at 0% for section 1, 25% section 2 etc. 
+    // ensures the progress defaults at 0% for section 1, 25% section 2 etc.  And resets session upon section1 visit
   
 if (sectionKey === "section1") {
     const baseProgressMap = {
