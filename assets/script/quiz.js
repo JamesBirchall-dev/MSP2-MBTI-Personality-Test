@@ -13,17 +13,28 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // ensures the progress defaults at 0% for section 1, 25% section 2 etc. 
   
-if (!sessionStorage.getItem(progress_key)) {
+if (sectionKey === "section1") {
     const baseProgressMap = {
         section1: 0,
         section2: 10,
         section3: 20,
-        section4: 30
+        section4: 30,
     };
+    sessionStorage.setItem(progress_key, baseProgressMap[sectionKey]);
+}
 
+else if (!sessionStorage.getItem(progress_key)) {
+    const baseProgressMap = {
+        section1: 0,
+        section2: 10,
+        section3: 20,
+        section4: 30,
+    };
     const initialCount = baseProgressMap[sectionKey] || 0;
     sessionStorage.setItem(progress_key, initialCount);
 }
+
+
 
     // map for each section defined in body section in ei.html sn.html tf.html jp.html
 
