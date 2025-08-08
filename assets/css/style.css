@@ -4,25 +4,25 @@
 :root {
   --primary-font: "Montserrat", sans-serif;
   --secondary-font: "Varela", sans-serif;
-  --primary-color: rgb(49, 81, 102);
-  --secondary-color: rgb(168, 180, 211);
+  --primary-color: #315166;
+  --secondary-color: #A8B4D3;
   /* corresponds to ei sn tf and jp to apply to h2 text headers and selection on test forms"*/
  /*e vs i*/
-  --extraversion-color: 96, 63, 120;
-  --introversion-color: 97, 145, 176;
-  --sensing-color: 88, 146, 115;
-  --intuition-color: 151, 128, 167;
-  --thinking-color: 233, 124, 156;
-  --feeling-color: 6, 82, 132;
-  --judging-color: 165, 17, 29;
-  --perceiving-color: 1, 87, 42;
+  --extraversion-color: #603F78;
+  --introversion-color: #6191B0;
+  --sensing-color: #589273;
+  --intuition-color: #9780A7;
+  --thinking-color: #E97C9C;
+  --feeling-color: #065284;
+  --judging-color: #A5111D;
+  --perceiving-color: #01572A;
 }
 
 
 /*font text color and background color for page*/
 body {
   font-family: var(--primary-font);
-  
+  color: var(--primary-color);
   background-color: var(--secondary-color);
 }
 /*main headings stlye*/
@@ -107,84 +107,53 @@ h3 {
   transition: width 0.3s ease;
 }
 
-/*interacts with card color change on selection js
-.card.answered {
- background-color: aqua;
-
-}
-*/
-
 /*updates card background dependent on selection and section - see myersbriggsdiagramcolors in readme */
 
-.card.e-selected {
- background-color: rgba(var(--extraversion-color),0.5);
-}
+.card.e-selected { background-color: var(--extraversion-color); }
+.card.i-selected { background-color: var(--introversion-color); }
+.card.s-selected { background-color: var(--sensing-color); }
+.card.n-selected { background-color: var(--intuition-color); }
+.card.t-selected { background-color: var(--thinking-color); }
+.card.f-selected { background-color: var(--feeling-color); }
+.card.j-selected { background-color: var(--judging-color); }
+.card.p-selected { background-color: var(--perceiving-color); }
+/*currently clashing with h1 variables, if have time fix*/
 
-.card.i-selected {
-  background-color: rgba(var(--introversion-color),0.5);
-}
-
-.card.s-selected {
-  background-color: rgba(var(--sensing-color),0.5);
-}
-
-.card.n-selected {
-  background-color: rgba(var(--intuition-color),0.5);
-}
-
-.card.t-selected {
-  background-color: rgba(var(--thinking-color),0.5);
-}
-
-.card.f-selected {
-  background-color: rgba(var(--feeling-color),0.5);
-}
-
-.card.j-selected {
-  background-color: rgba(var(--judging-color),0.5);
-}
-
-.card.p-selected {
-  background-color: rgba(var(--perceiving-color),0.5);
-}
-
-*currently clashing with h1 variables, if have time fix/
-
-.header-container .extraversion-text {
+.extraversion-text {
   color: var(--extraversion-color);
   font-weight: bold;
 }
-.header-container .introversion-text {
+.introversion-text {
 color: var(--introversion-color);
 font-weight: bold;
 }
 
-.header-container .sensing-text {
+.sensing-text {
 color: var(--sensing-color);
 font-weight: bold; 
 }
 
-.header-container .intuition-text {
+.intuition-text {
 color: var(--intuition-color);
 font-weight: bold;
 }
 
-.header-container .thinking-text {
+.thinking-text {
 color: var(--thinking-color);
 font-weight: bold;
 }
 
-.header-container .feeling-text {
+.feeling-text {
 color: var(--feeling-color);
 font-weight: bold;
 }
 
-.header-container .judging-text {
+.judging-text {
 color: var(--judging--color);
 font-weight: bold;
 }
 
-.header-container .perceiving-text {
+.perceiving-text {
 color: var(--perceiving--color);
 font-weight: bold;
 }
