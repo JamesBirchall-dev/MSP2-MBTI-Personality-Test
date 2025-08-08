@@ -46,6 +46,23 @@ h3 {
  
 }
 
+/*progress bar styling*/
+#overall-progress-bar {
+  width: 0%;
+  height: 20px;
+  background-color: #007bff; /* Bootstrap primary color */
+  transition: width 0.3s ease;
+}
+
+#progress-container {
+  width: 100%;
+  background-color: white;
+  height: 20px;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+}
+
 /*centre alignment for homepage*/
 .index-page .container {
   text-align: center;
@@ -105,7 +122,7 @@ h3 {
 .card h1 {
   color: rgb(245, 231, 231); /* overwrites h1 text color withing card only*/
 }
-
+/*progress bar styling*/
 #overall-progress-bar {
   width: 0%;
   height: 20px;
@@ -125,6 +142,7 @@ h3 {
 .card.p-selected { background-color: var(--perceiving-color); }
 /*currently clashing with h1 variables, if have time fix*/
 
+/* Results page card styling*/
 .results .container{
   text-align: center;
   max-width: 700px;
@@ -138,7 +156,7 @@ h3 {
 .results-card h2 {
   color: white;
 }
-.results-card a{
+.results-card a{ /* required for contrast/accessibility*/
   color: blue;
   text-decoration: underline;
 
@@ -150,6 +168,7 @@ h3 {
   display: block;
 }
 
+/*span class text for header text on test/quiz pages*/
 .extraversion-text {
   color: var(--extraversion-color);
   font-weight: bold;
@@ -188,20 +207,4 @@ font-weight: bold;
 color: var(--perceiving-color);
 font-weight: bold;
 }
-*/
 
-#progress-container {
-  width: 100%;
-  background-color: white;
-  height: 20px;
-  border-radius: 10px;
-  margin-bottom: 1.5rem;
-  overflow: hidden;
-}
-
-#progress-bar{
-  height: 100%;
-  background-color: rgb(8, 78, 78);
-  width: 0%;
-  transition: width 0.3s ease-in-out
-}
