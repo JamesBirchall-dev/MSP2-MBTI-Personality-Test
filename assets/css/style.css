@@ -87,13 +87,11 @@ h3 {
 .card {
   margin-bottom: 1rem;
   color: rgb(255, 255, 255);
-  background-color: rgb(
-    25,
-    38,
-    61
-  ); /*essential to show radio buttons as input class being used in JS*/
+  background-color: rgb(25,38,61);
   font-size: 1rem;
-  font-weight: 300; /*ensures readbility with negative contrast*/
+  font-weight: 300; 
+  /*ensures readbility with negative contrast*/
+
 }
 
 .card h1 {
