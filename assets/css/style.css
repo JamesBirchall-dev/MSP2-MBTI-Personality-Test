@@ -221,7 +221,7 @@ h3 {
 
 /* centres text and adds spacing between mesage and 'next section' submit button*/
 #validation-message {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.2rem;
   text-align: center;
   font-weight: bold;
   font-size: 1.1rem;
