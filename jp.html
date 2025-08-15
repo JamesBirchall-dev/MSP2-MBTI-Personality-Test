@@ -43,19 +43,21 @@
 
   <!--body id section for custom css and js based on each section scores-->
   <body data-section="section4">
-<!-- Navigation py-3 required for optimal width, mb-0 to reduce margin beneath -->
-<nav class="nav py-3 mb-0 custom-navbar">
-  <div class="container">
-    <a href="index.html" class="btn btn-primary btn-lg">Home</a>
-  </div>
-</nav>
+ <!-- Navigation py-3 required for optimal width, mb-4 for spacing beneath, container required to bring button in alignment with content-->
+     <div class="sticky-nav-wrapper">
+    <nav class="nav py-3 mb-0 custom-navbar">
+      <div class="container">
+        <a href="index.html" class="btn btn-primary btn-lg">Home</a>
+      </div>
+    </nav>
 
-<!-- Progress Bar sticky -->
-<div class="container">
-  <div id="overall-progress-container" style="width: 100%; background-color: #ddd;">
-    <div id="overall-progress-bar"></div>
-  </div>
-</div>
+    <!-- Progress Bar sticky below nav -->
+    <div class="container">
+      <div id="overall-progress-container" style="width: 100%; background-color: #ddd; height: 20px;">
+        <div id="overall-progress-bar" style="height: 100%; background-color: #0d6efd; width: 0%;"></div>
+      </div>
+    </div>
+  </div> <!-- sticky-nav-wrapper ends here -->
 
 <!-- Section 4 Heading for the 4/4 results scoring -->
 <div class="container">
@@ -70,6 +72,8 @@
     </div>
   </div>
 </div>
+
+<!--test/ quiz section -->
 
     <form id="quiz-form" class="needs-validation" novalidate>
       <div class="card">
@@ -446,12 +450,8 @@
         class="text-danger mt-3"
         style="display: none"
       >
-        Please answer all questions before continuing.
-
-        
+       Please answer all questions before continuing.
       </div>
- 
-
 
       <!--href needs to be # in order for the js to deal with the navigation-->
       <button type="submit" id="next" class="btn btn-primary btn-lg active">

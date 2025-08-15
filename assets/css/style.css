@@ -5,9 +5,9 @@
   --primary-font: "Montserrat", sans-serif;
   --secondary-font: "Varela", sans-serif;
   --primary-color: #315166;
-  --secondary-color: #A8B4D3;
+  --secondary-color: #a8b4d3;
   /* corresponds to ei sn tf and jp to apply to h2 text headers and selection on test forms"*/
- /*e vs i*/
+  /*e vs i*/
   --extraversion-color: #d9abfa;
   --introversion-color: #9ad0f5;
   --sensing-color: #71be95;
@@ -17,7 +17,6 @@
   --judging-color: #d67078;
   --perceiving-color: #6dd6a0;
 }
-
 
 /*font text color and background color for page*/
 body {
@@ -43,7 +42,6 @@ h3 {
   position: sticky;
   top: 0; /* sticks to the top */
   z-index: 1000; /* ensures it stays on top */
- 
 }
 
 /*progress bar styling*/
@@ -93,7 +91,6 @@ h3 {
   }
 }
 
-
 /* boostrap quiz form override styles for optimised width on larger screens*/
 
 #quiz-form {
@@ -103,7 +100,6 @@ h3 {
 }
 
 #quiz-form .form-check-label:hover {
- 
   cursor: pointer;
   transition: color 0.3s ease; /*smooth hover transition*/
 }
@@ -114,9 +110,8 @@ h3 {
   color: rgb(255, 255, 255);
   background-color: rgb(20, 31, 51);
   font-size: 1rem;
-  font-weight: 300; 
+  font-weight: 300;
   /*ensures readbility with negative contrast*/
-
 }
 
 .card h1 {
@@ -132,18 +127,111 @@ h3 {
 
 /*updates card background dependent on selection and section - see myersbriggsdiagramcolors in readme */
 
-.card.e-selected { background-color: var(--extraversion-color); }
-.card.i-selected { background-color: var(--introversion-color); }
-.card.s-selected { background-color: var(--sensing-color); }
-.card.n-selected { background-color: var(--intuition-color); }
-.card.t-selected { background-color: var(--thinking-color); }
-.card.f-selected { background-color: var(--feeling-color); }
-.card.j-selected { background-color: var(--judging-color); }
-.card.p-selected { background-color: var(--perceiving-color); }
+.card.e-selected,
+.card.i-selected,
+.card.s-selected,
+.card.n-selected,
+.card.t-selected,
+.card.f-selected,
+.card.j-selected,
+.card.p-selected {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+/* Selected card gradient backgrounds (dark - theme/var color to ensure selected card text has sufficient contrast */
+.card.e-selected {
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.25) 0%,
+    var(--extraversion-color) 100%
+  );
+  opacity: 0.9;
+}
+
+.card.i-selected {
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.25) 0%,
+    var(--introversion-color) 100%
+  );
+  opacity: 0.9;
+}
+
+.card.s-selected {
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.25) 0%,
+    var(--sensing-color) 100%
+  );
+  opacity: 0.9;
+}
+
+.card.n-selected {
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.25) 0%,
+    var(--intuition-color) 100%
+  );
+  opacity: 0.9;
+}
+
+.card.t-selected {
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.25) 0%,
+    var(--thinking-color) 100%
+  );
+  opacity: 0.9;
+}
+
+.card.f-selected {
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.25) 0%,
+    var(--feeling-color) 100%
+  );
+  opacity: 0.9;
+}
+
+.card.j-selected {
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.25) 0%,
+    var(--judging-color) 100%
+  );
+  opacity: 0.9;
+}
+
+.card.p-selected {
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.25) 0%,
+    var(--perceiving-color) 100%
+  );
+  opacity: 0.9;
+}
+/* override bootstrap validation for valid input check for accessibility/contrast with custom card.selected colors"*/
+
+.was-validated .form-check-input:valid ~ .form-check-label {
+  color: white;
+  
+}
+
+/* centres text and adds spacing between mesage and 'next section' submit button*/
+#validation-message {
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #dc3545; 
+}
+
 /*currently clashing with h1 variables, if have time fix*/
 
 /* Results page card styling*/
-.results .container{
+.results .container {
   text-align: center;
   max-width: 700px;
   margin: 0 auto;
@@ -156,10 +244,10 @@ h3 {
 .results-card h2 {
   color: white;
 }
-.results-card a{ /* required for contrast/accessibility*/
+.results-card a {
+  /* required for contrast/accessibility*/
   color: blue;
   text-decoration: underline;
-
 }
 #resultImage {
   aspect-ratio: 1046 / 516;
@@ -172,40 +260,38 @@ h3 {
 .extraversion-text {
   color: var(--extraversion-color);
   font-weight: bold;
-  
 }
 .introversion-text {
-color: var(--introversion-color);
-font-weight: bold;
+  color: var(--introversion-color);
+  font-weight: bold;
 }
 
 .sensing-text {
-color: var(--sensing-color);
-font-weight: bold; 
+  color: var(--sensing-color);
+  font-weight: bold;
 }
 
 .intuition-text {
-color: var(--intuition-color);
-font-weight: bold;
+  color: var(--intuition-color);
+  font-weight: bold;
 }
 
 .thinking-text {
-color: var(--thinking-color);
-font-weight: bold;
+  color: var(--thinking-color);
+  font-weight: bold;
 }
 
 .feeling-text {
-color: var(--feeling-color);
-font-weight: bold;
+  color: var(--feeling-color);
+  font-weight: bold;
 }
 
 .judging-text {
-color: var(--judging-color);
-font-weight: bold;
+  color: var(--judging-color);
+  font-weight: bold;
 }
 
 .perceiving-text {
-color: var(--perceiving-color);
-font-weight: bold;
+  color: var(--perceiving-color);
+  font-weight: bold;
 }
-
