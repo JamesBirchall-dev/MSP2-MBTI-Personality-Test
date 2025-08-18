@@ -240,6 +240,7 @@ h3 {
 .results-card {
   text-align: center;
   background-color: #3e8656;
+  font-size: 1.5rem; /*Required for lighthouse accessibility */
 }
 .results-card h2 {
   color: white;
@@ -247,6 +248,7 @@ h3 {
 .results-card a {
   /* required for contrast/accessibility*/
   color: blue;
+  background-color: white;
   text-decoration: underline;
 }
 #resultImage {

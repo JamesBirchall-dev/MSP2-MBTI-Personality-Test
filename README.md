@@ -71,6 +71,87 @@ The Myers Briggs Personality Index (MBTI) Test, is a psuedo psychology quiz deve
 
 ---
 
+## Scope & Content
+
+The purpose of this project is to create an interactive website that utilises javascript for calculation and provides a visual feedback to the user in the UX.
+I have chosen a quiz/test format using the Myers Briggs Personality Inidcator Test as a framework for the questioning, with visual feedbacks to the user being on multiple choice color feedback, field validation and a results page which compiles the results for the user.
+
+The sites goal is to be very user friendly using a variety of matching, visually pleasing color schemes and graphics. It should have a very clear journey indicators of where the user is on the journey and provide visual feedback to screen interactions such as clicking answers.
+
+The test was designed during WW2, using the Psychologist, Carl Jung's complicated work on personality types, the test was devised to simplify this down to 16 potential personality types.
+The logic is that for each section (4 in total) an Extrovert or Introvert majority answers is determined, each with a unique letter scoring, which leads to a 4 letter score at the end and a 16 total possibility of personality types.
+Using google, I compiled the questions into their respective 4 sections, 10 questions per section totalling 40 questions over all.
+
+For all the questions for each section please refer to my external sheet (https://docs.google.com/spreadsheets/d/1qcxpp5MTfT22Qdgeemm6ImCjR0gg_z4acRIAtPzjFSg/edit?usp=sharing)
+Below is an example taken from section 1 only (ei.html):
+
+### Section 1: Extraversion vs Introversion
+
+Scoring:
+
+- Option 1 answers score = E
+- Option 2 answers score = I
+
+Q1. At social gatherings, do you:
+
+- Option 1: Enjoy mingling with new people
+- Option 2: Prefer deep conversations with a few people
+
+Q2. You feel recharged after:
+
+- Option 1: Spending time with others
+- Option 2: Spending time alone
+
+Q3. When thinking something through, you:
+
+- Option 1: Prefer talking it out
+- Option 2: Prefer reflecting silently
+
+Q4. In meetings, you're more likely to:
+
+- Option 1: Speak up quickly
+- Option 2: Listen and contribute after thinking
+
+Q5. When you wake up on a weekend, you:
+
+- Option 1: Look forward to plans with others
+- Option 2: Look forward to time to yourself
+
+Q6. When introduced to a new group, you:
+
+- Option 1: Introduce yourself and ask questions
+- Option 2: Wait to be approached
+
+Q7. On vacation, you prefer:
+
+- Option 1: Group activities and exploring
+- Option 2: Relaxing on your own terms
+
+Q8. You tend to:
+
+- Option 1: Share your thoughts easily
+- Option 2: Keep thoughts to yourself unless asked
+
+Q9. Your ideal workday includes:
+
+- Option 1: Frequent collaboration
+- Option 2: Long stretches of solo work
+
+Q10. People would describe you as:
+
+- Option 1: Outgoing and energetic
+- Option 2: Quiet and thoughtful
+
+Section 2: Sensing vs Intuition
+Section 3: Thinking vs Feeling
+Section 4: Judging vs Perceiving.
+
+The site will be split into 3 main journey steps:
+
+- Homepage
+- Quiz/Test (4 x sections)
+- Results Page
+
 ## UX
 
 ### User Stories
@@ -122,17 +203,150 @@ The commit that corresponds to this is :
 - Based on MBTI diagram used across multiple platforms
 - Accessible color scheme with light backgrounds and high contrast
 
-#### Images
+#### Index Page Styling (index.html)
 
-#### Index Page MBTI Diagram sourced from (https://en.wikipedia.org/wiki/Myers%E2%80%93Briggs_Type_Indicator)
+The index/ homepage's purpose is to simplisticly deliver information about the history, the purpose and the meaning of the test and the results. This is acheived through:
 
-![MBTI](https://en.wikipedia.org/wiki/Myers%E2%80%93Briggs_Type_Indicator")
+Navigation:
 
-#### MBTI Test
+- Direct required on this page is to take the test. (ei.html)
+- Simplistic Bootstrap nav, utilising the primary color #315166; A dark and greyed green to provide good contrast against the bold-blue bootstrap primary button class .
 
-![ISTJ](https://raw.githubusercontent.com/JamesBirchall-dev/imagehost/main/istjresult.webp)
+Header Card
+
+Acheives a high contrast color ratio for reading, content is displayed centrally to keep buttons and content inline on page, allows for better device scaling and smaller device interaction as well:
+
+- Utilised bootstrap card https://getbootstrap.com/docs/5.3/components/card/.
+- White writing on a custom css dark blue background for accessibility, displays H1 and H2 headers with a P section which is used for a summary of the tests' history along with a secondary bootstrap button class which redirects the user to the external wiki page (in new tab).
+- Centre aligned content (whole page) for uniformity and for easy device scaling and scrolling,
+
+Diagram Section
+
+- H3 Header section very dark blue text against secondary color background for contrast.
+- Bootstrap secondary button for additional page direct to take the test. (ei.html)
+- External Diagram image showing a map of the personality types against their introvert vs extrovert sections.
+- Small inline block text box for acknowledgment of 3rd party image source.
+
+Device Scaling:
+
+- Bootstrap and container classes utilised to scale content proportionatly. Custom CSS media queries to determine image width for 480px and 768px ,
+
+Laptop, Tabelt and Mobile Views:
+![Index Layout](/assets/images/readme-design-index.png)
+
+### Section Pages
+
+The section pages are 4 seperate sections of the test to be taken by the user. Each section will determine a letter as a result to be compiled in the final results.html page.
+
+Navigation:
+
+- Same styling as Homepage nav except the link (Home) alignment is to the left and aligned with the test/ quiz content below and the navbar is sticky with the progress bar.
+
+Progress Bar:
+
+- custom inline CSS progress bar with boostrap blue also remains sticky with the navbar so the user can always see the interaction update where ever they are on the page.
+
+- Same colors and alignment as the Header card on the index/home page.
+- H1 Header "The Myers Briggs Type Inidicator Test" fixed on all section pages.
+- H2 Header - custom per section and utilises the root variants via span classes (more info in following sextions)
+  - extraversion-color: #d9abfa
+  - introversion-color: #9ad0f5
+  - sensing-color: #71be95
+  - intuition-color: #d8c1e9
+  - thinking-color: #f0b8c9
+  - feeling-color: #61a4d1
+  - judging-color: #d67078
+  - perceiving-color: #6dd6a0
+
+Form section (Test/Quiz):
+
+- Utilising bootstrap card and card body for the layout with input classes, names, ids and values to be used with javascript for scoring and css for visual interaction.
+- Radio input for option 1 and 2 responses.
+- Custom card background color _ see following sections for more information_
+- Bootstrap validation (needs-validation) implemented.
+
+Override in style.css for validation - check - vald. Changed from green to white to allow better contrast vs the following custom card background colors:
+
+#### Section 1: Extroversion vs Introversion (ei.html)
+
+These are stlying choices that relate to the specific section.
+
+- Progress Bar defaults to 0% when page is loaded.
+- "Extraversion (E)" and "Introversion (I)" H2 Text custom css root color variants determined using span class in H2 Headings:
+
+  - extraversion-color: #d9abfa
+  - introversion-color: #9ad0f5
+
+- Upon answer selection, the card's background updates to the assigned color (option 1 is extraversion color and option 2 is introversion on this page).
+- Linear gradient utilised on card selection in order to allow a black gradiant to the assigned color from left to right. This is to ensure the text is still legible after selection. Should the user choose to revise their answer. Source: (https://www.w3schools.com/css/css3_gradients.asp)
+
+![Section 1 Layout](/assets/images/readme-design-ei.png)
+
+#### Section 2: Sensing vs Intuition (sn.html)
+
+- Progress Bar defaults to 25% when page is loaded.
+- "Sensing (S)" and "Intuition (N)" H2 Text custom css root colorvariants determined using span class in H2 Headings:
+
+  - sensing-color: #71be95
+  - intuition-color: #d8c1e9
+
+- Upon answer selection, the card's background updates to the assigned color (option 1 is sensing-color and option 2 is intuition-color on this page).
+- Linear gradient utilised on card selection in order to allow a black gradiant to the assigned color from left to right. This is to ensure the text is still legible after selection. Should the user choose to revise their answer. Source: (https://www.w3schools.com/css/css3_gradients.asp)
+
+![Section 2 Layout](/assets/images/readme-design-sn.png)
+
+#### Section 3: Thinking vs Feeling (tf.html)
+
+- Progress Bar defaults to 50% when page is loaded.
+- "Thinking (T)" and "Feeling (F) " H2 Text custom css root colorvariants determined using span class in H2 Headings:
+
+  - thinking-color: #f0b8c9
+  - feeling-color: #61a4d1
+
+- Upon answer selection, the card's background updates to the assigned color (option 1 is thinking-color and option 2 is feeling-color on this page).
+- Linear gradient utilised on card selection in order to allow a black gradiant to the assigned color from left to right. This is to ensure the text is still legible after selection. Should the user choose to revise their answer. Source: (https://www.w3schools.com/css/css3_gradients.asp)
+
+![Section 3 Layout](/assets/images/readme-design-tf.png)
+
+#### Section 4: Judging vs Perceiving (jp.html)
+
+- Progress Bar defaults to 75% whn page is loaded.
+- "Judging (J) and Perceiving (P)"" H2 Text custom css root color variants determined using span class in H2 Headings:
+
+  - judging-color: #d67078
+  - perceiving-color: #6dd6a0
+
+- Upon answer selection, the card's background updates to the assigned color (option 1 is judging-color and option 2 is perceiving-color on this page).
+- Linear gradient utilised on card selection in order to allow a black gradiant to the assigned color from left to right. This is to ensure the text is still legible after selection. Should the user choose to revise their answer. Source: (https://www.w3schools.com/css/css3_gradients.asp)
+
+![Section 4 Layout](/assets/images/readme-design-jp.png)
+
+#### Results (results.html)
+
+The results page's purpose is to show the user their personality test results with a 4 letter scoring taken from each section. The example below is a result for ESFP which means in:
+
+- Section 1: scored E (Extraversion)
+- section 2: scored S (Sending)
+- Section 4: scored F (Feeling)
+- Section 4L scored P (Perceiving)
+- Giving the total concatination of letter: ESFP
+
+Predetermined in the results.js const types, the following fields are populated using JS:
+
+- type (eg. ESFP)
+- title (eg. The Entertainer)
+- percentage (eg. 8.7%)
+- description (eg "Extraverted, Observant, Feeling, and Prospecting")
+- Site (external link to personality pagee)
+- External image (Media query for device set in javascript const types)
+
+![Results Layout](/assets/images/readme-design-results.png)
 
 #### Results Page Personality Type Images sourced from (https://16personalities.com)
+
+Below are the different images loaded depending on the personality score.
+
+![ISTJ](https://raw.githubusercontent.com/JamesBirchall-dev/imagehost/main/istjresult.webp)
 
 ### ISTJ
 
@@ -198,326 +412,544 @@ The commit that corresponds to this is :
 
 ![ENTJ](https://raw.githubusercontent.com/JamesBirchall-dev/imagehost/main/entjresult.webp)
 
-### Styling
-
-- Bootstrap 5 classes utilised as well as custom css (styles.css stylesheet). See page elements for more details.
+#### Bootstrap Form Validation Styling
 
 ## Page Elements
 
-### Homepage (`index.html`)
+### Homepage HTML & CSS Elements (`index.html`)
 
-#### **1. `<nav class="nav py-3 mb-4 custom-navbar">`**
+#### **1 Navigation Bar Section **
 
-- **Type:** HTML `<nav>` (navigation)
-- **Bootstrap:**
-  - `.nav` → Base navigation layout
-  - `.py-3` → Vertical padding
-  - `.mb-4` → Margin bottom
-- **Custom CSS:** `custom-navbar`
+- nav - Bootstrap navigation container (basic)
+- py3 - Bootstrap - vertical padding 1rem top & bottom.
+- mb-4 - Adds Bottom margin for space to the header card.
+- container - center and contains width of content.
+- btn-primary btn-lg - Blue themed Large Button direct to test/quiz page.
 
-##### **2. `<div class="container">` (inside `<nav>`)**
+#### **2 Heading Card Section **
 
-- **Type:** HTML `<div>`
-- **Bootstrap:** `.container` → Responsive fixed-width container
+- container - alignement and responsive.
+- card - Bootstrap component:
+- card-header - Top section of card used for H1 Heading
+- card-body - Main paragraph text body
+- card-title - H2 Heading sub heading.
+- card-text - paragraph styling within the card-body
+- btn-secondary - secondary gray color directing user to external link (wiki page in new tab)
 
-#### **3. `<a href="ei.html" class="btn btn-primary btn-lg">Take the test!</a>`**
+#### \*\*3 Image Section
 
-- **Type:** HTML `<a>` (link)
-- **Bootstrap:**
-  - `.btn` → Button styling
-  - `.btn-primary` → Primary theme color
-  - `.btn-lg` → Large button size
+- text-center - horizontal text centre alignment
+- pt-3, pt-5 - Top and Bottom padding respectively.
+- container - keeps section content contained.
+- mb-4. mb-3 - bottom margin for spacing.
+- btn-secondary - secondary gray color directing user to test (ei.html)
+- img-fluid - to make image responsive to size.
+- rounded-4 - adds rounded corners
+- d-inline-block - to allow padding and margin.
+- px-2, pt-1 - x and y padding.
 
-#### **4. `<div class="container">` (main heading card container)**
+#### ** Index/Homepage Content Diagram **
 
-- **Type:** HTML `<div>`
-- **Bootstrap:** `.container` → Responsive wrapper
+![index html diagram](/assets/images/readme-html-index-diagram.png)
 
-#### **5. `<div class="card">`**
+#### Homepage (`index.html`) Custom CSS
 
-- **Type:** HTML `<div>`
-- **Bootstrap:** `.card` → Card component
+Global Values:
 
-#### **6. `<div class="card-header">`**
+- Google Font Import ( Monsterrat )
+- root variables (colors and fonts)
+- body - for font family, primary & secondary colors and background color
+- h1,h2,h3 headings to secondary font (varela), dark text (rgb 2,18,29) and center alignment.
+- index page container - applies centre alignment for index page only.
 
-- **Type:** HTML `<div>`
-- **Bootstrap:** `.card-header` → Card header section
+NavBar:
 
-#### **7. `<h1>The Myers Briggs Type Indicator Test (MBTI)</h1>`**
+- Background color applies var(--primary-color) with white text.
 
-- **Type:** HTML `<h1>`
-- **Bootstrap:** _None_
+Image Section.
 
-#### **8. `<div class="card-body">`**
+- .image-section - background color (var(--secondary-color)) text color rgb(16,12,19).
+- .image-section img - sets width 100%, height: auto and max width 800px for responsivity and reduce large size shifts with larger screens.
+- Media queries for smaller screens: (@media) → adjust .image-section img for screens ≤768px (90%, max-width: 500px) and ≤480px (100%).
 
-- **Type:** HTML `<div>`
-- **Bootstrap:** `.card-body` → Main content area for card
+### **Section pages HTML and CSS Elements (ei.html, sn.html, tf.html, jp.html)**
 
-#### **9. `<h2 class="card-title">About the test</h2>`**
+#### **1. Navigation**
 
-- **Type:** HTML `<h2>`
-- **Bootstrap:** `.card-title` → Card title styling
+- Classes:
+  - sticky-nav-wrapper - custom wrapper for sticky nav only applied to the section pages.
+  - nav - Bootstrap basic class
+  - py3 - Bootstrap - vertical padding 1rem top & bottom.
+  - mb-0 for no bottom margin.
+- Inner container div class to center content and add horizontal padding.
+- btn-primary btn-lg - Blue themed Large Button direct to home/index page.
 
-#### **10. `<p class="card-text">` (two instances)**
+#### **2. Progress Bar**
 
-- **Type:** HTML `<p>`
-- **Bootstrap:** `.card-text` → Standard card paragraph styling
+- container - for alignment and padding
+- enclosed in nav container so this remains sticky with the navbar.
 
-#### **11. `<a href="..." target="_blank" class="btn btn-secondary">Visit the wikipedia page</a>`**
+#### **3. Header Card**
 
-- **Type:** HTML `<a>` (link)
-- **Bootstrap:**
-  - `.btn` → Button styling
-  - `.btn-secondary` → Secondary theme color
+- container - Bootstrap container for layout.
+- header-container: custom class, probably for spacing or header-specific styling.
+- card- Bootstrap card component.
+  - card-header: styles the header area of the card.
+  - card-body: content area of the card.
+  - card-title: styles the main title in card body.
+- Span text (for example with ei.html):
+  - extraversion-text and introversion-text: custom color for text colors for these words to match the card selection color change detailed below.
+  - same logic applied for other sections so sn.html will have sensitivity-text and intuition-text and color var's to match.
 
-#### **12. `<section class="image-section text-center pt-3 pb-5">`**
+#### **4. Quiz/ Test form section**
 
-- **Type:** HTML `<section>`
-- **Bootstrap:**
-  - `.text-center` → Center-aligned text
-  - `.pt-3` → Padding top
-  - `.pb-5` → Padding bottom
-- **Custom CSS:** `image-section`
+General:
 
-#### **13. `<div class="container">` (inside image section)**
+- needs-validation: Bootstrap validation class
+- novalidate - disables native html validation for Bootstrap.
 
-- **Type:** HTML `<div>`
-- **Bootstrap:** `.container` → Responsive wrapper
+Question Cards:
 
-#### **14. `<h3 class="mb-4">Diagram of Cognitive Functions in the MBTI</h3>`**
+- card - Bootstrap card for each question.
+- card-body - content wrapper for question.
+- form-check - Bootstrap class for checkbox/radio wrapper.
+- form-check-input - styles the radio button input.
+- form-check-label - styles the label for the radio button.
+- invalid-feedback - Bootstrap validation message shown when input invalid.
 
-- **Type:** HTML `<h3>`
-- **Bootstrap:** `.mb-4` → Bottom margin
+Validation Message:
 
-#### **15. `<img class="img-fluid rounded-4 mb-3">`**
+- "div id="validation-message" class="text-danger mt-3" style="display: none">
+  Please answer all questions before continuing."
+- text-danger: Bootstrap class to make text red.
+- mt-3: margin-top of 3 units.
+- Hidden by default (display: none), shown by JS if form incomplete.
 
-- **Type:** HTML `<img>`
-- **Bootstrap:**
-  - `.img-fluid` → Responsive image scaling
-  - `.rounded-4` → Large rounded corners
-  - `.mb-3` → Bottom margin
+Submit/ Next Section Bootstrap Button:
 
-#### **16. `<p class="mb-3">`**
+- btn - base Bootstrap button.
+- btn-primary - primary color styling.
+- btn-lg - large size.
+- active - gives button a pressed/active state styling.
 
-- **Type:** HTML `<p>`
-- **Bootstrap:** `.mb-3` → Bottom margin
+#### **Section pages Diagram (ei.html, sn.html, tf.html, jp.html)**
 
-#### **17. `<span class="d-inline-block bg-light text-dark px-2 py-1 rounded">`**
+![section html diagram](/assets/images/readme-html-section-diagram.png)
 
-- **Type:** HTML `<span>`
-- **Bootstrap:**
-  - `.d-inline-block` → Inline-block display
-  - `.bg-light` → Light background color
-  - `.text-dark` → Dark text color
-  - `.px-2` → Horizontal padding
-  - `.py-1` → Vertical padding
-  - `.rounded` → Rounded corners
+#### **Section pages custom CSS (ei.html, sn.html, tf.html, jp.html)**
 
-#### **18. `<small>... <a href="...">CC BY-SA 4.0</a></small>`**
+1. **Google Fonts**
+   "@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");"
+   Imports the Montserrat font from Google Fonts.
 
-- **Type:** HTML `<small>` with `<a>` (link)
-- **Bootstrap:** _None_
+2. **CSS Variables (:root):**
 
-#### **19. `<a href="ei.html" class="btn btn-secondary">Take the test!</a>`**
+":root {
+--primary-font: "Montserrat", sans-serif;
+--secondary-font: "Varela", sans-serif;
+--primary-color: #315166;
+--secondary-color: #a8b4d3;
+--extraversion-color: #d9abfa;
+--introversion-color: #9ad0f5;
+--sensing-color: #71be95;
+--intuition-color: #d8c1e9;
+--thinking-color: #f0b8c9;
+--feeling-color: #61a4d1;
+--judging-color: #d67078;
+--perceiving-color: #6dd6a0;"
 
-- **Type:** HTML `<a>` (link)
-- **Bootstrap:**
-  - `.btn` → Button styling
-  - `.btn-secondary` → Secondary theme color
+- Variables make it easy to maintain consistent colors and fonts.
+- Each MBTI dimension has its own color variable for highlighting selected answers.
+- primary-color and --secondary-color are used for general page theming.
 
-### **Section pages Elements (ei.html, sn.html, tf.html, jp.html)**
+3. **Body & Typography:**
 
-#### **1. `<nav class="nav py-3 mb-4 custom-navbar">`**
+"body {
+font-family: var(--primary-font);
+color: var(--primary-color);
+background-color: var(--secondary-color);
+}
 
-- **Function:** Top navigation bar containing a "Home" button.
-- **Bootstrap:**
-  - `.nav` → Applies Bootstrap nav styling.
-  - `.py-3` → Adds vertical padding.
-  - `.mb-4` → Adds bottom margin.
-  - `.container` (inside) → Centers and limits content width.
-  - `.btn`, `.btn-primary`, `.btn-lg` → Large primary-styled Bootstrap button.
+h1, h2, h3 {
+font-family: var(--secondary-font);
+color: rgb(2, 18, 29);
+text-align: center;
+}"
 
-####
+- Sets the global font and page background.
+- Main headings use secondary font and center alignment.
 
-**2. `<div class="container">` (Heading Section)**
+4. **Navbar & Sticky Header**
 
-- **Function:** Displays the test title and section heading.
-- **Bootstrap:** `.container` → Responsive fixed-width content wrapper.
+.custom-navbar {
+background-color: var(--primary-color);
+color: white;
+}
 
-#### **3. `<form id="quiz-form" class="needs-validation" novalidate>`**
+.sticky-nav-wrapper {
+position: sticky;
+top: 0;
+z-index: 1000;
+}
 
-- **Function:** Contains the test questions and handles input/validation.
-- **Bootstrap:**
-  - `.needs-validation` → Enables Bootstrap form validation styling.
-  - Uses `.mb-3` inside for spacing between form elements.
+- .custom-navbar overrides default Bootstrap colors.
+- .sticky-nav-wrapper ensures the nav bar sticks to top of page.
 
-#### **4. `<div class="container mb-5">` (Question Container)**
+5. **Progress Bar**
 
-- **Function:** Holds a set of questions and answer options.
-- **Bootstrap:**
-  - `.container` → Centers content.
-  - `.mb-5` → Large bottom margin.
+"#overall-progress-bar {
+width: 0%;
+height: 20px;
+background-color: #007bff;
+transition: width 0.3s ease;
+}
 
-#### **5. `<div class="form-check">` (Inside Question Block)**
+#progress-container {
+width: 100%;
+background-color: white;
+height: 20px;
+border-radius: 10px;
+margin-bottom: 1.5rem;
+overflow: hidden;
+}"
+"
 
-- **Function:** Groups a single radio button with its label.
-- **Bootstrap:** `.form-check` → Bootstrap form check/radio wrapper.
+- Styles the progress bar and its container.
+- Smooth width transition when updating progress.
 
-#### **6. `<input class="form-check-input" type="radio">`**
+6. **Image Section**
 
-- **Function:** Radio button for selecting an answer.
-- **Bootstrap:** `.form-check-input` → Styles the radio button.
+".image-section {
+background-color: var(--secondary-color);
+color: rgb(16, 12, 19);
+}
 
-#### **7. `<label class="form-check-label">`**
+.image-section img {
+width: 100%;
+height: auto;
+max-width: 800px;
+}
+"
 
-- **Function:** Label text for the radio button.
-- **Bootstrap:** `.form-check-label` → Styles label positioning and spacing.
+- Sets background and text for image areas.
+- Makes images responsive with max-width.
+- Responsive breakpoints adjusts image width for tablets and mobile screens.
+  - @media (max-width: 768px) { .image-section img { width: 90%; max-width: 500px; } }
+  - @media (max-width: 480px) { .image-section img { width: 100%; } }
 
-#### **8. `<button class="btn btn-primary mt-3">`**
+7. **Quiz Form**
 
-- **Function:** Submit button for the quiz form.
-- **Bootstrap:**
-  - `.btn` → Base Bootstrap button style.
-  - `.btn-primary` → Primary color style.
-  - `.mt-3` → Top margin.
+"#quiz-form {
+max-width: 700px;
+margin: auto;
+padding: 1rem;
+}
 
-#### **9. `<div class="container text-center mt-5">` (Footer Area)**
+#quiz-form .form-check-label:hover {
+cursor: pointer;
+transition: color 0.3s ease;
+}"
 
-- **Function:** Footer section with centered text.
-- **Bootstrap:**
-  - `.container` → Centers content.
-  - `.text-center` → Centers text horizontally.
-  - `.mt-5` → Adds space above.
+- Centers quiz form and limits width.
+- Adds hover effect for options.
+
+8. **Card Styling**
+
+".card {
+margin-bottom: 1rem;
+color: rgb(255,255,255);
+background-color: rgb(20,31,51);
+font-size: 1rem;
+font-weight: 300;
+}
+
+.card h1 {
+color: rgb(245,231,231);
+}"
+
+- Dark themed cards with white text.
+- h1 inside cards slightly lighter.
+
+9. **Selected Card Gradients**
+
+.card.e-selected { background: linear-gradient(135deg, rgba(0,0,0,0.25) 0%, var(--extraversion-color) 100%); opacity: 0.9; }
+/_ same pattern repeated for i,s,n,t,f,j,p _/
+
+- Applies distinct gradient colors when an answer is selected.
+- Ensures sufficient contrast for text readability.
+
+10. **Form Validation**
+
+".was-validated .form-check-input:valid ~ .form-check-label {
+color: white;
+}
+
+#validation-message {
+margin-bottom: 1.2rem;
+text-align: center;
+font-weight: bold;
+font-size: 1.1rem;
+color: #dc3545;
+}
+"
+
+- Ensures labels stay readable when options are validated.
+- Centers error/validation messages.
 
 ### Results Page (results.html)
 
-#### **1. `<nav class="nav py-3 mb-4 custom-navbar">`**
+1. **NavBar**
 
-- **Type:** HTML `<nav>` (navigation)
-- **Bootstrap:**
-  - `.nav` → Base navigation layout
-  - `.py-3` → Vertical padding
-  - `.mb-4` → Margin bottom
-- **Custom CSS:** `custom-navbar`
+- nav - Bootstrap navigation container (basic)
+- py3 - Bootstrap - vertical padding 1rem top & bottom.
+- mb-4 - Adds Bottom margin for space to the header card.
+- container - center and contains width of content.
+- btn-primary btn-lg - Blue themed Large Button direct to homepage.
 
-#### **2. `<div class="container">` (inside `<nav>`)**
+2. **Results**
 
-- **Type:** HTML `<div>`
-- **Bootstrap:** `.container` → Responsive fixed-width container
+- container class - to ensure responsive layout.
+- card results-card class - for custom css for the results page card.
+- card:
+  - card-header:
+    - Bootstrap componenent card header use for default padding.
+    - H1 main heading #type span will be populated dynamically with JS.
+  - card-body - Bootstrap componenet used for default padding.
+  - H2 id="title" - used to populate from result.js script.
+  - ht-3 to add 1rem margin top.
+- Population and descripion:
+  - paragraph p tags
+  - strong tag for bold text emphasis
+  - span elements for dynamic js content from result.js
+- External Link
+  - id site link used from results.js for specific personality type page.
+  - a tag link opens in new window.
+- Results Image:
+  - resultImage id - targeted by JS from results.js
+  - img-fluid my-4 - Bootstrap class for responsive image scale and top/bottom margin
+  - width/height to set intrinsic image size.
+  - style = max-width - for scaling images.
+  - eager loading - lighthouse flag prevention for lazy/ long loading time.
 
-#### **3. `<a href="index.html" class="btn btn-primary btn-lg">Home</a>`**
+3. **Acknowledgement message**
 
-- **Type:** HTML `<a>` (link)
-- **Bootstrap:**
-  - `.btn` → Button styling
-  - `.btn-primary` → Primary theme color
-  - `.btn-lg` → Large button size
+- "p class="mb-3" - Bootstrap margin-bottom = 1rem.
+- span class="d-inline-block bg-light text-dark px-2 py-1 rounded">" Bootstrap utility classes:
+  - d-inline-block - displays span as inline-block.
+  - bg-light - light background color.
+  - text-dark - dark text.
+  - px-2 py-1 - padding X = 0.5rem, padding Y = 0.25rem.
+  - rounded - small border-radius (rounded corners).
+  - small - smaller text.
 
-#### **4. `<div class="container text-center">`**
+#### **Results page Diagram (results.html)**
 
-- **Type:** HTML `<div>`
-- **Bootstrap:**
-  - `.container` → Responsive wrapper
-  - `.text-center` → Center-aligned text
+![section html diagram](/assets/images/readme-html-results-diagram.png)
 
-#### **5. `<h1>Your MBTI Type: <span id="type"></span></h1>`**
+#### **Results page custom CSS (results.html)**
 
-- **Type:** HTML `<h1>` with `<span>` for dynamic text
-- **Bootstrap:** _None_
+Global & Variables:
 
-#### **6. `<h2 id="title" class="mt-3"></h2>`**
+- :root → defines all your CSS variables (fonts, colors, MBTI colors).
+- body:
+  - font-family: var(--primary-font) - Montserrat
+  - color: var(--primary-color) - dark blue-gray text
+  - background-color: var(--secondary-color) - light blue-gray background
 
-- **Type:** HTML `<h2>`
-- **Bootstrap:** `.mt-3` → Top margin
+Headings
+h1, h2, h3:
 
-#### **7. `<p><strong>Percentage of population:</strong> <span id="percentage"></span></p>`**
+- font-family: var(--secondary-font) (Varela fallback)
+- color: rgb(2,18,29) (dark)
+- text-align: center
 
-- **Type:** HTML `<p>` with `<strong>` and `<span>`
-- **Bootstrap:** _None_
+But inside .card:
 
-#### **8. `<p id="description"></p>`**
+- .card h1 → overrides h1 color - light text rgb(245,231,231)
 
-- **Type:** HTML `<p>`
-- **Bootstrap:** _None_
+Navbar
 
-#### **9. `<p><a id="site" href="#" target="_blank">Learn more about this type</a></p>`**
+- .custom-navbar
+- background-color: var(--primary-color)
+- color: white
 
-- **Type:** HTML `<p>` with `<a>` (link)
-- **Bootstrap:** _None_
+Cards
 
-#### **10. `<img id="resultImage" alt="Results Image" class="img-fluid my-4">`**
+- .card (applies to .results-card because it inherits .card)
+- margin-bottom: 1rem
+- color - #fff (sets text color)
+- background-color - rgb(20,31,51) (dark background)
+- font-size - 1rem; font-weight: 300
 
-- **Type:** HTML `<img>`
-- **Bootstrap:**
-  - `.img-fluid` → Responsive image scaling
-  - `.my-4` → Vertical margin
+\*\* But then overridden by .results-card:
 
-#### **11. `<p class="mb-3">`**
+- text-align: center
+- background-color: #3e8656 (green background instead of dark navy)
+- .results-card h2 - color: white
+- .results-card a - color: blue; text-decoration: underline
 
-- **Type:** HTML `<p>`
-- **Bootstrap:** `.mb-3` → Bottom margin
+Image - #resultImage:
 
-#### **12. `<span class="d-inline-block bg-light text-dark px-2 py-1 rounded">`**
+- aspect-ratio: 1046/516
+- width: 100%; height: auto
+- display: block
+  (Bootstrap img-fluid also applies → responsive scaling)
 
-- **Type:** HTML `<span>`
-- **Bootstrap:**
-  - `.d-inline-block` → Inline-block display
-  - `.bg-light` → Light background color
-  - `.text-dark` → Dark text color
-  - `.px-2` → Horizontal padding
-  - `.py-1` → Vertical padding
-  - `.rounded` → Rounded corners
+Container Adjustments (Results Page Only .results .container:
 
-#### **13. `<small>Illustration and content by <a href="...">16Personalities.com</a></small>`**
-
-- **Type:** HTML `<small>` with `<a>` (link)
-- **Bootstrap:** _None_
-
-#### **14. `<script src="assets/script/results.js"></script>`**
-
-- **Type:** HTML `<script>` (JavaScript loader)
+- text-align: center
+- max-width: 700px
+- margin: 0 auto
 
 ## Javascript
 
-### Javascript Overview
+The quiz.js file is the prodominant js used on the site as it is used for handling validation, progress bar, score counting and storage and some custom card background css which is conditional on option 1 or 2 selection. The results.js is essentially only used to store the fixed const metadata for the different scoring possibilities, and populate the specific content to the results page.
 
-There are 2 seperate javascript files: quiz.js and results.js. The main purpose of the javascript is to collect results from each section, then display preset text and image outputs in the results based off the results from the sections, it is also used for form validation in the quiz-form portion of the site:
+### quiz.js - Loaded on all test/quiz section pages (ei.html/ sn.html/ tf.html/ jp.html)
 
-#### quiz.js
+1. Setup/ Load DOM Contents gets references to the:
 
-Is applied to all the test section pages (ei.html, sn.html, tf.html, jp.html) its functions are as follows:
+- Form
+- sectionKey obtained from body data-section="section1", "...section2" etc.
+- validation message element (bootstrap validation)
+- Constant definitions:
+  - totl_questions = 40 (4 x sections of 10 questions)
+  - progress_key = "questionsAnswered" session storage for the 4 sections of 10 questions.
 
-- Uses DOMContentLoaded so the script runs only after all HTML elements are available.
-- Selects key elements from the page: form, sectionkey (corresponding to each section page) , feedback image (placeholder for future developmenet, validation message (for use with bootstrap validation).
-- Maps section keys (section1, section2, etc.) to the two answer options that should be counted for that section:
-- Prevents the default page reload (e.preventDefault()).
-- Adds the Bootstrap validation class "was-validated" to visually show field errors.
-- If form is invalid - Shows the validation message (validationMsg.style.display = "block")
-- If form is valid - Hides the validation message
-- Uses FormData(form) to collect all form inputs (For final score)
-- Counts how many times each letter was chosen
-- stores the results - Creates an object like { e: 3, i: 7 } for that section.
-- Redirects the browser to that next page. _ html redirect not used to prevent this running before the script ends_
+![1codescreenshot](/assets/images/readme-js-quiz-1.png)
 
-#### results.js
+2. Progress initialisation. Primarily use for progress bar to default to the correct percentage on each section. If the user is on:
+   (40 Questions in Total)
 
-Is applied to results.html and it's function is as follows:
+- section 1, it sets to 0
+- section 2, it sets to 10
+- section 3, it sets to 20
+- section 4, it sets to 30.
+  As the user journey and form validation do not allow skipping of sections, the primary use for these vars are to set the progress bar at the correct value as the format of the quiz/test form over different pages led to issues with saving the progress via storage in testing.
 
-- Uses DOMContentLoaded to ensure all HTML elements are available before running the script.
-- Creates an object types where each key is an MBTI code (e.g., "ISTJ") and the value is an object containing: title – personality type name, percentage – approximate percentage of the population with that type, description – short traits summary, site – link to more info (16Personalities.com), image – URL to the type’s image.
-  -Loads JSON‑formatted counts from sessionStorage for: section1, section2, section3, section4
-- validates stored results
-- Compares counts for each section: Picks the letter with the greater count.\* Uses >= so the first option wins if there’s a tie (to prevent split answers)
-- Finds the corresponding data from the types object based on the determined MBTI type.
-  -Populates the results page with: The 4‑letter type, Personality title, Percentage of population, Description ,Link to more info ,Image source and alt text.
+![2codescreenshot](/assets/images/readme-js-quiz-2.png)
 
-#### Function map
+3. Section Definitions:
 
-This is a visual to show the click journey of the user along with its html and js key steps ([please note only top line script is displayed for overview purposes]
+- valueMap - which two letters the section measures (eg section 1 = E vs I)
+- nextPageMap - which page to go to after the present one.
+  ![3codescreenshot](assets/images/readme-js-quiz-3.png)
 
-![Functionmap](assets/images/readme-function-map.png)
+4. Helper functions:
+
+- Counts how many answers were option 1 or option 2 (for example with section 1: Option 1 = "E" and option 2 = "I") getFormDataCounts (formData, firtLetter, secondLetter).
+
+![4acodescreenshot](assets/images/readme-js-quiz-4a.png)
+
+- validateForm(form)
+
+![4bcodescreenshot](assets/images/readme-js-quiz-4b.png)
+
+- was-vallidated class bootstrap link: Checks if all required answers are filled and shows/ hides validation message based on this.
+
+![4ccodescreenshot](assets/images/readme-js-quiz-4c.png)
+
+- saveResults (sectionKey, result): Saves the result into storage (for example: e: 6, i: 4 for section 1 meaning 6 x option 1s were answered and 4 x option 2s).
+
+![4dcodescreenshot](assets/images/readme-js-quiz-4d.png)
+
+- goToNextPage(sectionKey): directs the browser to the next page. \*\* essential JS does this over HTML as HTML will load before the JS and could break the session.
+
+5. Form subission (handleSubmit)
+
+- Prevents standard form submission.
+- Validates answers (backup to bootstrap function)
+- Collects answers/ response -counts with getFormDataCounts.
+- Saves results in sessions storage.
+- Redirects to the next section page.
+
+![5codescreenshot](assets/images/readme-js-quiz-5.png)
+
+6.  Card Selection handling ( to update card background color based on selection)
+    For .card:
+
+- Listener for radio button change
+- Removes selection highlight css class.
+- Adds selection classes: eg. "e-selected, i-selected etc." for css to color the card.
+- Updates updates global answered count. incrementGlobalProgress
+- Updates section progress.
+
+![6codescreenshot](assets/images/readme-js-quiz-6.png)
+
+7. Progress bar functions:
+
+- updateProgressBar : per-section progress %
+- getQuestionsAnswered : total questions answered (from sessionstorage)
+- saveQuestionsAnswered: save total answered count.
+- incrementGlobalProgress: increments once per card.
+- updateOverallProgressBar: updates the global progress bar accross all sections.
+
+![7codescreenshot](assets/images/readme-js-quiz-7.png)
+
+8. Initialization calls order:
+
+- 1. Setup variables.
+- 2. Initialize progress
+- 3. Define helper maps
+- 4. Define functions
+- 5. Attach event listeners
+- 6. Initialize progress bars.
+
+### results.js used in final scoring page (results.html)
+
+Used to define data based on the scoring values from the test/quiz.
+
+1. MBTI types data
+
+- Defines personality score using type, broken down into 16 possible scorings and storing the following values to populate in the results.html page:
+  - title
+  - percentage
+  - descrtipion
+  - external site link
+  - images (multiple for mobile, tablet and desktop sizes)
+  - media query function
+
+![resultscodescreenshot1](assets/images/readme-js-results-1.png)
+![resultscodescreenshot1](assets/images/readme-js-results-1b.png)
+
+2. Data definitions:
+
+- reads results from sessionStorage
+
+![resultscodescreenshot2a](assets/images/readme-js-results-2a.png)
+
+- handles missing data (bootstrap does this function via validation but in place as a backup).
+
+![resultscodescreenshot2b](assets/images/readme-js-results-2c.png)
+
+- determines a score like "ESFP" to match the MBTI const type. (Option 1 is the dominant trait option so if even score, it will default to option 1)
+
+![resultscodescreenshot2c](assets/images/readme-js-results-2d.png)
+
+- displays title, description, percentage, link and image per device.
+
+![resultscodescreenshot2d](assets/images/readme-js-results-2e.png)
+
+3. Order on page:
+
+- 1.  Wait for DOM ready
+- 2.  Define all 16 MBTI metadata.
 
 ## Testing
+
+### Manual vs Automated Testing
+
+Manual testing's advantage would be to consollidate the test process with both the User Testing and script testing. The reason's for manual use on this site are as follows:
+
+- User journey possibilities with javascript are quite linear:
+  - 2 option answer question format
+  - Each section determines if option 1 or 2 was more dominant
+  - Session saves the score for each section.
+- Same applies with validation, progress bar and background css card change.
+
+Automated test scripts would be more appropiate if the questions and answers were more dynamic and randomised. And where all the possibilities of the interractions could be quickly written as test scripts and ran in the fraction of the time a user could.
+
+Overall, as the site requires user testing anyway and the outcome possibilities can be easily acheived with the same process, the overall choice is to manually test the whole site without the need for test scripts.
 
 ### User Testing
 
