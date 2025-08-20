@@ -4,74 +4,122 @@ The Myers Briggs Personality Index (MBTI) Test, is a psuedo psychology quiz deve
 
 ![device mockup](assets/images/readme-devicemockup.png)
 
-# Table of Contents
+## Table of Contents
 
-## UX
+- [Scope & Content](#scope--content)
 
-- [User Stories](#user-stories)
+  - [Scope](#scope)
+  - [Content](#content)
 
-## Visual Design
+- [UX](#ux)
 
-- [Wireframes](#wireframes)
-- [Index Page](#index-page)
-- [Section Pages (ei.html, sn.html, tf.html, jp.html)](#section-pages-eihtml-snhtml-tfhtml-jphtml)
-- [Results Page](#results-page)
-- [Fonts](#fonts)
-- [Colors](#colors)
-- [Images](#images)
-  - [Index Page MBTI Diagram](#index-page-mbti-diagram-sourced-from)
-  - [MBTI Test](#mbti-test)
-    - [ISTJ](#istj)
-    - [ISFJ](#isfj)
-    - [INFJ](#infj)
-    - [INTJ](#intj)
-    - [ISTP](#istp)
-    - [ISFP](#isfp)
-    - [INFP](#infp)
-    - [INTP](#intp)
-    - [ESTP](#estp)
-    - [ESFP](#esfp)
-    - [ENFP](#enfp)
-    - [ENTP](#entp)
-    - [ESTJ](#estj)
-    - [ESFJ](#esfj)
-    - [ENFJ](#enfj)
-    - [ENTJ](#entj)
-- [Styling](#styling)
+  - [User Stories](#user-stories)
 
-## Page Elements
+- [Visual Design](#visual-design)
 
-- [Homepage (index.html)](#homepage-indexhtml)
-- [Section Pages Elements (ei.html, sn.html, tf.html, jp.html)](#section-pages-elements-eihtml-snhtml-tfhtml-jphtml)
-- [Results Page (results.html)](#results-page-resultshtml)
+  - [Wireframes](#wireframes)
+    - [Index Page](#index-page)
+    - [Section Pages (ei.html, sn.html, tf.html, jp.html)](#section-pages-eihtml-snhtml-tfhtml-jphtml)
+    - [Section Pages Re-Design Flag](#section-pages-re-design-flag)
+    - [Results Page](#results-page)
+  - [Fonts](#fonts)
+  - [Colors](#colors)
+  - [Homepage Styling (index.html)](#homepage-styling-indexhtml)
+    - [Navigation](#navigation)
+    - [Header Card](#header-card)
+    - [Diagram Section](#diagram-section)
+    - [Device Scaling](#device-scaling)
+  - [Section Pages Styling (ei.html ; sn.html ; tf.html ; jp.html)](#section-pages-styling-eihtml-snhtml-tfhtml-jphtml)
+    - [Overview](#overview)
+    - [Section 1: Extroversion vs Introversion (ei.html)](#section-1-extroversion-vs-introversion-eihtml)
+    - [Section 2: Sensing vs Intuition (sn.html)](#section-2-sensing-vs-intuition-snhtml)
+    - [Section 3: Thinking vs Feeling (tf.html)](#section-3-thinking-vs-feeling-tfhtml)
+    - [Section 4: Judging vs Perceiving (jp.html)](#section-4-judging-vs-perceiving-jphtml)
+  - [Results Page Styling (results.html)](#results-page-styling-resultshtml)
+    - [Navigation Bar](#navigation-bar)
+    - [Results Section](#results-section)
+    - [Personality Type Images](#personality-type-images)
 
-## Javascript
+- [Page Elements](#page-elements)
 
-- [Javascript Overview](#javascript-overview)
-  - [quiz.js](#quizjs)
-  - [results.js](#resultsjs)
-  - [Function map](#function-map)
+  - [Homepage HTML & CSS Elements (index.html)](#homepage-html--css-elements-indexhtml)
+    - [Navigation Bar Section](#navigation-bar-section)
+    - [Heading Card Section](#heading-card-section)
+    - [Image Section](#image-section)
+    - [Index/Homepage Content Diagram](#indexhomepage-content-diagram)
+    - [Homepage (index.html) Custom CSS](#homepage-indexhtml-custom-css)
+  - [Section pages HTML and CSS Elements (ei.html, sn.html, tf.html, jp.html)](#section-pages-html-and-css-elements-eihtml-snhtml-tfhtml-jphtml)
+    - [Navigation Bar Section](#navigation-bar-section-1)
+    - [Progress Bar](#progress-bar)
+    - [Header Card Section](#header-card-section)
+    - [Quiz/Test Form Section](#quiz-test-form-section)
+    - [Section Pages HTML Diagram](#section-pages-html-diagram-eihtml-snhtml-tfhtml-jphtml)
+    - [Section Pages Custom CSS](#section-pages-custom-css-eihtml-snhtml-tfhtml-jphtml)
+  - [Results Page (results.html)](#results-page-resultshtml)
+    - [Navigation Bar Section](#navigation-bar-section-2)
+    - [Results Section](#results-section-1)
+    - [Acknowledgement Message](#acknowledgement-message)
+    - [Results Page Diagram](#results-page-diagram-resultshtml)
+    - [Results Page Custom CSS](#results-page-custom-css-resultshtml)
 
-## Testing
+- [JavaScript](#javascript)
 
-- [User Testing](#user-testing)
-- [General Testing](#general-testing)
-- [User Stories Testing](#user-stories-testing)
-- [Mobile Testing](#mobile-testing)
-- [Desktop Testing](#desktop-testing)
-- [Lighthouse Overview](#lighthouse-overview)
-- [Issues Resolution/Acceptance](#issues-resolutionacceptance)
+  - [JavaScript Overview](#javascript-overview)
+  - [quiz.js (Loaded on all test/quiz section pages)](#quizjs---loaded-on-all-testquiz-section-pages-eihtml-snhtml-tfhtml-jphtml)
+    - [Setup/Load DOM Contents](#setupload-dom-contents)
+    - [Progress Initialization](#progress-initialization)
+    - [Section Definitions](#section-definitions)
+    - [Helper Functions](#helper-functions)
+    - [Form Submission (handleSubmit)](#form-submission-handlesubmit)
+    - [Card Selection Handling](#card-selection-handling)
+    - [Progress Bar Functions](#progress-bar-functions)
+    - [Initialization Calls Order](#initialization-calls-order)
+  - [results.js (used in final scoring page)](#resultsjs-used-in-final-scoring-page-resultshtml)
+    - [MBTI Types Data](#mbti-types-data)
+    - [Data Definitions](#data-definitions)
+    - [Order on Page](#order-on-page)
 
-## Deployment
+- [Testing](#testing)
 
-- [Local Deployment](#local-deployment)
-  - [Local Preparation](#local-preparation)
-- [Github Deployment](#github-deployment)
-  - [Github Instructions](#github-instructions)
+  - [Manual vs Automated Testing](#manual-vs-automated-testing)
+  - [User Testing](#user-testing)
+  - [General Testing](#general-testing)
+  - [User Stories Testing](#user-stories-testing)
+  - [Mobile Testing](#mobile-testing)
+  - [Desktop Testing](#desktop-testing)
+  - [Lighthouse](#lighthouse)
+    - [index.html](#indexhtml-homepage)
+    - [ei.html](#eihtml-section-1)
+    - [sn.html](#snhtml-section-2)
+    - [tf.html](#tfhtml-section-3)
+    - [jp.html](#jphtml-section-4)
+    - [results.html](#resultshtml-results-page)
+    - [Issues Resolution/Acceptance](#issues-resolution-acceptance)
+  - [HTML Validation](#html-validation)
+    - [ei.html](#eihtml-section-1-1)
+    - [sn.html](#snhtml-section-2-1)
+    - [tf.html](#tfhtml-section-3-1)
+    - [jp.html](#jphtml-section-4-1)
+    - [results.html](#resultshtml-results-page-1)
+  - [CSS Validation](#css-validation)
+  - [JS Hint Validation](#js-hint-validation)
+
+- [Deployment](#deployment)
+
+  - [Local Deployment](#local-deployment)
+    - [Local Preparation](#local-preparation)
+  - [GitHub Deployment](#github-deployment)
+    - [GitHub Instructions](#github-instructions)
+
+- [Credits and Contact](#credits-and-contact)
+  - [Content](#content-1)
+  - [Contact](#contact)
 
 ---
 
 ## Scope & Content
+
+### Scope
 
 The purpose of this project is to create an interactive website that utilises javascript for calculation and provides a visual feedback to the user in the UX.
 I have chosen a quiz/test format using the Myers Briggs Personality Inidcator Test as a framework for the questioning, with visual feedbacks to the user being on multiple choice color feedback, field validation and a results page which compiles the results for the user.
@@ -82,10 +130,17 @@ The test was designed during WW2, using the Psychologist, Carl Jung's complicate
 The logic is that for each section (4 in total) an Extrovert or Introvert majority answers is determined, each with a unique letter scoring, which leads to a 4 letter score at the end and a 16 total possibility of personality types.
 Using google, I compiled the questions into their respective 4 sections, 10 questions per section totalling 40 questions over all.
 
+### Content
+
+Test/Quiz Questions : Section 1: Extraversion vs Introversion.
+
+If 5 or more answers are answer option 1, then the score for the section will be "E"
+If 6 or more answers are answer option 2, then the score for the section will be "I"
+
+The same logic is applied to all 4 sections giving a final 4 letter scoring.
+
 For all the questions for each section please refer to my external sheet (https://docs.google.com/spreadsheets/d/1qcxpp5MTfT22Qdgeemm6ImCjR0gg_z4acRIAtPzjFSg/edit?usp=sharing)
 Below is an example taken from section 1 only (ei.html):
-
-### Section 1: Extraversion vs Introversion
 
 Scoring:
 
@@ -189,30 +244,30 @@ The commit that corresponds to this is :
 
 ![Results page](assets/images/readme-results-layout.png)
 
-#### Fonts
+### Fonts
 
 ![Fonts](assets/readmeassets/readme-font.png)
 
 - **Primary:** `Montserrat`, sans-serif – Bold and accessible for headings
 - **Secondary:** `Varela`, sans-serif – Clean and minimalist for paragraph text
 
-#### Colors
+### Colors
 
 ![Color Palette](https://github.com/JamesBirchall-dev/imagehost/blob/main/mayersbriggsdiagram-colors.png?raw=true)
 
 - Based on MBTI diagram used across multiple platforms
 - Accessible color scheme with light backgrounds and high contrast
 
-#### Index Page Styling (index.html)
+### Homepage Styling (index.html)
 
 The index/ homepage's purpose is to simplisticly deliver information about the history, the purpose and the meaning of the test and the results. This is acheived through:
 
-Navigation:
+#### Navigation
 
 - Direct required on this page is to take the test. (ei.html)
 - Simplistic Bootstrap nav, utilising the primary color #315166; A dark and greyed green to provide good contrast against the bold-blue bootstrap primary button class .
 
-Header Card
+#### Header Card
 
 Acheives a high contrast color ratio for reading, content is displayed centrally to keep buttons and content inline on page, allows for better device scaling and smaller device interaction as well:
 
@@ -220,21 +275,23 @@ Acheives a high contrast color ratio for reading, content is displayed centrally
 - White writing on a custom css dark blue background for accessibility, displays H1 and H2 headers with a P section which is used for a summary of the tests' history along with a secondary bootstrap button class which redirects the user to the external wiki page (in new tab).
 - Centre aligned content (whole page) for uniformity and for easy device scaling and scrolling,
 
-Diagram Section
+#### Diagram Section
 
 - H3 Header section very dark blue text against secondary color background for contrast.
 - Bootstrap secondary button for additional page direct to take the test. (ei.html)
 - External Diagram image showing a map of the personality types against their introvert vs extrovert sections.
 - Small inline block text box for acknowledgment of 3rd party image source.
 
-Device Scaling:
+#### Device Scaling
 
 - Bootstrap and container classes utilised to scale content proportionatly. Custom CSS media queries to determine image width for 480px and 768px ,
 
 Laptop, Tabelt and Mobile Views:
 ![Index Layout](/assets/images/readme-design-index.png)
 
-### Section Pages
+### Section Pages Styling (ei.html ; sn.html ; tf.html ; jp.html)
+
+#### Overview
 
 The section pages are 4 seperate sections of the test to be taken by the user. Each section will determine a letter as a result to be compiled in the final results.html page.
 
@@ -321,7 +378,13 @@ These are stlying choices that relate to the specific section.
 
 ![Section 4 Layout](/assets/images/readme-design-jp.png)
 
-#### Results (results.html)
+### Results Page Styling (results.html)
+
+#### Navigation Bar
+
+Same NavBar as the homepage applied with only change is that the Button is named "Home" and redirects the user back to the Homepage (index.html)
+
+#### Results Section
 
 The results page's purpose is to show the user their personality test results with a 4 letter scoring taken from each section. The example below is a result for ESFP which means in:
 
@@ -331,7 +394,7 @@ The results page's purpose is to show the user their personality test results wi
 - Section 4L scored P (Perceiving)
 - Giving the total concatination of letter: ESFP
 
-Predetermined in the results.js const types, the following fields are populated using JS:
+Predetermined as const types in the results.js const types, the following fields are populated using JS:
 
 - type (eg. ESFP)
 - title (eg. The Entertainer)
@@ -342,83 +405,83 @@ Predetermined in the results.js const types, the following fields are populated 
 
 ![Results Layout](/assets/images/readme-design-results.png)
 
-#### Results Page Personality Type Images sourced from (https://16personalities.com)
+#### Personality Type Images
+
+Sourced from (https://16personalities.com)
 
 Below are the different images loaded depending on the personality score.
 
 ![ISTJ](https://raw.githubusercontent.com/JamesBirchall-dev/imagehost/main/istjresult.webp)
 
-### ISTJ
+ISTJ
 
 ![ISTJ](https://raw.githubusercontent.com/JamesBirchall-dev/imagehost/main/istjresult.webp)
 
-### ISFJ
+ISFJ
 
 ![ISFJ](https://raw.githubusercontent.com/JamesBirchall-dev/imagehost/main/isfjresult.webp)
 
-### INFJ
+INFJ
 
 ![INFJ](https://raw.githubusercontent.com/JamesBirchall-dev/imagehost/main/infjresult.webp)
 
-### INTJ
+INTJ
 
 ![INTJ](https://raw.githubusercontent.com/JamesBirchall-dev/imagehost/main/intjresult.webp)
 
-### ISTP
+ISTP
 
 ![ISTP](https://raw.githubusercontent.com/JamesBirchall-dev/imagehost/main/istpresult.webp)
 
-### ISFP
+ISFP
 
 ![ISFP](https://raw.githubusercontent.com/JamesBirchall-dev/imagehost/main/isfpresult.webp)
 
-### INFP
+INFP
 
 ![INFP](https://raw.githubusercontent.com/JamesBirchall-dev/imagehost/main/infpresult.webp)
 
-### INTP
+INTP
 
 ![INTP](https://raw.githubusercontent.com/JamesBirchall-dev/imagehost/main/intpresult.webp)
 
-### ESTP
+ESTP
 
 ![ESTP](https://raw.githubusercontent.com/JamesBirchall-dev/imagehost/main/estpresult.webp)
 
-### ESFP
+ESFP
 
 ![ESFP](https://raw.githubusercontent.com/JamesBirchall-dev/imagehost/main/esfpresult.webp)
 
-### ENFP
+ENFP
 
 ![ENFP](https://raw.githubusercontent.com/JamesBirchall-dev/imagehost/main/enfpresult.webp)
 
-### ENTP
+ENTP
 
 ![ENTP](https://raw.githubusercontent.com/JamesBirchall-dev/imagehost/main/entpresult.webp)
 
-### ESTJ
+ESTJ
 
 ![ESTJ](https://raw.githubusercontent.com/JamesBirchall-dev/imagehost/main/estjresult.webp)
 
-### ESFJ
+ESFJ
 
 ![ESFJ](https://raw.githubusercontent.com/JamesBirchall-dev/imagehost/main/esfjresult.webp)
 
-### ENFJ
+ENFJ
 
 ![ENFJ](https://raw.githubusercontent.com/JamesBirchall-dev/imagehost/main/enfjresult.webp)
 
-### ENTJ
+ENTJ
 
 ![ENTJ](https://raw.githubusercontent.com/JamesBirchall-dev/imagehost/main/entjresult.webp)
-
-#### Bootstrap Form Validation Styling
 
 ## Page Elements
 
 ### Homepage HTML & CSS Elements (`index.html`)
 
-#### **1 Navigation Bar Section **
+#### Navigation Bar
 
 - nav - Bootstrap navigation container (basic)
 - py3 - Bootstrap - vertical padding 1rem top & bottom.
@@ -426,7 +489,7 @@ Below are the different images loaded depending on the personality score.
 - container - center and contains width of content.
 - btn-primary btn-lg - Blue themed Large Button direct to test/quiz page.
 
-#### **2 Heading Card Section **
+#### Heading Card Section
 
 - container - alignement and responsive.
 - card - Bootstrap component:
@@ -436,7 +499,7 @@ Below are the different images loaded depending on the personality score.
 - card-text - paragraph styling within the card-body
 - btn-secondary - secondary gray color directing user to external link (wiki page in new tab)
 
-#### \*\*3 Image Section
+#### Image Section
 
 - text-center - horizontal text centre alignment
 - pt-3, pt-5 - Top and Bottom padding respectively.
@@ -448,7 +511,7 @@ Below are the different images loaded depending on the personality score.
 - d-inline-block - to allow padding and margin.
 - px-2, pt-1 - x and y padding.
 
-#### ** Index/Homepage Content Diagram **
+#### Index/Homepage Content Diagram
 
 ![index html diagram](/assets/images/readme-html-index-diagram.png)
 
@@ -472,9 +535,9 @@ Image Section.
 - .image-section img - sets width 100%, height: auto and max width 800px for responsivity and reduce large size shifts with larger screens.
 - Media queries for smaller screens: (@media) → adjust .image-section img for screens ≤768px (90%, max-width: 500px) and ≤480px (100%).
 
-### **Section pages HTML and CSS Elements (ei.html, sn.html, tf.html, jp.html)**
+### Section pages HTML and CSS Elements (ei.html, sn.html, tf.html, jp.html)
 
-#### **1. Navigation**
+#### Navigation Bar
 
 - Classes:
   - sticky-nav-wrapper - custom wrapper for sticky nav only applied to the section pages.
@@ -484,12 +547,12 @@ Image Section.
 - Inner container div class to center content and add horizontal padding.
 - btn-primary btn-lg - Blue themed Large Button direct to home/index page.
 
-#### **2. Progress Bar**
+#### Progress Bar
 
 - container - for alignment and padding
 - enclosed in nav container so this remains sticky with the navbar.
 
-#### **3. Header Card**
+#### Header Card Section
 
 - container - Bootstrap container for layout.
 - header-container: custom class, probably for spacing or header-specific styling.
@@ -501,7 +564,7 @@ Image Section.
   - extraversion-text and introversion-text: custom color for text colors for these words to match the card selection color change detailed below.
   - same logic applied for other sections so sn.html will have sensitivity-text and intuition-text and color var's to match.
 
-#### **4. Quiz/ Test form section**
+#### Quiz/ Test Form section
 
 General:
 
@@ -532,17 +595,17 @@ Submit/ Next Section Bootstrap Button:
 - btn-lg - large size.
 - active - gives button a pressed/active state styling.
 
-#### **Section pages Diagram (ei.html, sn.html, tf.html, jp.html)**
+#### Section Pages HTML Diagram (ei.html, sn.html, tf.html, jp.html)
 
 ![section html diagram](/assets/images/readme-html-section-diagram.png)
 
-#### **Section pages custom CSS (ei.html, sn.html, tf.html, jp.html)**
+#### Section pages custom CSS (ei.html, sn.html, tf.html, jp.html)
 
-1. **Google Fonts**
-   "@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");"
-   Imports the Montserrat font from Google Fonts.
+Google Fonts
+"@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");"
+Imports the Montserrat font from Google Fonts.
 
-2. **CSS Variables (:root):**
+CSS Variables (:root):
 
 ":root {
 --primary-font: "Montserrat", sans-serif;
@@ -562,7 +625,7 @@ Submit/ Next Section Bootstrap Button:
 - Each MBTI dimension has its own color variable for highlighting selected answers.
 - primary-color and --secondary-color are used for general page theming.
 
-3. **Body & Typography:**
+Body & Typography:
 
 "body {
 font-family: var(--primary-font);
@@ -579,7 +642,7 @@ text-align: center;
 - Sets the global font and page background.
 - Main headings use secondary font and center alignment.
 
-4. **Navbar & Sticky Header**
+Navbar & Sticky Header
 
 .custom-navbar {
 background-color: var(--primary-color);
@@ -595,7 +658,7 @@ z-index: 1000;
 - .custom-navbar overrides default Bootstrap colors.
 - .sticky-nav-wrapper ensures the nav bar sticks to top of page.
 
-5. **Progress Bar**
+Progress Bar
 
 "#overall-progress-bar {
 width: 0%;
@@ -617,7 +680,7 @@ overflow: hidden;
 - Styles the progress bar and its container.
 - Smooth width transition when updating progress.
 
-6. **Image Section**
+Image Section
 
 ".image-section {
 background-color: var(--secondary-color);
@@ -637,7 +700,7 @@ max-width: 800px;
   - @media (max-width: 768px) { .image-section img { width: 90%; max-width: 500px; } }
   - @media (max-width: 480px) { .image-section img { width: 100%; } }
 
-7. **Quiz Form**
+Quiz Form
 
 "#quiz-form {
 max-width: 700px;
@@ -653,7 +716,7 @@ transition: color 0.3s ease;
 - Centers quiz form and limits width.
 - Adds hover effect for options.
 
-8. **Card Styling**
+Card Styling
 
 ".card {
 margin-bottom: 1rem;
@@ -670,7 +733,7 @@ color: rgb(245,231,231);
 - Dark themed cards with white text.
 - h1 inside cards slightly lighter.
 
-9. **Selected Card Gradients**
+Selected Card Gradients
 
 .card.e-selected { background: linear-gradient(135deg, rgba(0,0,0,0.25) 0%, var(--extraversion-color) 100%); opacity: 0.9; }
 /_ same pattern repeated for i,s,n,t,f,j,p _/
@@ -678,7 +741,7 @@ color: rgb(245,231,231);
 - Applies distinct gradient colors when an answer is selected.
 - Ensures sufficient contrast for text readability.
 
-10. **Form Validation**
+Form Validation
 
 ".was-validated .form-check-input:valid ~ .form-check-label {
 color: white;
@@ -698,7 +761,7 @@ color: #dc3545;
 
 ### Results Page (results.html)
 
-1. **NavBar**
+#### Navigation Bar Section
 
 - nav - Bootstrap navigation container (basic)
 - py3 - Bootstrap - vertical padding 1rem top & bottom.
@@ -706,7 +769,7 @@ color: #dc3545;
 - container - center and contains width of content.
 - btn-primary btn-lg - Blue themed Large Button direct to homepage.
 
-2. **Results**
+#### Results Section
 
 - container class - to ensure responsive layout.
 - card results-card class - for custom css for the results page card.
@@ -731,7 +794,7 @@ color: #dc3545;
   - style = max-width - for scaling images.
   - eager loading - lighthouse flag prevention for lazy/ long loading time.
 
-3. **Acknowledgement message**
+#### Acknowledgement Message
 
 - "p class="mb-3" - Bootstrap margin-bottom = 1rem.
 - span class="d-inline-block bg-light text-dark px-2 py-1 rounded">" Bootstrap utility classes:
@@ -742,11 +805,11 @@ color: #dc3545;
   - rounded - small border-radius (rounded corners).
   - small - smaller text.
 
-#### **Results page Diagram (results.html)**
+#### Results page Diagram (results.html)
 
 ![section html diagram](/assets/images/readme-html-results-diagram.png)
 
-#### **Results page custom CSS (results.html)**
+#### Results page custom CSS (results.html)
 
 Global & Variables:
 
@@ -803,11 +866,13 @@ Container Adjustments (Results Page Only .results .container:
 
 ## Javascript
 
+### Javascript Overview
+
 The quiz.js file is the prodominant js used on the site as it is used for handling validation, progress bar, score counting and storage and some custom card background css which is conditional on option 1 or 2 selection. The results.js is essentially only used to store the fixed const metadata for the different scoring possibilities, and populate the specific content to the results page.
 
 ### quiz.js - Loaded on all test/quiz section pages (ei.html/ sn.html/ tf.html/ jp.html)
 
-1. Setup/ Load DOM Contents gets references to the:
+#### Setup/ Load DOM Contents
 
 - Form
 - sectionKey obtained from body data-section="section1", "...section2" etc.
@@ -818,8 +883,10 @@ The quiz.js file is the prodominant js used on the site as it is used for handli
 
 ![1codescreenshot](/assets/images/readme-js-quiz-1.png)
 
-2. Progress initialisation. Primarily use for progress bar to default to the correct percentage on each section. If the user is on:
-   (40 Questions in Total)
+#### Progress Initialization
+
+Primarily use for progress bar to default to the correct percentage on each section. If the user is on:
+(40 Questions in Total)
 
 - section 1, it sets to 0
 - section 2, it sets to 10
@@ -829,13 +896,13 @@ The quiz.js file is the prodominant js used on the site as it is used for handli
 
 ![2codescreenshot](/assets/images/readme-js-quiz-2.png)
 
-3. Section Definitions:
+#### Section Definitions
 
 - valueMap - which two letters the section measures (eg section 1 = E vs I)
 - nextPageMap - which page to go to after the present one.
   ![3codescreenshot](assets/images/readme-js-quiz-3.png)
 
-4. Helper functions:
+#### Helper Functions
 
 - Counts how many answers were option 1 or option 2 (for example with section 1: Option 1 = "E" and option 2 = "I") getFormDataCounts (formData, firtLetter, secondLetter).
 
@@ -855,7 +922,7 @@ The quiz.js file is the prodominant js used on the site as it is used for handli
 
 - goToNextPage(sectionKey): directs the browser to the next page. \*\* essential JS does this over HTML as HTML will load before the JS and could break the session.
 
-5. Form subission (handleSubmit)
+#### Form Subission (handleSubmit)
 
 - Prevents standard form submission.
 - Validates answers (backup to bootstrap function)
@@ -865,7 +932,8 @@ The quiz.js file is the prodominant js used on the site as it is used for handli
 
 ![5codescreenshot](assets/images/readme-js-quiz-5.png)
 
-6.  Card Selection handling ( to update card background color based on selection)
+#### Card Selection Handling ( to update card background color based on selection)
+
     For .card:
 
 - Listener for radio button change
@@ -876,7 +944,7 @@ The quiz.js file is the prodominant js used on the site as it is used for handli
 
 ![6codescreenshot](assets/images/readme-js-quiz-6.png)
 
-7. Progress bar functions:
+#### Progress Bar Functions
 
 - updateProgressBar : per-section progress %
 - getQuestionsAnswered : total questions answered (from sessionstorage)
@@ -886,7 +954,7 @@ The quiz.js file is the prodominant js used on the site as it is used for handli
 
 ![7codescreenshot](assets/images/readme-js-quiz-7.png)
 
-8. Initialization calls order:
+#### Initialization Calls Order
 
 - 1. Setup variables.
 - 2. Initialize progress
@@ -899,7 +967,7 @@ The quiz.js file is the prodominant js used on the site as it is used for handli
 
 Used to define data based on the scoring values from the test/quiz.
 
-1. MBTI types data
+#### MBTI types data
 
 - Defines personality score using type, broken down into 16 possible scorings and storing the following values to populate in the results.html page:
   - title
@@ -912,7 +980,7 @@ Used to define data based on the scoring values from the test/quiz.
 ![resultscodescreenshot1](assets/images/readme-js-results-1.png)
 ![resultscodescreenshot1](assets/images/readme-js-results-1b.png)
 
-2. Data definitions:
+#### Data definitions
 
 - reads results from sessionStorage
 
@@ -930,7 +998,7 @@ Used to define data based on the scoring values from the test/quiz.
 
 ![resultscodescreenshot2d](assets/images/readme-js-results-2e.png)
 
-3. Order on page:
+#### Order on page
 
 - 1.  Wait for DOM ready
 - 2.  Define all 16 MBTI metadata.
@@ -1013,55 +1081,118 @@ Overall, as the site requires user testing anyway and the outcome possibilities 
 - The sites functionality and navigation have been tested on Chrome, Firefox and Edge.
 - Internet Explorer was not tested and the site was not developed with it in mind as support for the browser is gradually being dropped.
 
-### Lighthouse Overview
+### Lighthouse
 
-Any remaining flags in the lighthouse reports are due to external sources so are neglegible.
-There is also a remaining flag of contrast in foreground vs background however, as this is on the legal disclaimer for external image use; this is also negligable.
+Any remaining flags in the lighthouse reports are due to external sources so are neglegible for the purposes of this project.
+In particular, the Best Practises score on Index page are due to the 3rd party image from wikipedia.
 
-Index page
+#### index.html (Homepage)
+
 Desktop
-![index-desktop-lighthouse-overview](/assets/images/readme-index-lighthouse-desktop-overview-final.png)
+![index-desktop-lighthouse-overview](/assets/images/readme-lighthouse-index-desktop-score.png)
 Mobile
-![index-mobile-lighthouse-overview](/assets/images/readme-index-lighthouse-mobile-overview-final.png)
+![index-mobile-lighthouse-overview](/assets/images/readme-lighthouse-index-mobile-score.png)
 
-ei (section 1) page
+#### ei.html (section 1)
+
 Desktop
-![ei-desktop-lighthouse-overview](/assets/images/readme-ei-lighthouse-desktop-overview-final.png)
+![ei-desktop-lighthouse-overview](/assets/images/readme-lighthouse-ei-desktop-score.png)
 Mobile
-![ei-mobile-lighthouse-overview](/assets/images/readme-ei-lighthouse-mobile-overview-final.png)
+![ei-mobile-lighthouse-overview](/assets/images/readme-lighthouse-ei-mobile-score.png)
 
-sn (section 2) page
+#### sn.html (section 2)
+
 Desktop
-![sn-desktop-lighthouse-overview](/assets/images/readme-sn-lighthouse-desktop-overview-final.png)
+![sn-desktop-lighthouse-overview](/assets/images/readme-lighthouse-sn-desktop-score.png)
 Mobile
-![sn-mobile-lighthouse-overview](/assets/images/readme-sn-lighthouse-mobile-overview-final.png)
+![sn-mobile-lighthouse-overview](/assets/images/readme-lighthouse-sn-mobile-score.png)
 
-tf (section 3) page
+#### tf.html (section 3)
+
 Desktop
-![tf-desktop-lighthouse-overview](/assets/images/readme-tf-lighthouse-desktop-overview-final.png)
+![tf-desktop-lighthouse-overview](/assets/images/readme-lighthouse-tf-desktop-score.png)
 Mobile
-![tf-mobile-lighthouse-overview](/assets/images/readme-tf-lighthouse-mobile-overview-final.png)
+![tf-mobile-lighthouse-overview](/assets/images/readme-lighthouse-tf-mobile-score.png)
 
-jp (section 4) page
+#### jp.html (section 4)
+
 Desktop
-![jp-desktop-lighthouse-overview](/assets/images/readme-jp-lighthouse-desktop-overview-final.png)
+![jp-desktop-lighthouse-overview](/assets/images/readme-lighthouse-tf-mobile-score.png)
 Mobile
-![jp-mobile-lighthouse-overview](/assets/images/readme-jp-lighthouse-mobile-overview-final.png)
+![jp-mobile-lighthouse-overview](/assets/images/readme-lighthouse-tf-mobile-score.png)
 
-Issues Resolution/ Acceptance
+#### results.html (Results Page)
 
-Issue: background vs foreground text low contrast
+Desktop
+![jp-desktop-lighthouse-overview](/assets/images/readme-lighthouse-results-mobile-score.png)
+Mobile
+![jp-mobile-lighthouse-overview](/assets/images/readme-lighthouse-results-mobile-score.png)
+
+#### Issues Resolution/ Acceptance
+
+Issue 1: background vs foreground text low contrast
 Acceptance Reason: text is for legal purposes only, no impact to UX.
 ![Backgroundvsforegroundcontrast](/assets/images/readme-lighthouse-mobile-accessibility-backgroundvsforegroundcontrast.png)
 
-Issue: Issues logged in panel
+Issue 2: Issues logged in panel
 Acceptance Reason: 3rd Party Cookie - not in scope.
 ![Issuespanel](/assets/images/readme-lighthouse-mobile-bestpractices-issuespanel.png)
 
-Issue: explicit height and width not set
+Issue 3: explicit height and width not set
 Resolution: set explicit width and height to images on index & results page.
 Commit message: lighthouse fix: index, results page - explicit height and width
 ![Issuespanel](/assets/images/readme-lighthouse-mobile-performance-imageelementsexplicitheightandwidth.png)
+
+Issue 4: background vs foreground contrast issue on results page for external link.
+Resolution: Updated the link text to white to provide contrast.
+commit message: git commit -m "update readme. update results.html link background color (lighthouse)"
+
+### HTML Validation
+
+All html files have been checked using w3c school validater check via direct input. (https://validator.w3.org/detailed.html)
+Screenshots for each page:
+
+#### index.html (Homepage)
+
+![index html valid](/assets/images/readme-htmlvalidation-index.png)
+
+#### ei.html (section 1)
+
+![ei html valid](/assets/images/readme-htmlvalidation-ei.png)
+
+#### sn.html (section 2)
+
+![sn html valid](/assets/images/readme-htmlvalidation-sn.png)
+
+#### tf.html (section 3)
+
+![tf html valid](/assets/images/readme-htmlvalidation-tf.png)
+
+#### jp.html (section 4)
+
+![jp html valid](/assets/images/readme-htmlvalidation-jp.png)
+
+#### results.html (Results Page)
+
+![results html valid](/assets/images/readme-htmlvalidation-results.png)
+
+### CSS Validation
+
+All css files have been checked using w3c validation https://jigsaw.w3.org/css-validator.
+Screenshot for style.css:
+![style css valid](/assets/images/readme-cssvalidation-style.png)
+
+### JS Hint Validation
+
+All .js files have been checked using the JS Hint validation service, this has been configured with additional ES6 to support new Javascript features.
+
+quiz.js:
+
+![quiz js valid](/assets/images/readme-jshint-quiz.png)
+
+results.js:
+
+![results js valid](/assets/images/readme-jshint-results.png)
 
 ## Deployment
 
