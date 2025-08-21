@@ -257,6 +257,10 @@ h3 {
   height: auto;
   display: block;
 }
+/* required to reduce large layout shift on page */
+#description {
+  min-height: 4em;
+}
 
 /*span class text for header text on test/quiz pages*/
 .extraversion-text {
