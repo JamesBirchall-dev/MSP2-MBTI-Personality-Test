@@ -1,3 +1,4 @@
+//main structure used from https://codepen.io/pulpexploder/pen/pNpdeq/
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.querySelector("form");
   const sectionKey = document.body.dataset.section;

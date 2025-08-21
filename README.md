@@ -1021,7 +1021,7 @@ Overall, as the site requires user testing anyway and the outcome possibilities 
 
 ### User Testing
 
-![Fonts](/assets/images/readme-usertesting-quiz-result-scenarios.png)
+![usertest](/assets/images/readme-usertesting-quiz-result-scenarios.png)
 
 ### General Testing
 
@@ -1040,33 +1040,51 @@ Overall, as the site requires user testing anyway and the outcome possibilities 
 
 - Homepage header card provides background and information about the test.
 
+![userstorytest1](/assets/images/readme-userstorytest-1.png)
+
 2. I want to understand the results before starting the test.
 
 - MBTI Diagram image as well as Wikipedia link provides overview of this.
 
+![userstorytest2](/assets/images/readme-userstorytest-2.png)
+
 3. I want access to external sources.
 
 - Acheived via wikipedia links in the homepage and also the 16personalities link at the results page.
+  ![userstorytest3](/assets/images/readme-userstorytest-3.png)
 
 4. I want to easily start the test.
 
 - Acheived via homepage with button#1 in the navigation to be in landing view, then also button#2 below the image for scrolled-down access.
 
+![userstorytest4](/assets/images/readme-userstorytest-4.png)
+
 5. I want validation if questions are skipped.
 
-- Bootstrap validation and backup javascript applied to the test pages.
+- Bootstrap validation and backup javascript applied to the test pages. Also backup Javascript validation in quiz.js should this fail.
+  ![userstorytest5](/assets/images/readme-userstorytest-5.png)
 
 6. I want the test to work on all devices.
 
 - As well as a simple layout. Also utilised bootstrap classes and media queries to scale easily.
+  Device view Laptop, Tablet and Mobile.
+  ![designhome](/assets/images/readme-design-index.png)
+  ![designform](/assets/images/readme-design-ei.png)
+  ![designresults](/assets/images/readme-design-results.png)
 
 7. I want to return to the homepage easily.
 
 - Homepage button in all non-index pages in the navigation.
+  ![userstorytest7](/assets/images/readme-userstorytest-7.png)
 
 8. I want the site to be visually accessible.
 
 - simple design with well contrasted background vs foreground. Lighthouse accessibility good scores.
+  Device view Laptop, Tablet and Mobile.
+  Please see lighthouse testing section for accessibility score.
+  ![designhome](/assets/images/readme-design-index.png)
+  ![designform](/assets/images/readme-design-ei.png)
+  ![designresults](/assets/images/readme-design-results.png)
 
 ### Mobile Testing
 
