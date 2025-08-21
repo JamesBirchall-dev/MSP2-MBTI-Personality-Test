@@ -1140,12 +1140,17 @@ Acceptance Reason: 3rd Party Cookie - not in scope.
 
 Issue 3: explicit height and width not set
 Resolution: set explicit width and height to images on index & results page.
-Commit message: lighthouse fix: index, results page - explicit height and width
+Commit message: "lighthouse fix: index, results page - explicit height and width"
 ![Issuespanel](/assets/images/readme-lighthouse-mobile-performance-imageelementsexplicitheightandwidth.png)
 
 Issue 4: background vs foreground contrast issue on results page for external link.
 Resolution: Updated the link text to white to provide contrast.
-commit message: git commit -m "update readme. update results.html link background color (lighthouse)"
+commit message: "update readme. update results.html link background color (lighthouse)"
+
+![Issuespanel](/assets/images/readme-results-lighthouse-largelayoutshift2.png)
+Issue 5: large layout shifts on page. Caused by conflicting bootstrap fluid class against custom css and min-height not determined in paragraph.
+Resolution: Remove bootstrap fluid class from results.html, add custom css for #paragraph for min height.
+commit message: "results pararaph. add min-height css. Removed fluid class from results page image"
 
 ### HTML Validation
 
