@@ -1142,9 +1142,9 @@ Mobile
 #### results.html (Results Page)
 
 Desktop
-![jp-desktop-lighthouse-overview](/assets/images/readme-lighthouse-results-mobile-score.png)
+![jp-desktop-lighthouse-overview](/assets/images/readme-lighthouse-results-desktop.png)
 Mobile
-![jp-mobile-lighthouse-overview](/assets/images/readme-lighthouse-results-mobile-score.png)
+![jp-mobile-lighthouse-overview](/assets/images/readme-lighthouse-results-mobile.png)
 
 #### Issues Resolution/ Acceptance
 
