@@ -2,6 +2,8 @@
 
 The Myers Briggs Personality Index (MBTI) Test, is a psuedo psychology quiz developed during WWII to determine the users' personality groups based on introverted vs extroverted answers over 4 different sections. Based on the work of Carl Jung, it is a popular quiz for people to determine their personality group and though considered redundant professionally, it still provides a good insight to someones traits.
 
+[Visit deployed site](https://jamesbirchall-dev.github.io/MSP2-MBTI-Personality-Test/)
+
 ![device mockup](assets/images/readme-devicemockup.png)
 
 ## Table of Contents
@@ -14,6 +16,10 @@ The Myers Briggs Personality Index (MBTI) Test, is a psuedo psychology quiz deve
 - [UX](#ux)
 
   - [User Stories](#user-stories)
+  - [User Journey](#user-journey)
+  - [Interaction Design](#interaction-design)
+  - [Accessibility and Best Practises](#accessibility-amd-best-practises)
+  - [Testing and Feedbacl](#testing-and-feedback)
 
 - [Visual Design](#visual-design)
 
@@ -133,6 +139,7 @@ Using google, I compiled the questions into their respective 4 sections, 10 ques
 ### Content
 
 Test/Quiz Questions : Section 1: Extraversion vs Introversion.
+[Visit Deployed Site](https://jamesbirchall-dev.github.io/MSP2-MBTI-Personality-Test/ei.html)
 
 If 5 or more answers are answer option 1, then the score for the section will be "E"
 If 6 or more answers are answer option 2, then the score for the section will be "I"
@@ -220,6 +227,48 @@ The site will be split into 3 main journey steps:
 7. I want to return to the homepage easily.
 8. I want the site to be visually accessible.
 
+### User Profile
+
+As the test/ quiz is a fun activity, the site should try to cater to as broad an audience as possible so it is important to keep the information brief and clear, and provide plenty of interactivity and visual queues to keep the user engaged.
+
+### User Journey
+
+The main purpose of the site is to provide the user with an interactive and interesting quiz whilst also providing some accessible understanding and learning about the quiz beforehand.
+
+Therefore I chose a linear approach with the user journey and navigation.
+
+The homepage should have clear information and taking the test should be in landing view on the page.
+
+The test itself should be very clickable with plenty of screen interaction and feedback, guiding the user through each section, keeping the user informed of progress.
+
+Ending up on the results page which should provide structured and clear results.
+
+All pages except the index page should have the ability to return to the homepage and repeat the journey.
+
+### Interaction Design
+
+The primary interaction will be on the test/quiz section pages, with 4 sections, 10 questions per section. Each question will have a 2 option answer via use of radio buttons on cards.
+
+As the test’s results are based on the total outcome of opt 1 v opt 2, I’ve decided to incorporate custom colors to update via CSS using Javascript upon user selection and use Bootstrap with custom CSS for form validation feedback.
+
+I will also add a progress bar which feeds back live to the user.
+
+The home page and results page will have clickable, external links that open in a new tab in the web browser, with appropriate acknowledgements to the sources.
+
+### Accessibility and Best Practises
+
+Font chosen (Primary: Montserrat, sans-serif ;Secondary: Varela, sans-serif ) as is clear and well spaced & curved making this beneficial to people with learning difficulties such as dyslexia.
+
+Best practises in design using clear and interactive navigation, good contrast with foreground vs background and use a color scheme that is dynamic and stylish. This is to be complimented with clear and structured sections in the pages.
+
+Lighthouse testing and resolution to ensure accessibility and best practices throughout the site.
+
+### Testing and Feedback
+
+Ensure positive user experience through continuous and thorough testing during and and upon completion of the website.
+
+Also to test via friends and peers within my learning group and ensure smaller devices are heavily tested in particular.
+
 ## Visual Design
 
 ### Wireframes
@@ -229,8 +278,11 @@ The site will be split into 3 main journey steps:
 #### Index Page
 
 ![Index Page](assets/images/readme-index-layout.png)
+[Visit deployed site](https://jamesbirchall-dev.github.io/MSP2-MBTI-Personality-Test/)
 
 #### Section Pages (ei.html, sn.html, tf.html, jp.html)
+
+[Visit Deployed Site](https://jamesbirchall-dev.github.io/MSP2-MBTI-Personality-Test/ei.html)
 
 #### Section Pages Re-Design Flag:
 
@@ -246,7 +298,7 @@ The commit that corresponds to this is :
 
 ### Fonts
 
-![Fonts](assets/readmeassets/readme-font.png)
+![Fonts](assets/images/readme-font.png)
 
 - **Primary:** `Montserrat`, sans-serif – Bold and accessible for headings
 - **Secondary:** `Varela`, sans-serif – Clean and minimalist for paragraph text
@@ -259,6 +311,8 @@ The commit that corresponds to this is :
 - Accessible color scheme with light backgrounds and high contrast
 
 ### Homepage Styling (index.html)
+
+[Visit deployed site](https://jamesbirchall-dev.github.io/MSP2-MBTI-Personality-Test/)
 
 The index/ homepage's purpose is to simplisticly deliver information about the history, the purpose and the meaning of the test and the results. This is acheived through:
 
@@ -288,6 +342,7 @@ Acheives a high contrast color ratio for reading, content is displayed centrally
 
 Laptop, Tabelt and Mobile Views:
 ![Index Layout](/assets/images/readme-design-index.png)
+[Visit deployed site](https://jamesbirchall-dev.github.io/MSP2-MBTI-Personality-Test/)
 
 ### Section Pages Styling (ei.html ; sn.html ; tf.html ; jp.html)
 
@@ -325,6 +380,8 @@ Form section (Test/Quiz):
 Override in style.css for validation - check - vald. Changed from green to white to allow better contrast vs the following custom card background colors:
 
 #### Section 1: Extroversion vs Introversion (ei.html)
+
+[Visit Deployed Site](https://jamesbirchall-dev.github.io/MSP2-MBTI-Personality-Test/ei.html)
 
 These are stlying choices that relate to the specific section.
 
@@ -480,6 +537,8 @@ ENTJ
 ## Page Elements
 
 ### Homepage HTML & CSS Elements (`index.html`)
+
+[Visit deployed site](https://jamesbirchall-dev.github.io/MSP2-MBTI-Personality-Test/)
 
 #### Navigation Bar
 
@@ -1034,6 +1093,19 @@ Overall, as the site requires user testing anyway and the outcome possibilities 
 - Image resolutions intrinsic vs rendered checekd.
 - adhoc troubleshooting with the aid of Code Institute Network and https://www.stackoverflow.com.
 
+### External Testing and Peer Review
+
+The site has been sent to close friends and family members, and tested on both iphone and android mobile devices with no issues reported.
+
+General feedback is that the site was comfortable and visually stimulating to play around with as well as informative.
+
+Sent the website to class mates with primmary feedback received from Greg and David in my September '24 Runshaw College Level 5 Web App Diploma class.
+
+Greg "The test looks great it’s very unusual, and I’ve never heard of a personality test like this before. I’ll share it with my wife, as I believe she’s the complete opposite.
+The colors look good, and the page is responsive. I tested it on my iPhone 13, both vertically and horizontally."
+
+David "I just had a play with your project. Very interesting and it worked well. It was informative. I didn’t have any issues when completing the test."
+
 ### User Stories Testing
 
 1. I want to learn about the history of the MBTI.
@@ -1233,7 +1305,7 @@ results.js:
 #### Github Instructions
 
 1. Log in to your GitHub account.
-   navigate to [https://github.com/Ri-Dearg/neverlost-thrift\](https://github.com/JamesBirchall-dev/Invital-Health-Centre](https://github.com/JamesBirchall-dev/MSP2))](https://github.com/JamesBirchall-dev/MSP2).
+   navigate to [(https://github.com/JamesBirchall-dev/MSP2-MBTI-Personality-Test](https://github.com/JamesBirchall-dev/MSP2-MBTI-Personality-Test).
 1. You can set up your own repository and copy or clone it, or you fork the repository.
 1. `git add`, `git commit` and `git push` to a GitHub repository, if necessary.
 1. GitHub pages will update from the master branch by default.
