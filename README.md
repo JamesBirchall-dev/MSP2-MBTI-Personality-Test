@@ -592,7 +592,7 @@ Image Section.
 
 - .image-section - background color (var(--secondary-color)) text color rgb(16,12,19).
 - .image-section img - sets width 100%, height: auto and max width 800px for responsivity and reduce large size shifts with larger screens.
-- Media queries for smaller screens: (@media) → adjust .image-section img for screens ≤768px (90%, max-width: 500px) and ≤480px (100%).
+- Media queries for smaller screens: (@media) - adjust .image-section img for screens ≤768px (90%, max-width: 500px) and ≤480px (100%).
 
 ### Section pages HTML and CSS Elements (ei.html, sn.html, tf.html, jp.html)
 
@@ -872,7 +872,7 @@ color: #dc3545;
 
 Global & Variables:
 
-- :root → defines all your CSS variables (fonts, colors, MBTI colors).
+- :root - Defines all CSS variables (fonts, colors, MBTI colors).
 - body:
   - font-family: var(--primary-font) - Montserrat
   - color: var(--primary-color) - dark blue-gray text
@@ -887,7 +887,7 @@ h1, h2, h3:
 
 But inside .card:
 
-- .card h1 → overrides h1 color - light text rgb(245,231,231)
+- .card h1 - overrides h1 color - light text rgb(245,231,231)
 
 Navbar
 
@@ -915,7 +915,7 @@ Image - #resultImage:
 - aspect-ratio: 1046/516
 - width: 100%; height: auto
 - display: block
-  (Bootstrap img-fluid also applies → responsive scaling)
+  (Bootstrap img-fluid also applies - responsive scaling)
 
 Container Adjustments (Results Page Only .results .container:
 
@@ -933,10 +933,10 @@ The quiz.js file is the prodominant js used on the site as it is used for handli
 
 #### Setup/ Load DOM Contents
 
-- Form
+- form
 - sectionKey obtained from body data-section="section1", "...section2" etc.
 - validation message element (bootstrap validation)
-- Constant definitions:
+- constant definitions:
   - totl_questions = 40 (4 x sections of 10 questions)
   - progress_key = "questionsAnswered" session storage for the 4 sections of 10 questions.
 
@@ -947,10 +947,11 @@ The quiz.js file is the prodominant js used on the site as it is used for handli
 Primarily use for progress bar to default to the correct percentage on each section. If the user is on:
 (40 Questions in Total)
 
-- section 1, it sets to 0
-- section 2, it sets to 10
-- section 3, it sets to 20
-- section 4, it sets to 30.
+- section 1, sets to 0/40
+- section 2, sets to 10/40
+- section 3, sets to 20/40
+- section 4, sets to 30/40
+
   As the user journey and form validation do not allow skipping of sections, the primary use for these vars are to set the progress bar at the correct value as the format of the quiz/test form over different pages led to issues with saving the progress via storage in testing.
 
 ![2codescreenshot](/assets/images/readme-js-quiz-2.png)
@@ -1091,7 +1092,7 @@ Overall, as the site requires user testing anyway and the outcome possibilities 
 - External links open in a new tab.
 - Font and color placement.
 - Image resolutions intrinsic vs rendered checekd.
-- adhoc troubleshooting with the aid of Code Institute Network and https://www.stackoverflow.com.
+- Adhoc troubleshooting with the aid of Code Institute Network and https://www.stackoverflow.com.
 
 ### External Testing and Peer Review
 
